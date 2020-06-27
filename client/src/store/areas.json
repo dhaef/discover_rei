@@ -1,0 +1,8894 @@
+[
+    {
+        "name": "Acadia Parish, LA",
+        "fips": 22001
+    },
+    {
+        "name": "Alamance County, NC",
+        "fips": 37001
+    },
+    {
+        "name": "Alexander County, NC",
+        "fips": 37003
+    },
+    {
+        "name": "Allen County, OH",
+        "fips": 39003
+    },
+    {
+        "name": "Angelina County, TX",
+        "fips": 48005
+    },
+    {
+        "name": "Armstrong County, PA",
+        "fips": 42005
+    },
+    {
+        "name": "Atkinson County, GA",
+        "fips": 13003
+    },
+    {
+        "name": "Augusta County, VA",
+        "fips": 51015
+    },
+    {
+        "name": "Bandera County, TX",
+        "fips": 48019
+    },
+    {
+        "name": "Barton County, KS",
+        "fips": 20009
+    },
+    {
+        "name": "Beaufort County, SC",
+        "fips": 45013
+    },
+    {
+        "name": "Bedford County, TN",
+        "fips": 47003
+    },
+    {
+        "name": "Benton County, AR",
+        "fips": 5007
+    },
+    {
+        "name": "Benton County, MN",
+        "fips": 27009
+    },
+    {
+        "name": "Berks County, PA",
+        "fips": 42011
+    },
+    {
+        "name": "Black Hawk County, IA",
+        "fips": 19013
+    },
+    {
+        "name": "Bollinger County, MO",
+        "fips": 29017
+    },
+    {
+        "name": "Boone County, AR",
+        "fips": 5009
+    },
+    {
+        "name": "Botetourt County, VA",
+        "fips": 51023
+    },
+    {
+        "name": "Bradley County, TN",
+        "fips": 47011
+    },
+    {
+        "name": "Brazos County, TX",
+        "fips": 48041
+    },
+    {
+        "name": "Broome County, NY",
+        "fips": 36007
+    },
+    {
+        "name": "Bryan County, OK",
+        "fips": 40013
+    },
+    {
+        "name": "Buffalo County, NE",
+        "fips": 31019
+    },
+    {
+        "name": "Burlington County, NJ",
+        "fips": 34005
+    },
+    {
+        "name": "Butler County, PA",
+        "fips": 42019
+    },
+    {
+        "name": "Caldwell County, MO",
+        "fips": 29025
+    },
+    {
+        "name": "Calhoun County, TX",
+        "fips": 48057
+    },
+    {
+        "name": "Camden County, NC",
+        "fips": 37029
+    },
+    {
+        "name": "Cape Girardeau County, MO",
+        "fips": 29031
+    },
+    {
+        "name": "Carroll County, MS",
+        "fips": 28015
+    },
+    {
+        "name": "Cass County, IN",
+        "fips": 18017
+    },
+    {
+        "name": "Champaign County, IL",
+        "fips": 17019
+    },
+    {
+        "name": "Chattooga County, GA",
+        "fips": 13055
+    },
+    {
+        "name": "Cherokee County, OK",
+        "fips": 40021
+    },
+    {
+        "name": "Chilton County, AL",
+        "fips": 1021
+    },
+    {
+        "name": "Churchill County, NV",
+        "fips": 32001
+    },
+    {
+        "name": "Clark County, MO",
+        "fips": 29045
+    },
+    {
+        "name": "Clay County, IA",
+        "fips": 19041
+    },
+    {
+        "name": "Clayton County, GA",
+        "fips": 13063
+    },
+    {
+        "name": "Clinton County, IA",
+        "fips": 19045
+    },
+    {
+        "name": "Cobb County, GA",
+        "fips": 13067
+    },
+    {
+        "name": "Cole County, MO",
+        "fips": 29051
+    },
+    {
+        "name": "Columbia County, NY",
+        "fips": 36021
+    },
+    {
+        "name": "Contra Costa County, CA",
+        "fips": 6013
+    },
+    {
+        "name": "Coryell County, TX",
+        "fips": 48099
+    },
+    {
+        "name": "Crawford County, KS",
+        "fips": 20037
+    },
+    {
+        "name": "Cumberland County, IL",
+        "fips": 17035
+    },
+    {
+        "name": "Dakota County, MN",
+        "fips": 27037
+    },
+    {
+        "name": "Darke County, OH",
+        "fips": 39037
+    },
+    {
+        "name": "DeKalb County, AL",
+        "fips": 1049
+    },
+    {
+        "name": "Decatur County, GA",
+        "fips": 13087
+    },
+    {
+        "name": "Delta County, MI",
+        "fips": 26041
+    },
+    {
+        "name": "District of Columbia, DC",
+        "fips": 11001
+    },
+    {
+        "name": "Dorchester County, MD",
+        "fips": 24019
+    },
+    {
+        "name": "Douglas County, OR",
+        "fips": 41019
+    },
+    {
+        "name": "Dubuque County, IA",
+        "fips": 19061
+    },
+    {
+        "name": "East Baton Rouge Parish, LA",
+        "fips": 22033
+    },
+    {
+        "name": "Edgecombe County, NC",
+        "fips": 37065
+    },
+    {
+        "name": "Elk County, PA",
+        "fips": 42047
+    },
+    {
+        "name": "Erath County, TX",
+        "fips": 48143
+    },
+    {
+        "name": "Fairfax County, VA",
+        "fips": 51059
+    },
+    {
+        "name": "Fayette County, IN",
+        "fips": 18041
+    },
+    {
+        "name": "Fond du Lac County, WI",
+        "fips": 55039
+    },
+    {
+        "name": "Franklin County, KY",
+        "fips": 21073
+    },
+    {
+        "name": "Franklin County, VT",
+        "fips": 50011
+    },
+    {
+        "name": "Fulton County, NY",
+        "fips": 36035
+    },
+    {
+        "name": "Gaston County, NC",
+        "fips": 37071
+    },
+    {
+        "name": "Georgetown County, SC",
+        "fips": 45043
+    },
+    {
+        "name": "Gloucester County, NJ",
+        "fips": 34015
+    },
+    {
+        "name": "Grady County, OK",
+        "fips": 40051
+    },
+    {
+        "name": "Grant County, KY",
+        "fips": 21081
+    },
+    {
+        "name": "Grant Parish, LA",
+        "fips": 22043
+    },
+    {
+        "name": "Greene County, AL",
+        "fips": 1063
+    },
+    {
+        "name": "Greenwood County, SC",
+        "fips": 45047
+    },
+    {
+        "name": "Gwinnett County, GA",
+        "fips": 13135
+    },
+    {
+        "name": "Hale County, TX",
+        "fips": 48189
+    },
+    {
+        "name": "Hamlin County, SD",
+        "fips": 46057
+    },
+    {
+        "name": "Hancock County, IN",
+        "fips": 18059
+    },
+    {
+        "name": "Harford County, MD",
+        "fips": 24025
+    },
+    {
+        "name": "Harrison County, TX",
+        "fips": 48203
+    },
+    {
+        "name": "Haywood County, TN",
+        "fips": 47075
+    },
+    {
+        "name": "Ada County, ID",
+        "fips": 16001
+    },
+    {
+        "name": "Adams County, WA",
+        "fips": 53001
+    },
+    {
+        "name": "Alcorn County, MS",
+        "fips": 28003
+    },
+    {
+        "name": "Alexandria city, VA",
+        "fips": 51510
+    },
+    {
+        "name": "Anderson County, KY",
+        "fips": 21005
+    },
+    {
+        "name": "Arapahoe County, CO",
+        "fips": 8005
+    },
+    {
+        "name": "Atchison County, KS",
+        "fips": 20005
+    },
+    {
+        "name": "Baldwin County, GA",
+        "fips": 13009
+    },
+    {
+        "name": "Barren County, KY",
+        "fips": 21009
+    },
+    {
+        "name": "Beadle County, SD",
+        "fips": 46005
+    },
+    {
+        "name": "Bell County, KY",
+        "fips": 21013
+    },
+    {
+        "name": "Bergen County, NJ",
+        "fips": 34003
+    },
+    {
+        "name": "Bexar County, TX",
+        "fips": 48029
+    },
+    {
+        "name": "Bolivar County, MS",
+        "fips": 28011
+    },
+    {
+        "name": "Boone County, IL",
+        "fips": 17007
+    },
+    {
+        "name": "Bourbon County, KY",
+        "fips": 21017
+    },
+    {
+        "name": "Brantley County, GA",
+        "fips": 13025
+    },
+    {
+        "name": "Brevard County, FL",
+        "fips": 12009
+    },
+    {
+        "name": "Broomfield County, CO",
+        "fips": 8014
+    },
+    {
+        "name": "Bryan County, GA",
+        "fips": 13029
+    },
+    {
+        "name": "Burke County, NC",
+        "fips": 37023
+    },
+    {
+        "name": "Cabarrus County, NC",
+        "fips": 37025
+    },
+    {
+        "name": "Calhoun County, IL",
+        "fips": 17013
+    },
+    {
+        "name": "Camas County, ID",
+        "fips": 16025
+    },
+    {
+        "name": "Campbell County, VA",
+        "fips": 51031
+    },
+    {
+        "name": "Carbon County, UT",
+        "fips": 49007
+    },
+    {
+        "name": "Carteret County, NC",
+        "fips": 37031
+    },
+    {
+        "name": "Catawba County, NC",
+        "fips": 37035
+    },
+    {
+        "name": "Chambers County, AL",
+        "fips": 1017
+    },
+    {
+        "name": "Chatham County, NC",
+        "fips": 37037
+    },
+    {
+        "name": "Cherokee County, GA",
+        "fips": 13057
+    },
+    {
+        "name": "Chesterfield County, VA",
+        "fips": 51041
+    },
+    {
+        "name": "Cibola County, NM",
+        "fips": 35006
+    },
+    {
+        "name": "Clark County, NV",
+        "fips": 32003
+    },
+    {
+        "name": "Clay County, IN",
+        "fips": 18021
+    },
+    {
+        "name": "Clear Creek County, CO",
+        "fips": 8019
+    },
+    {
+        "name": "Clinton County, IL",
+        "fips": 17027
+    },
+    {
+        "name": "Cochise County, AZ",
+        "fips": 4003
+    },
+    {
+        "name": "Coles County, IL",
+        "fips": 17029
+    },
+    {
+        "name": "Columbia County, OR",
+        "fips": 41009
+    },
+    {
+        "name": "Cook County, IL",
+        "fips": 17031
+    },
+    {
+        "name": "Coshocton County, OH",
+        "fips": 39031
+    },
+    {
+        "name": "Crawford County, GA",
+        "fips": 13079
+    },
+    {
+        "name": "Culpeper County, VA",
+        "fips": 51047
+    },
+    {
+        "name": "Curry County, NM",
+        "fips": 35009
+    },
+    {
+        "name": "Dallas County, TX",
+        "fips": 48113
+    },
+    {
+        "name": "Davis County, UT",
+        "fips": 49011
+    },
+    {
+        "name": "DeKalb County, MO",
+        "fips": 29063
+    },
+    {
+        "name": "Delaware County, IN",
+        "fips": 18035
+    },
+    {
+        "name": "Doddridge County, WV",
+        "fips": 54017
+    },
+    {
+        "name": "Douglas County, CO",
+        "fips": 8035
+    },
+    {
+        "name": "Do�a Ana County, NM",
+        "fips": 35013
+    },
+    {
+        "name": "Dutchess County, NY",
+        "fips": 36027
+    },
+    {
+        "name": "Echols County, GA",
+        "fips": 13101
+    },
+    {
+        "name": "Effingham County, GA",
+        "fips": 13103
+    },
+    {
+        "name": "Ellis County, KS",
+        "fips": 20051
+    },
+    {
+        "name": "Essex County, NJ",
+        "fips": 34013
+    },
+    {
+        "name": "Fannin County, TX",
+        "fips": 48147
+    },
+    {
+        "name": "Flathead County, MT",
+        "fips": 30029
+    },
+    {
+        "name": "Forsyth County, NC",
+        "fips": 37067
+    },
+    {
+        "name": "Franklin County, PA",
+        "fips": 42055
+    },
+    {
+        "name": "Fremont County, WY",
+        "fips": 56013
+    },
+    {
+        "name": "Gadsden County, FL",
+        "fips": 12039
+    },
+    {
+        "name": "Gates County, NC",
+        "fips": 37073
+    },
+    {
+        "name": "Gila County, AZ",
+        "fips": 4007
+    },
+    {
+        "name": "Glynn County, GA",
+        "fips": 13127
+    },
+    {
+        "name": "Grainger County, TN",
+        "fips": 47057
+    },
+    {
+        "name": "Gratiot County, MI",
+        "fips": 26057
+    },
+    {
+        "name": "Greene County, MO",
+        "fips": 29077
+    },
+    {
+        "name": "Grundy County, IA",
+        "fips": 19075
+    },
+    {
+        "name": "Hall County, GA",
+        "fips": 13139
+    },
+    {
+        "name": "Hampshire County, MA",
+        "fips": 25015
+    },
+    {
+        "name": "Hancock County, MS",
+        "fips": 28045
+    },
+    {
+        "name": "Harris County, GA",
+        "fips": 13145
+    },
+    {
+        "name": "Harrison County, WV",
+        "fips": 54033
+    },
+    {
+        "name": "Hempstead County, AR",
+        "fips": 5057
+    },
+    {
+        "name": "Henry County, VA",
+        "fips": 51089
+    },
+    {
+        "name": "Hopewell city, VA",
+        "fips": 51670
+    },
+    {
+        "name": "Howell County, MO",
+        "fips": 29091
+    },
+    {
+        "name": "Hunterdon County, NJ",
+        "fips": 34019
+    },
+    {
+        "name": "Indian River County, FL",
+        "fips": 12061
+    },
+    {
+        "name": "Isabella County, MI",
+        "fips": 26073
+    },
+    {
+        "name": "Adams County, CO",
+        "fips": 8001
+    },
+    {
+        "name": "Alachua County, FL",
+        "fips": 12001
+    },
+    {
+        "name": "Allegany County, MD",
+        "fips": 24001
+    },
+    {
+        "name": "Anchorage Municipality, AK",
+        "fips": 2020
+    },
+    {
+        "name": "Appomattox County, VA",
+        "fips": 51011
+    },
+    {
+        "name": "Asotin County, WA",
+        "fips": 53003
+    },
+    {
+        "name": "Auglaize County, OH",
+        "fips": 39011
+    },
+    {
+        "name": "Bartholomew County, IN",
+        "fips": 18005
+    },
+    {
+        "name": "Baxter County, AR",
+        "fips": 5005
+    },
+    {
+        "name": "Bedford County, VA",
+        "fips": 51019
+    },
+    {
+        "name": "Benton County, IA",
+        "fips": 19011
+    },
+    {
+        "name": "Bibb County, AL",
+        "fips": 1007
+    },
+    {
+        "name": "Boise County, ID",
+        "fips": 16015
+    },
+    {
+        "name": "Boone County, KY",
+        "fips": 21015
+    },
+    {
+        "name": "Box Elder County, UT",
+        "fips": 49003
+    },
+    {
+        "name": "Bristol County, MA",
+        "fips": 25005
+    },
+    {
+        "name": "Brown County, OH",
+        "fips": 39015
+    },
+    {
+        "name": "Bucks County, PA",
+        "fips": 42017
+    },
+    {
+        "name": "Buncombe County, NC",
+        "fips": 37021
+    },
+    {
+        "name": "Butler County, KY",
+        "fips": 21031
+    },
+    {
+        "name": "Caddo Parish, LA",
+        "fips": 22017
+    },
+    {
+        "name": "Caldwell County, TX",
+        "fips": 48055
+    },
+    {
+        "name": "Calloway County, KY",
+        "fips": 21035
+    },
+    {
+        "name": "Cameron County, TX",
+        "fips": 48061
+    },
+    {
+        "name": "Canadian County, OK",
+        "fips": 40017
+    },
+    {
+        "name": "Carlton County, MN",
+        "fips": 27017
+    },
+    {
+        "name": "Carter County, KY",
+        "fips": 21043
+    },
+    {
+        "name": "Cass County, MN",
+        "fips": 27021
+    },
+    {
+        "name": "Cecil County, MD",
+        "fips": 24015
+    },
+    {
+        "name": "Charleston County, SC",
+        "fips": 45019
+    },
+    {
+        "name": "Chesapeake city, VA",
+        "fips": 51550
+    },
+    {
+        "name": "Christian County, KY",
+        "fips": 21047
+    },
+    {
+        "name": "Clarke County, MS",
+        "fips": 28023
+    },
+    {
+        "name": "Clay County, SD",
+        "fips": 46027
+    },
+    {
+        "name": "Clinton County, MI",
+        "fips": 26037
+    },
+    {
+        "name": "Coffee County, GA",
+        "fips": 13069
+    },
+    {
+        "name": "Columbia County, AR",
+        "fips": 5027
+    },
+    {
+        "name": "Comal County, TX",
+        "fips": 48091
+    },
+    {
+        "name": "Copiah County, MS",
+        "fips": 28029
+    },
+    {
+        "name": "Craven County, NC",
+        "fips": 37049
+    },
+    {
+        "name": "Cullman County, AL",
+        "fips": 1043
+    },
+    {
+        "name": "Currituck County, NC",
+        "fips": 37053
+    },
+    {
+        "name": "Dare County, NC",
+        "fips": 37055
+    },
+    {
+        "name": "DeKalb County, GA",
+        "fips": 13089
+    },
+    {
+        "name": "Decatur County, IN",
+        "fips": 18031
+    },
+    {
+        "name": "Dickinson County, IA",
+        "fips": 19059
+    },
+    {
+        "name": "Douglas County, MN",
+        "fips": 27041
+    },
+    {
+        "name": "Duval County, TX",
+        "fips": 48131
+    },
+    {
+        "name": "El Paso County, CO",
+        "fips": 8041
+    },
+    {
+        "name": "Escambia County, FL",
+        "fips": 12033
+    },
+    {
+        "name": "Fairfield County, CT",
+        "fips": 9001
+    },
+    {
+        "name": "Fayette County, WV",
+        "fips": 54019
+    },
+    {
+        "name": "Floyd County, GA",
+        "fips": 13115
+    },
+    {
+        "name": "Franklin County, ID",
+        "fips": 16041
+    },
+    {
+        "name": "Frederick County, MD",
+        "fips": 24021
+    },
+    {
+        "name": "Fulton County, OH",
+        "fips": 39051
+    },
+    {
+        "name": "Gem County, ID",
+        "fips": 16045
+    },
+    {
+        "name": "Goodhue County, MN",
+        "fips": 27049
+    },
+    {
+        "name": "Grand Traverse County, MI",
+        "fips": 26055
+    },
+    {
+        "name": "Gray County, TX",
+        "fips": 48179
+    },
+    {
+        "name": "Greene County, OH",
+        "fips": 39057
+    },
+    {
+        "name": "Grundy County, IL",
+        "fips": 17063
+    },
+    {
+        "name": "Hamblen County, TN",
+        "fips": 47063
+    },
+    {
+        "name": "Hampton city, VA",
+        "fips": 51650
+    },
+    {
+        "name": "Hancock County, WV",
+        "fips": 54029
+    },
+    {
+        "name": "Harrison County, IA",
+        "fips": 19085
+    },
+    {
+        "name": "Harvey County, KS",
+        "fips": 20079
+    },
+    {
+        "name": "Hendry County, FL",
+        "fips": 12051
+    },
+    {
+        "name": "Hillsborough County, NH",
+        "fips": 33011
+    },
+    {
+        "name": "Hot Spring County, AR",
+        "fips": 5059
+    },
+    {
+        "name": "Hudspeth County, TX",
+        "fips": 48229
+    },
+    {
+        "name": "Iberville Parish, LA",
+        "fips": 22047
+    },
+    {
+        "name": "Isanti County, MN",
+        "fips": 27059
+    },
+    {
+        "name": "Jackson County, KS",
+        "fips": 20085
+    },
+    {
+        "name": "Jasper County, IN",
+        "fips": 18073
+    },
+    {
+        "name": "Jefferson County, OH",
+        "fips": 39081
+    },
+    {
+        "name": "Johnson County, IL",
+        "fips": 17087
+    },
+    {
+        "name": "Jones County, MS",
+        "fips": 28067
+    },
+    {
+        "name": "Kandiyohi County, MN",
+        "fips": 27067
+    },
+    {
+        "name": "Kent County, DE",
+        "fips": 10001
+    },
+    {
+        "name": "Keweenaw County, MI",
+        "fips": 26083
+    },
+    {
+        "name": "Knox County, KY",
+        "fips": 21121
+    },
+    {
+        "name": "Adams County, IL",
+        "fips": 17001
+    },
+    {
+        "name": "Alameda County, CA",
+        "fips": 6001
+    },
+    {
+        "name": "Allegan County, MI",
+        "fips": 26005
+    },
+    {
+        "name": "Amelia County, VA",
+        "fips": 51007
+    },
+    {
+        "name": "Andrews County, TX",
+        "fips": 48003
+    },
+    {
+        "name": "Anson County, NC",
+        "fips": 37007
+    },
+    {
+        "name": "Ashtabula County, OH",
+        "fips": 39007
+    },
+    {
+        "name": "Ballard County, KY",
+        "fips": 21007
+    },
+    {
+        "name": "Barrow County, GA",
+        "fips": 13013
+    },
+    {
+        "name": "Beaufort County, NC",
+        "fips": 37013
+    },
+    {
+        "name": "Bennington County, VT",
+        "fips": 50003
+    },
+    {
+        "name": "Berkeley County, WV",
+        "fips": 54003
+    },
+    {
+        "name": "Blair County, PA",
+        "fips": 42013
+    },
+    {
+        "name": "Boone County, MO",
+        "fips": 29019
+    },
+    {
+        "name": "Boyle County, KY",
+        "fips": 21021
+    },
+    {
+        "name": "Bristol city, VA",
+        "fips": 51520
+    },
+    {
+        "name": "Broward County, FL",
+        "fips": 12011
+    },
+    {
+        "name": "Burleigh County, ND",
+        "fips": 38015
+    },
+    {
+        "name": "Cache County, UT",
+        "fips": 49005
+    },
+    {
+        "name": "Callaway County, MO",
+        "fips": 29027
+    },
+    {
+        "name": "Campbell County, WY",
+        "fips": 56005
+    },
+    {
+        "name": "Carroll County, OH",
+        "fips": 39019
+    },
+    {
+        "name": "Cassia County, ID",
+        "fips": 16031
+    },
+    {
+        "name": "Chambers County, TX",
+        "fips": 48071
+    },
+    {
+        "name": "Chautauqua County, NY",
+        "fips": 36013
+    },
+    {
+        "name": "Chester County, SC",
+        "fips": 45023
+    },
+    {
+        "name": "Clarendon County, SC",
+        "fips": 45027
+    },
+    {
+        "name": "Clay County, KY",
+        "fips": 21051
+    },
+    {
+        "name": "Clinton County, MO",
+        "fips": 29049
+    },
+    {
+        "name": "Collier County, FL",
+        "fips": 12021
+    },
+    {
+        "name": "Cooper County, MO",
+        "fips": 29053
+    },
+    {
+        "name": "Coweta County, GA",
+        "fips": 13077
+    },
+    {
+        "name": "Craighead County, AR",
+        "fips": 5031
+    },
+    {
+        "name": "Crawford County, PA",
+        "fips": 42039
+    },
+    {
+        "name": "Crockett County, TN",
+        "fips": 47033
+    },
+    {
+        "name": "Crosby County, TX",
+        "fips": 48107
+    },
+    {
+        "name": "Cumberland County, PA",
+        "fips": 42041
+    },
+    {
+        "name": "Dade County, GA",
+        "fips": 13083
+    },
+    {
+        "name": "Dallas County, IA",
+        "fips": 19049
+    },
+    {
+        "name": "Danville city, VA",
+        "fips": 51590
+    },
+    {
+        "name": "Darlington County, SC",
+        "fips": 45031
+    },
+    {
+        "name": "Daviess County, IN",
+        "fips": 18027
+    },
+    {
+        "name": "Davison County, SD",
+        "fips": 46035
+    },
+    {
+        "name": "Dawson County, TX",
+        "fips": 48115
+    },
+    {
+        "name": "Deaf Smith County, TX",
+        "fips": 48117
+    },
+    {
+        "name": "Delaware County, OH",
+        "fips": 39041
+    },
+    {
+        "name": "Dickson County, TN",
+        "fips": 47043
+    },
+    {
+        "name": "Dodge County, WI",
+        "fips": 55027
+    },
+    {
+        "name": "Douglas County, NE",
+        "fips": 31055
+    },
+    {
+        "name": "DuPage County, IL",
+        "fips": 17043
+    },
+    {
+        "name": "Dyer County, TN",
+        "fips": 47045
+    },
+    {
+        "name": "Ector County, TX",
+        "fips": 48135
+    },
+    {
+        "name": "El Paso County, TX",
+        "fips": 48141
+    },
+    {
+        "name": "Ellis County, OK",
+        "fips": 40045
+    },
+    {
+        "name": "Erie County, PA",
+        "fips": 42049
+    },
+    {
+        "name": "Falls Church city, VA",
+        "fips": 51610
+    },
+    {
+        "name": "Fayette County, PA",
+        "fips": 42051
+    },
+    {
+        "name": "Floyd County, IN",
+        "fips": 18043
+    },
+    {
+        "name": "Fort Bend County, TX",
+        "fips": 48157
+    },
+    {
+        "name": "Franklin County, AR",
+        "fips": 5047
+    },
+    {
+        "name": "Franklin County, IN",
+        "fips": 18047
+    },
+    {
+        "name": "Franklin County, TN",
+        "fips": 47051
+    },
+    {
+        "name": "Fremont County, CO",
+        "fips": 8043
+    },
+    {
+        "name": "Gage County, NE",
+        "fips": 31067
+    },
+    {
+        "name": "Garfield County, CO",
+        "fips": 8045
+    },
+    {
+        "name": "Geary County, KS",
+        "fips": 20061
+    },
+    {
+        "name": "Genesee County, NY",
+        "fips": 36037
+    },
+    {
+        "name": "Goochland County, VA",
+        "fips": 51075
+    },
+    {
+        "name": "Grand Isle County, VT",
+        "fips": 50013
+    },
+    {
+        "name": "Grays Harbor County, WA",
+        "fips": 53027
+    },
+    {
+        "name": "Greene County, TN",
+        "fips": 47059
+    },
+    {
+        "name": "Guadalupe County, TX",
+        "fips": 48187
+    },
+    {
+        "name": "Hall County, NE",
+        "fips": 31079
+    },
+    {
+        "name": "Hampshire County, WV",
+        "fips": 54027
+    },
+    {
+        "name": "Hancock County, OH",
+        "fips": 39063
+    },
+    {
+        "name": "Harris County, TX",
+        "fips": 48201
+    },
+    {
+        "name": "Harrisonburg city, VA",
+        "fips": 51660
+    },
+    {
+        "name": "Henderson County, TX",
+        "fips": 48213
+    },
+    {
+        "name": "Henry County, TN",
+        "fips": 47079
+    },
+    {
+        "name": "Hood River County, OR",
+        "fips": 41027
+    },
+    {
+        "name": "Howard County, IN",
+        "fips": 18067
+    },
+    {
+        "name": "Hutchinson County, TX",
+        "fips": 48233
+    },
+    {
+        "name": "Adair County, MO",
+        "fips": 29001
+    },
+    {
+        "name": "Aiken County, SC",
+        "fips": 45003
+    },
+    {
+        "name": "Anderson County, TX",
+        "fips": 48001
+    },
+    {
+        "name": "Armstrong County, TX",
+        "fips": 48011
+    },
+    {
+        "name": "Atlantic County, NJ",
+        "fips": 34001
+    },
+    {
+        "name": "Austin County, TX",
+        "fips": 48015
+    },
+    {
+        "name": "Banner County, NE",
+        "fips": 31007
+    },
+    {
+        "name": "Bartow County, GA",
+        "fips": 13015
+    },
+    {
+        "name": "Beauregard Parish, LA",
+        "fips": 22011
+    },
+    {
+        "name": "Belmont County, OH",
+        "fips": 39013
+    },
+    {
+        "name": "Benton County, IN",
+        "fips": 18007
+    },
+    {
+        "name": "Billings County, ND",
+        "fips": 38007
+    },
+    {
+        "name": "Blount County, AL",
+        "fips": 1009
+    },
+    {
+        "name": "Bossier Parish, LA",
+        "fips": 22015
+    },
+    {
+        "name": "Brazoria County, TX",
+        "fips": 48039
+    },
+    {
+        "name": "Brookings County, SD",
+        "fips": 46011
+    },
+    {
+        "name": "Brown County, IN",
+        "fips": 18013
+    },
+    {
+        "name": "Buchanan County, MO",
+        "fips": 29021
+    },
+    {
+        "name": "Burleson County, TX",
+        "fips": 48051
+    },
+    {
+        "name": "Butte County, ID",
+        "fips": 16023
+    },
+    {
+        "name": "Calhoun County, AL",
+        "fips": 1015
+    },
+    {
+        "name": "Calumet County, WI",
+        "fips": 55015
+    },
+    {
+        "name": "Cameron Parish, LA",
+        "fips": 22023
+    },
+    {
+        "name": "Cannon County, TN",
+        "fips": 47015
+    },
+    {
+        "name": "Carroll County, GA",
+        "fips": 13045
+    },
+    {
+        "name": "Carter County, OK",
+        "fips": 40019
+    },
+    {
+        "name": "Cass County, MI",
+        "fips": 26027
+    },
+    {
+        "name": "Cayuga County, NY",
+        "fips": 36011
+    },
+    {
+        "name": "Charlotte County, FL",
+        "fips": 12015
+    },
+    {
+        "name": "Cheatham County, TN",
+        "fips": 47021
+    },
+    {
+        "name": "Cheshire County, NH",
+        "fips": 33005
+    },
+    {
+        "name": "Chittenden County, VT",
+        "fips": 50007
+    },
+    {
+        "name": "Clark County, IN",
+        "fips": 18019
+    },
+    {
+        "name": "Clark County, WA",
+        "fips": 53011
+    },
+    {
+        "name": "Clay County, MO",
+        "fips": 29047
+    },
+    {
+        "name": "Clermont County, OH",
+        "fips": 39025
+    },
+    {
+        "name": "Clinton County, OH",
+        "fips": 39027
+    },
+    {
+        "name": "Codington County, SD",
+        "fips": 46029
+    },
+    {
+        "name": "Colonial Heights city, VA",
+        "fips": 51570
+    },
+    {
+        "name": "Columbia County, WI",
+        "fips": 55021
+    },
+    {
+        "name": "Coos County, OR",
+        "fips": 41011
+    },
+    {
+        "name": "Cowley County, KS",
+        "fips": 20035
+    },
+    {
+        "name": "Crittenden County, AR",
+        "fips": 5035
+    },
+    {
+        "name": "Cumberland County, NJ",
+        "fips": 34011
+    },
+    {
+        "name": "Dallas County, AL",
+        "fips": 1047
+    },
+    {
+        "name": "Davie County, NC",
+        "fips": 37059
+    },
+    {
+        "name": "DeSoto County, FL",
+        "fips": 12027
+    },
+    {
+        "name": "Denton County, TX",
+        "fips": 48121
+    },
+    {
+        "name": "Dixon County, NE",
+        "fips": 31051
+    },
+    {
+        "name": "Douglas County, GA",
+        "fips": 13097
+    },
+    {
+        "name": "Dukes County, MA",
+        "fips": 25007
+    },
+    {
+        "name": "East Feliciana Parish, LA",
+        "fips": 22037
+    },
+    {
+        "name": "Effingham County, IL",
+        "fips": 17049
+    },
+    {
+        "name": "Ellis County, TX",
+        "fips": 48139
+    },
+    {
+        "name": "Etowah County, AL",
+        "fips": 1055
+    },
+    {
+        "name": "Fayette County, GA",
+        "fips": 13113
+    },
+    {
+        "name": "Florence County, SC",
+        "fips": 45041
+    },
+    {
+        "name": "Franklin County, NC",
+        "fips": 37069
+    },
+    {
+        "name": "Frederick County, VA",
+        "fips": 51069
+    },
+    {
+        "name": "Frio County, TX",
+        "fips": 48163
+    },
+    {
+        "name": "Gallia County, OH",
+        "fips": 39053
+    },
+    {
+        "name": "Genesee County, MI",
+        "fips": 26049
+    },
+    {
+        "name": "Gordon County, GA",
+        "fips": 13129
+    },
+    {
+        "name": "Grant County, WA",
+        "fips": 53025
+    },
+    {
+        "name": "Greene County, VA",
+        "fips": 51079
+    },
+    {
+        "name": "Guernsey County, OH",
+        "fips": 39059
+    },
+    {
+        "name": "Hamilton County, OH",
+        "fips": 39061
+    },
+    {
+        "name": "Hanson County, SD",
+        "fips": 46061
+    },
+    {
+        "name": "Harrison County, MS",
+        "fips": 28047
+    },
+    {
+        "name": "Henderson County, NC",
+        "fips": 37089
+    },
+    {
+        "name": "Henry County, IN",
+        "fips": 18065
+    },
+    {
+        "name": "Hinds County, MS",
+        "fips": 28049
+    },
+    {
+        "name": "Horry County, SC",
+        "fips": 45051
+    },
+    {
+        "name": "Howard County, MO",
+        "fips": 29089
+    },
+    {
+        "name": "Huntington County, IN",
+        "fips": 18069
+    },
+    {
+        "name": "Ionia County, MI",
+        "fips": 26067
+    },
+    {
+        "name": "Itasca County, MN",
+        "fips": 27061
+    },
+    {
+        "name": "Jackson County, OK",
+        "fips": 40065
+    },
+    {
+        "name": "Jefferson County, CO",
+        "fips": 8059
+    },
+    {
+        "name": "Jefferson County, MT",
+        "fips": 30043
+    },
+    {
+        "name": "Jennings County, IN",
+        "fips": 18079
+    },
+    {
+        "name": "Adams County, IN",
+        "fips": 18001
+    },
+    {
+        "name": "Albany County, WY",
+        "fips": 56001
+    },
+    {
+        "name": "Allen County, IN",
+        "fips": 18003
+    },
+    {
+        "name": "Amherst County, VA",
+        "fips": 51009
+    },
+    {
+        "name": "Anne Arundel County, MD",
+        "fips": 24003
+    },
+    {
+        "name": "Archer County, TX",
+        "fips": 48009
+    },
+    {
+        "name": "Athens County, OH",
+        "fips": 39009
+    },
+    {
+        "name": "Baltimore city, MD",
+        "fips": 24510
+    },
+    {
+        "name": "Bay County, MI",
+        "fips": 26017
+    },
+    {
+        "name": "Bee County, TX",
+        "fips": 48025
+    },
+    {
+        "name": "Benton County, WA",
+        "fips": 53005
+    },
+    {
+        "name": "Bernalillo County, NM",
+        "fips": 35001
+    },
+    {
+        "name": "Blue Earth County, MN",
+        "fips": 27013
+    },
+    {
+        "name": "Boone County, WV",
+        "fips": 54005
+    },
+    {
+        "name": "Boyd County, KY",
+        "fips": 21019
+    },
+    {
+        "name": "Bristol County, RI",
+        "fips": 44001
+    },
+    {
+        "name": "Brown County, SD",
+        "fips": 46013
+    },
+    {
+        "name": "Burke County, GA",
+        "fips": 13033
+    },
+    {
+        "name": "Butts County, GA",
+        "fips": 13035
+    },
+    {
+        "name": "Calhoun County, AR",
+        "fips": 5013
+    },
+    {
+        "name": "Calvert County, MD",
+        "fips": 24009
+    },
+    {
+        "name": "Campbell County, KY",
+        "fips": 21037
+    },
+    {
+        "name": "Carbon County, MT",
+        "fips": 30009
+    },
+    {
+        "name": "Carroll County, MD",
+        "fips": 24013
+    },
+    {
+        "name": "Cascade County, MT",
+        "fips": 30013
+    },
+    {
+        "name": "Cattaraugus County, NY",
+        "fips": 36009
+    },
+    {
+        "name": "Charles County, MD",
+        "fips": 24017
+    },
+    {
+        "name": "Charlottesville city, VA",
+        "fips": 51540
+    },
+    {
+        "name": "Chelan County, WA",
+        "fips": 53007
+    },
+    {
+        "name": "Chisago County, MN",
+        "fips": 27025
+    },
+    {
+        "name": "Christian County, MO",
+        "fips": 29043
+    },
+    {
+        "name": "Clark County, KY",
+        "fips": 21049
+    },
+    {
+        "name": "Clay County, FL",
+        "fips": 12019
+    },
+    {
+        "name": "Clay County, WV",
+        "fips": 54015
+    },
+    {
+        "name": "Cleveland County, OK",
+        "fips": 40027
+    },
+    {
+        "name": "Coahoma County, MS",
+        "fips": 28027
+    },
+    {
+        "name": "Colbert County, AL",
+        "fips": 1033
+    },
+    {
+        "name": "Columbia County, GA",
+        "fips": 13073
+    },
+    {
+        "name": "Concordia Parish, LA",
+        "fips": 22029
+    },
+    {
+        "name": "Cortland County, NY",
+        "fips": 36023
+    },
+    {
+        "name": "Crawford County, AR",
+        "fips": 5033
+    },
+    {
+        "name": "Crook County, WY",
+        "fips": 56011
+    },
+    {
+        "name": "Curry County, OR",
+        "fips": 41015
+    },
+    {
+        "name": "Dallas County, MO",
+        "fips": 29059
+    },
+    {
+        "name": "Daviess County, KY",
+        "fips": 21059
+    },
+    {
+        "name": "DeSoto County, MS",
+        "fips": 28033
+    },
+    {
+        "name": "Dickinson County, MI",
+        "fips": 26043
+    },
+    {
+        "name": "Douglas County, KS",
+        "fips": 20045
+    },
+    {
+        "name": "Dunn County, WI",
+        "fips": 55033
+    },
+    {
+        "name": "Edmonson County, KY",
+        "fips": 21061
+    },
+    {
+        "name": "Elmore County, ID",
+        "fips": 16039
+    },
+    {
+        "name": "Escambia County, AL",
+        "fips": 1053
+    },
+    {
+        "name": "Fairfax city, VA",
+        "fips": 51600
+    },
+    {
+        "name": "Faulkner County, AR",
+        "fips": 5045
+    },
+    {
+        "name": "Fillmore County, MN",
+        "fips": 27045
+    },
+    {
+        "name": "Florence County, WI",
+        "fips": 55037
+    },
+    {
+        "name": "Franklin County, MA",
+        "fips": 25011
+    },
+    {
+        "name": "Franklin city, VA",
+        "fips": 51620
+    },
+    {
+        "name": "Fulton County, IL",
+        "fips": 17057
+    },
+    {
+        "name": "Garfield County, OK",
+        "fips": 40047
+    },
+    {
+        "name": "Gilchrist County, FL",
+        "fips": 12041
+    },
+    {
+        "name": "Goliad County, TX",
+        "fips": 48175
+    },
+    {
+        "name": "Grand Forks County, ND",
+        "fips": 38035
+    },
+    {
+        "name": "Grayson County, TX",
+        "fips": 48181
+    },
+    {
+        "name": "Grenada County, MS",
+        "fips": 28043
+    },
+    {
+        "name": "Hamilton County, IN",
+        "fips": 18057
+    },
+    {
+        "name": "Haralson County, GA",
+        "fips": 13143
+    },
+    {
+        "name": "Hardin County, TX",
+        "fips": 48199
+    },
+    {
+        "name": "Hays County, TX",
+        "fips": 48209
+    },
+    {
+        "name": "Henderson County, IL",
+        "fips": 17071
+    },
+    {
+        "name": "Henry County, GA",
+        "fips": 13151
+    },
+    {
+        "name": "Herkimer County, NY",
+        "fips": 36043
+    },
+    {
+        "name": "Hocking County, OH",
+        "fips": 39073
+    },
+    {
+        "name": "Hopkins County, KY",
+        "fips": 21107
+    },
+    {
+        "name": "Howard County, NE",
+        "fips": 31093
+    },
+    {
+        "name": "Huron County, OH",
+        "fips": 39077
+    },
+    {
+        "name": "Iowa County, WI",
+        "fips": 55049
+    },
+    {
+        "name": "Jackson County, AL",
+        "fips": 1071
+    },
+    {
+        "name": "Jackson County, WV",
+        "fips": 54035
+    },
+    {
+        "name": "Jasper County, SC",
+        "fips": 45053
+    },
+    {
+        "name": "Jefferson County, KS",
+        "fips": 20087
+    },
+    {
+        "name": "Jefferson County, WI",
+        "fips": 55055
+    },
+    {
+        "name": "Adams County, MS",
+        "fips": 28001
+    },
+    {
+        "name": "Albemarle County, VA",
+        "fips": 51003
+    },
+    {
+        "name": "Allen County, KY",
+        "fips": 21003
+    },
+    {
+        "name": "Androscoggin County, ME",
+        "fips": 23001
+    },
+    {
+        "name": "Arlington County, VA",
+        "fips": 51013
+    },
+    {
+        "name": "Atascosa County, TX",
+        "fips": 48013
+    },
+    {
+        "name": "Baldwin County, AL",
+        "fips": 1003
+    },
+    {
+        "name": "Barnstable County, MA",
+        "fips": 25001
+    },
+    {
+        "name": "Bay County, FL",
+        "fips": 12005
+    },
+    {
+        "name": "Belknap County, NH",
+        "fips": 33001
+    },
+    {
+        "name": "Benzie County, MI",
+        "fips": 26019
+    },
+    {
+        "name": "Berrien County, MI",
+        "fips": 26021
+    },
+    {
+        "name": "Blount County, TN",
+        "fips": 47009
+    },
+    {
+        "name": "Boone County, IN",
+        "fips": 18011
+    },
+    {
+        "name": "Bowie County, TX",
+        "fips": 48037
+    },
+    {
+        "name": "Brooke County, WV",
+        "fips": 54009
+    },
+    {
+        "name": "Brunswick County, NC",
+        "fips": 37019
+    },
+    {
+        "name": "Bulloch County, GA",
+        "fips": 13031
+    },
+    {
+        "name": "Cabell County, WV",
+        "fips": 54011
+    },
+    {
+        "name": "Calhoun County, MI",
+        "fips": 26025
+    },
+    {
+        "name": "Cambria County, PA",
+        "fips": 42021
+    },
+    {
+        "name": "Campbell County, TN",
+        "fips": 47013
+    },
+    {
+        "name": "Carbon County, PA",
+        "fips": 42025
+    },
+    {
+        "name": "Carver County, MN",
+        "fips": 27019
+    },
+    {
+        "name": "Catoosa County, GA",
+        "fips": 13047
+    },
+    {
+        "name": "Cerro Gordo County, IA",
+        "fips": 19033
+    },
+    {
+        "name": "Chatham County, GA",
+        "fips": 13051
+    },
+    {
+        "name": "Cherokee County, TX",
+        "fips": 48073
+    },
+    {
+        "name": "Chippewa County, WI",
+        "fips": 55017
+    },
+    {
+        "name": "Clackamas County, OR",
+        "fips": 41005
+    },
+    {
+        "name": "Clarke County, VA",
+        "fips": 51043
+    },
+    {
+        "name": "Clay County, TX",
+        "fips": 48077
+    },
+    {
+        "name": "Clinton County, IN",
+        "fips": 18023
+    },
+    {
+        "name": "Cocke County, TN",
+        "fips": 47029
+    },
+    {
+        "name": "Columbia County, FL",
+        "fips": 12023
+    },
+    {
+        "name": "Cooke County, TX",
+        "fips": 48097
+    },
+    {
+        "name": "Cotton County, OK",
+        "fips": 40033
+    },
+    {
+        "name": "Crisp County, GA",
+        "fips": 13081
+    },
+    {
+        "name": "Cumberland County, NC",
+        "fips": 37051
+    },
+    {
+        "name": "Dakota County, NE",
+        "fips": 31043
+    },
+    {
+        "name": "Davidson County, TN",
+        "fips": 47037
+    },
+    {
+        "name": "Dawson County, GA",
+        "fips": 13085
+    },
+    {
+        "name": "DeKalb County, IN",
+        "fips": 18033
+    },
+    {
+        "name": "Del Norte County, CA",
+        "fips": 6015
+    },
+    {
+        "name": "Des Moines County, IA",
+        "fips": 19057
+    },
+    {
+        "name": "Dodge County, MN",
+        "fips": 27039
+    },
+    {
+        "name": "Dougherty County, GA",
+        "fips": 13095
+    },
+    {
+        "name": "Douglas County, WI",
+        "fips": 55031
+    },
+    {
+        "name": "Durham County, NC",
+        "fips": 37063
+    },
+    {
+        "name": "Eau Claire County, WI",
+        "fips": 55035
+    },
+    {
+        "name": "Edmunds County, SD",
+        "fips": 46045
+    },
+    {
+        "name": "Elko County, NV",
+        "fips": 32007
+    },
+    {
+        "name": "Essex County, MA",
+        "fips": 25009
+    },
+    {
+        "name": "Fairfield County, SC",
+        "fips": 45039
+    },
+    {
+        "name": "Fayette County, OH",
+        "fips": 39047
+    },
+    {
+        "name": "Fluvanna County, VA",
+        "fips": 51065
+    },
+    {
+        "name": "Franklin County, NY",
+        "fips": 36033
+    },
+    {
+        "name": "Fredericksburg city, VA",
+        "fips": 51630
+    },
+    {
+        "name": "Fulton County, GA",
+        "fips": 13121
+    },
+    {
+        "name": "Galveston County, TX",
+        "fips": 48167
+    },
+    {
+        "name": "Geauga County, OH",
+        "fips": 39055
+    },
+    {
+        "name": "Gillespie County, TX",
+        "fips": 48171
+    },
+    {
+        "name": "Grafton County, NH",
+        "fips": 33009
+    },
+    {
+        "name": "Grant County, NM",
+        "fips": 35017
+    },
+    {
+        "name": "Green County, KY",
+        "fips": 21087
+    },
+    {
+        "name": "Gregg County, TX",
+        "fips": 48183
+    },
+    {
+        "name": "Habersham County, GA",
+        "fips": 13137
+    },
+    {
+        "name": "Hancock County, GA",
+        "fips": 13141
+    },
+    {
+        "name": "Hardee County, FL",
+        "fips": 12049
+    },
+    {
+        "name": "Hawaii County, HI",
+        "fips": 15001
+    },
+    {
+        "name": "Hendricks County, IN",
+        "fips": 18063
+    },
+    {
+        "name": "Hillsborough County, FL",
+        "fips": 12057
+    },
+    {
+        "name": "Hood County, TX",
+        "fips": 48221
+    },
+    {
+        "name": "Houston County, GA",
+        "fips": 13153
+    },
+    {
+        "name": "Hughes County, SD",
+        "fips": 46065
+    },
+    {
+        "name": "Iberia Parish, LA",
+        "fips": 22045
+    },
+    {
+        "name": "Ingham County, MI",
+        "fips": 26065
+    },
+    {
+        "name": "Isle of Wight County, VA",
+        "fips": 51093
+    },
+    {
+        "name": "Jackson County, MO",
+        "fips": 29095
+    },
+    {
+        "name": "Jasper County, GA",
+        "fips": 13159
+    },
+    {
+        "name": "Jasper County, MS",
+        "fips": 28061
+    },
+    {
+        "name": "Adams County, NE",
+        "fips": 31001
+    },
+    {
+        "name": "Albany County, NY",
+        "fips": 36001
+    },
+    {
+        "name": "Allegheny County, PA",
+        "fips": 42003
+    },
+    {
+        "name": "Anderson County, SC",
+        "fips": 45007
+    },
+    {
+        "name": "Aransas County, TX",
+        "fips": 48007
+    },
+    {
+        "name": "Assumption Parish, LA",
+        "fips": 22007
+    },
+    {
+        "name": "Baker County, FL",
+        "fips": 12003
+    },
+    {
+        "name": "Barbour County, AL",
+        "fips": 1005
+    },
+    {
+        "name": "Bates County, MO",
+        "fips": 29013
+    },
+    {
+        "name": "Beckham County, OK",
+        "fips": 40009
+    },
+    {
+        "name": "Beltrami County, MN",
+        "fips": 27007
+    },
+    {
+        "name": "Berkeley County, SC",
+        "fips": 45015
+    },
+    {
+        "name": "Bibb County, GA",
+        "fips": 13021
+    },
+    {
+        "name": "Bland County, VA",
+        "fips": 51021
+    },
+    {
+        "name": "Bonner County, ID",
+        "fips": 16017
+    },
+    {
+        "name": "Bracken County, KY",
+        "fips": 21023
+    },
+    {
+        "name": "Bronx County, NY",
+        "fips": 36005
+    },
+    {
+        "name": "Brown County, WI",
+        "fips": 55009
+    },
+    {
+        "name": "Bullitt County, KY",
+        "fips": 21029
+    },
+    {
+        "name": "Butler County, KS",
+        "fips": 20015
+    },
+    {
+        "name": "Butte County, CA",
+        "fips": 6007
+    },
+    {
+        "name": "Caldwell County, NC",
+        "fips": 37027
+    },
+    {
+        "name": "Camden County, GA",
+        "fips": 13039
+    },
+    {
+        "name": "Cape May County, NJ",
+        "fips": 34009
+    },
+    {
+        "name": "Carson County, TX",
+        "fips": 48065
+    },
+    {
+        "name": "Cass County, NE",
+        "fips": 31025
+    },
+    {
+        "name": "Centre County, PA",
+        "fips": 42027
+    },
+    {
+        "name": "Chase County, KS",
+        "fips": 20017
+    },
+    {
+        "name": "Chemung County, NY",
+        "fips": 36015
+    },
+    {
+        "name": "Chester County, TN",
+        "fips": 47023
+    },
+    {
+        "name": "Citrus County, FL",
+        "fips": 12017
+    },
+    {
+        "name": "Clarke County, GA",
+        "fips": 13059
+    },
+    {
+        "name": "Clay County, MS",
+        "fips": 28025
+    },
+    {
+        "name": "Cleveland County, AR",
+        "fips": 5025
+    },
+    {
+        "name": "Clinton County, PA",
+        "fips": 42035
+    },
+    {
+        "name": "Coffee County, AL",
+        "fips": 1031
+    },
+    {
+        "name": "Colquitt County, GA",
+        "fips": 13071
+    },
+    {
+        "name": "Columbiana County, OH",
+        "fips": 39029
+    },
+    {
+        "name": "Coosa County, AL",
+        "fips": 1037
+    },
+    {
+        "name": "Craig County, VA",
+        "fips": 51045
+    },
+    {
+        "name": "Crook County, OR",
+        "fips": 41013
+    },
+    {
+        "name": "Custer County, OK",
+        "fips": 40039
+    },
+    {
+        "name": "Dane County, WI",
+        "fips": 55025
+    },
+    {
+        "name": "De Soto Parish, LA",
+        "fips": 22031
+    },
+    {
+        "name": "Dearborn County, IN",
+        "fips": 18029
+    },
+    {
+        "name": "Delaware County, PA",
+        "fips": 42045
+    },
+    {
+        "name": "Dinwiddie County, VA",
+        "fips": 51053
+    },
+    {
+        "name": "Doniphan County, KS",
+        "fips": 20043
+    },
+    {
+        "name": "Douglas County, NV",
+        "fips": 32005
+    },
+    {
+        "name": "Dubois County, IN",
+        "fips": 18037
+    },
+    {
+        "name": "Eagle County, CO",
+        "fips": 8037
+    },
+    {
+        "name": "Eddy County, NM",
+        "fips": 35015
+    },
+    {
+        "name": "Elbert County, CO",
+        "fips": 8039
+    },
+    {
+        "name": "Erie County, OH",
+        "fips": 39043
+    },
+    {
+        "name": "Fairbanks North Star Borough, AK",
+        "fips": 2090
+    },
+    {
+        "name": "Fauquier County, VA",
+        "fips": 51061
+    },
+    {
+        "name": "Flagler County, FL",
+        "fips": 12035
+    },
+    {
+        "name": "Forsyth County, GA",
+        "fips": 13117
+    },
+    {
+        "name": "Franklin County, MO",
+        "fips": 29071
+    },
+    {
+        "name": "Franklin County, WA",
+        "fips": 53021
+    },
+    {
+        "name": "Fresno County, CA",
+        "fips": 6019
+    },
+    {
+        "name": "Garland County, AR",
+        "fips": 5051
+    },
+    {
+        "name": "Geneva County, AL",
+        "fips": 1061
+    },
+    {
+        "name": "Gilpin County, CO",
+        "fips": 8047
+    },
+    {
+        "name": "Gosper County, NE",
+        "fips": 31073
+    },
+    {
+        "name": "Grant County, IN",
+        "fips": 18053
+    },
+    {
+        "name": "Grant County, WI",
+        "fips": 55043
+    },
+    {
+        "name": "Green County, WI",
+        "fips": 55045
+    },
+    {
+        "name": "Greenville County, SC",
+        "fips": 45045
+    },
+    {
+        "name": "Guthrie County, IA",
+        "fips": 19077
+    },
+    {
+        "name": "Hamilton County, TN",
+        "fips": 47065
+    },
+    {
+        "name": "Hanover County, VA",
+        "fips": 51085
+    },
+    {
+        "name": "Harrison County, IN",
+        "fips": 18061
+    },
+    {
+        "name": "Haywood County, NC",
+        "fips": 37087
+    },
+    {
+        "name": "Henrico County, VA",
+        "fips": 51087
+    },
+    {
+        "name": "Hidalgo County, TX",
+        "fips": 48215
+    },
+    {
+        "name": "Hoke County, NC",
+        "fips": 37093
+    },
+    {
+        "name": "Howard County, TX",
+        "fips": 48227
+    },
+    {
+        "name": "Hunt County, TX",
+        "fips": 48231
+    },
+    {
+        "name": "Independence County, AR",
+        "fips": 5063
+    },
+    {
+        "name": "Iron County, UT",
+        "fips": 49021
+    },
+    {
+        "name": "Jackson County, IL",
+        "fips": 17077
+    },
+    {
+        "name": "Adams County, PA",
+        "fips": 42001
+    },
+    {
+        "name": "Alexander County, IL",
+        "fips": 17003
+    },
+    {
+        "name": "Alpena County, MI",
+        "fips": 26007
+    },
+    {
+        "name": "Andrew County, MO",
+        "fips": 29003
+    },
+    {
+        "name": "Anoka County, MN",
+        "fips": 27003
+    },
+    {
+        "name": "Ashland County, OH",
+        "fips": 39005
+    },
+    {
+        "name": "Audrain County, MO",
+        "fips": 29007
+    },
+    {
+        "name": "Autauga County, AL",
+        "fips": 1001
+    },
+    {
+        "name": "Bannock County, ID",
+        "fips": 16005
+    },
+    {
+        "name": "Bastrop County, TX",
+        "fips": 48021
+    },
+    {
+        "name": "Beaver County, PA",
+        "fips": 42007
+    },
+    {
+        "name": "Bell County, TX",
+        "fips": 48027
+    },
+    {
+        "name": "Benton County, OR",
+        "fips": 41003
+    },
+    {
+        "name": "Berkshire County, MA",
+        "fips": 25003
+    },
+    {
+        "name": "Blaine County, ID",
+        "fips": 16013
+    },
+    {
+        "name": "Bond County, IL",
+        "fips": 17005
+    },
+    {
+        "name": "Boone County, IA",
+        "fips": 19015
+    },
+    {
+        "name": "Boulder County, CO",
+        "fips": 8013
+    },
+    {
+        "name": "Branch County, MI",
+        "fips": 26023
+    },
+    {
+        "name": "Bremer County, IA",
+        "fips": 19017
+    },
+    {
+        "name": "Brown County, TX",
+        "fips": 48049
+    },
+    {
+        "name": "Bureau County, IL",
+        "fips": 17011
+    },
+    {
+        "name": "Butler County, MO",
+        "fips": 29023
+    },
+    {
+        "name": "Calcasieu Parish, LA",
+        "fips": 22019
+    },
+    {
+        "name": "Callahan County, TX",
+        "fips": 48059
+    },
+    {
+        "name": "Camden County, NJ",
+        "fips": 34007
+    },
+    {
+        "name": "Canyon County, ID",
+        "fips": 16027
+    },
+    {
+        "name": "Carroll County, IA",
+        "fips": 19027
+    },
+    {
+        "name": "Carter County, TN",
+        "fips": 47019
+    },
+    {
+        "name": "Cass County, ND",
+        "fips": 38017
+    },
+    {
+        "name": "Charles City County, VA",
+        "fips": 51036
+    },
+    {
+        "name": "Chaves County, NM",
+        "fips": 35005
+    },
+    {
+        "name": "Chester County, PA",
+        "fips": 42029
+    },
+    {
+        "name": "Christian County, IL",
+        "fips": 17021
+    },
+    {
+        "name": "Clark County, AR",
+        "fips": 5019
+    },
+    {
+        "name": "Clark County, OH",
+        "fips": 39023
+    },
+    {
+        "name": "Clay County, MN",
+        "fips": 27027
+    },
+    {
+        "name": "Clearfield County, PA",
+        "fips": 42033
+    },
+    {
+        "name": "Clinton County, NY",
+        "fips": 36019
+    },
+    {
+        "name": "Coconino County, AZ",
+        "fips": 4005
+    },
+    {
+        "name": "Collin County, TX",
+        "fips": 48085
+    },
+    {
+        "name": "Columbia County, PA",
+        "fips": 42037
+    },
+    {
+        "name": "Coos County, NH",
+        "fips": 33007
+    },
+    {
+        "name": "Cowlitz County, WA",
+        "fips": 53015
+    },
+    {
+        "name": "Creek County, OK",
+        "fips": 40037
+    },
+    {
+        "name": "Cumberland County, ME",
+        "fips": 23005
+    },
+    {
+        "name": "Cuyahoga County, OH",
+        "fips": 39035
+    },
+    {
+        "name": "Dauphin County, PA",
+        "fips": 42043
+    },
+    {
+        "name": "DeKalb County, IL",
+        "fips": 17037
+    },
+    {
+        "name": "Denver County, CO",
+        "fips": 8031
+    },
+    {
+        "name": "Dorchester County, SC",
+        "fips": 45035
+    },
+    {
+        "name": "Dunklin County, MO",
+        "fips": 29069
+    },
+    {
+        "name": "Eaton County, MI",
+        "fips": 26045
+    },
+    {
+        "name": "El Dorado County, CA",
+        "fips": 6017
+    },
+    {
+        "name": "Elmore County, AL",
+        "fips": 1051
+    },
+    {
+        "name": "Estill County, KY",
+        "fips": 21065
+    },
+    {
+        "name": "Falls County, TX",
+        "fips": 48145
+    },
+    {
+        "name": "Fayette County, TN",
+        "fips": 47047
+    },
+    {
+        "name": "Ford County, KS",
+        "fips": 20057
+    },
+    {
+        "name": "Franklin County, KS",
+        "fips": 20059
+    },
+    {
+        "name": "Franklin County, VA",
+        "fips": 51067
+    },
+    {
+        "name": "Fremont County, ID",
+        "fips": 16043
+    },
+    {
+        "name": "Gallatin County, KY",
+        "fips": 21077
+    },
+    {
+        "name": "Giles County, VA",
+        "fips": 51071
+    },
+    {
+        "name": "Graham County, AZ",
+        "fips": 4009
+    },
+    {
+        "name": "Graves County, KY",
+        "fips": 21083
+    },
+    {
+        "name": "Greenup County, KY",
+        "fips": 21089
+    },
+    {
+        "name": "Hale County, AL",
+        "fips": 1065
+    },
+    {
+        "name": "Hancock County, IL",
+        "fips": 17067
+    },
+    {
+        "name": "Hardin County, KY",
+        "fips": 21093
+    },
+    {
+        "name": "Hawkins County, TN",
+        "fips": 47073
+    },
+    {
+        "name": "Henderson County, KY",
+        "fips": 21101
+    },
+    {
+        "name": "Henry County, IL",
+        "fips": 17073
+    },
+    {
+        "name": "Hernando County, FL",
+        "fips": 12053
+    },
+    {
+        "name": "Hockley County, TX",
+        "fips": 48219
+    },
+    {
+        "name": "Hopkins County, TX",
+        "fips": 48223
+    },
+    {
+        "name": "Houston County, MN",
+        "fips": 27055
+    },
+    {
+        "name": "Hudson County, NJ",
+        "fips": 34017
+    },
+    {
+        "name": "Humboldt County, NV",
+        "fips": 32013
+    },
+    {
+        "name": "Imperial County, CA",
+        "fips": 6025
+    },
+    {
+        "name": "Irion County, TX",
+        "fips": 48235
+    },
+    {
+        "name": "Jackson County, GA",
+        "fips": 13157
+    },
+    {
+        "name": "Anderson County, TN",
+        "fips": 47001
+    },
+    {
+        "name": "Ascension Parish, LA",
+        "fips": 22005
+    },
+    {
+        "name": "Baltimore County, MD",
+        "fips": 24005
+    },
+    {
+        "name": "Bath County, KY",
+        "fips": 21011
+    },
+    {
+        "name": "Ben Hill County, GA",
+        "fips": 13017
+    },
+    {
+        "name": "Bingham County, ID",
+        "fips": 16011
+    },
+    {
+        "name": "Bonneville County, ID",
+        "fips": 16019
+    },
+    {
+        "name": "Bradford County, PA",
+        "fips": 42015
+    },
+    {
+        "name": "Brooks County, GA",
+        "fips": 13027
+    },
+    {
+        "name": "Brown County, MN",
+        "fips": 27015
+    },
+    {
+        "name": "Buena Vista County, IA",
+        "fips": 19021
+    },
+    {
+        "name": "Butler County, OH",
+        "fips": 39017
+    },
+    {
+        "name": "Calhoun County, SC",
+        "fips": 45017
+    },
+    {
+        "name": "Camp County, TX",
+        "fips": 48063
+    },
+    {
+        "name": "Carroll County, IN",
+        "fips": 18015
+    },
+    {
+        "name": "Cass County, MO",
+        "fips": 29037
+    },
+    {
+        "name": "Champaign County, OH",
+        "fips": 39021
+    },
+    {
+        "name": "Chattahoochee County, GA",
+        "fips": 13053
+    },
+    {
+        "name": "Cherokee County, SC",
+        "fips": 45021
+    },
+    {
+        "name": "Chippewa County, MI",
+        "fips": 26033
+    },
+    {
+        "name": "Clallam County, WA",
+        "fips": 53009
+    },
+    {
+        "name": "Clatsop County, OR",
+        "fips": 41007
+    },
+    {
+        "name": "Cleveland County, NC",
+        "fips": 37045
+    },
+    {
+        "name": "Coffee County, TN",
+        "fips": 47031
+    },
+    {
+        "name": "Comanche County, OK",
+        "fips": 40031
+    },
+    {
+        "name": "Covington County, MS",
+        "fips": 28031
+    },
+    {
+        "name": "Crawford County, OH",
+        "fips": 39033
+    },
+    {
+        "name": "Crow Wing County, MN",
+        "fips": 27035
+    },
+    {
+        "name": "Cumberland County, TN",
+        "fips": 47035
+    },
+    {
+        "name": "Dale County, AL",
+        "fips": 1045
+    },
+    {
+        "name": "Davidson County, NC",
+        "fips": 37057
+    },
+    {
+        "name": "Dawson County, NE",
+        "fips": 31047
+    },
+    {
+        "name": "Defiance County, OH",
+        "fips": 39039
+    },
+    {
+        "name": "Deschutes County, OR",
+        "fips": 41017
+    },
+    {
+        "name": "Dodge County, NE",
+        "fips": 31053
+    },
+    {
+        "name": "Douglas County, WA",
+        "fips": 53017
+    },
+    {
+        "name": "Duval County, FL",
+        "fips": 12031
+    },
+    {
+        "name": "Edgefield County, SC",
+        "fips": 45037
+    },
+    {
+        "name": "Elkhart County, IN",
+        "fips": 18039
+    },
+    {
+        "name": "Erie County, NY",
+        "fips": 36029
+    },
+    {
+        "name": "Eureka County, NV",
+        "fips": 32011
+    },
+    {
+        "name": "Fairfield County, OH",
+        "fips": 39045
+    },
+    {
+        "name": "Fayette County, KY",
+        "fips": 21067
+    },
+    {
+        "name": "Finney County, KS",
+        "fips": 20055
+    },
+    {
+        "name": "Forrest County, MS",
+        "fips": 28035
+    },
+    {
+        "name": "Franklin County, OH",
+        "fips": 39049
+    },
+    {
+        "name": "Freeborn County, MN",
+        "fips": 27047
+    },
+    {
+        "name": "Gallatin County, MT",
+        "fips": 30031
+    },
+    {
+        "name": "Gibson County, TN",
+        "fips": 47053
+    },
+    {
+        "name": "Gloucester County, VA",
+        "fips": 51073
+    },
+    {
+        "name": "Grant County, AR",
+        "fips": 5053
+    },
+    {
+        "name": "Granville County, NC",
+        "fips": 37077
+    },
+    {
+        "name": "Greene County, AR",
+        "fips": 5055
+    },
+    {
+        "name": "Guilford County, NC",
+        "fips": 37081
+    },
+    {
+        "name": "Halifax County, NC",
+        "fips": 37083
+    },
+    {
+        "name": "Hampden County, MA",
+        "fips": 25013
+    },
+    {
+        "name": "Hancock County, KY",
+        "fips": 21091
+    },
+    {
+        "name": "Harnett County, NC",
+        "fips": 37085
+    },
+    {
+        "name": "Hartford County, CT",
+        "fips": 9003
+    },
+    {
+        "name": "Heard County, GA",
+        "fips": 13149
+    },
+    {
+        "name": "Hennepin County, MN",
+        "fips": 27053
+    },
+    {
+        "name": "Henry County, KY",
+        "fips": 21103
+    },
+    {
+        "name": "Hillsdale County, MI",
+        "fips": 26059
+    },
+    {
+        "name": "Holmes County, MS",
+        "fips": 28051
+    },
+    {
+        "name": "Houghton County, MI",
+        "fips": 26061
+    },
+    {
+        "name": "Howard County, MD",
+        "fips": 24027
+    },
+    {
+        "name": "Huntingdon County, PA",
+        "fips": 42061
+    },
+    {
+        "name": "Indiana County, PA",
+        "fips": 42063
+    },
+    {
+        "name": "Itawamba County, MS",
+        "fips": 28057
+    },
+    {
+        "name": "Jackson County, OR",
+        "fips": 41029
+    },
+    {
+        "name": "Jefferson County, FL",
+        "fips": 12065
+    },
+    {
+        "name": "Jefferson County, NY",
+        "fips": 36045
+    },
+    {
+        "name": "Johnson County, IA",
+        "fips": 19103
+    },
+    {
+        "name": "Jones County, NC",
+        "fips": 37103
+    },
+    {
+        "name": "Kay County, OK",
+        "fips": 40071
+    },
+    {
+        "name": "Ketchikan Gateway Borough, AK",
+        "fips": 2130
+    },
+    {
+        "name": "Klamath County, OR",
+        "fips": 41035
+    },
+    {
+        "name": "La Plata County, CO",
+        "fips": 8067
+    },
+    {
+        "name": "Lamar County, GA",
+        "fips": 13171
+    },
+    {
+        "name": "Larimer County, CO",
+        "fips": 8069
+    },
+    {
+        "name": "Laurens County, SC",
+        "fips": 45059
+    },
+    {
+        "name": "Henry County, AL",
+        "fips": 1067
+    },
+    {
+        "name": "Highlands County, FL",
+        "fips": 12055
+    },
+    {
+        "name": "Honolulu County, HI",
+        "fips": 15003
+    },
+    {
+        "name": "Houston County, AL",
+        "fips": 1069
+    },
+    {
+        "name": "Humboldt County, CA",
+        "fips": 6023
+    },
+    {
+        "name": "Iredell County, NC",
+        "fips": 37097
+    },
+    {
+        "name": "Jackson County, MS",
+        "fips": 28059
+    },
+    {
+        "name": "Jasper County, IA",
+        "fips": 19099
+    },
+    {
+        "name": "Jefferson County, ID",
+        "fips": 16051
+    },
+    {
+        "name": "Jefferson Davis Parish, LA",
+        "fips": 22053
+    },
+    {
+        "name": "Johnson County, GA",
+        "fips": 13167
+    },
+    {
+        "name": "Jones County, TX",
+        "fips": 48253
+    },
+    {
+        "name": "Kemper County, MS",
+        "fips": 28069
+    },
+    {
+        "name": "Kershaw County, SC",
+        "fips": 45055
+    },
+    {
+        "name": "Kings County, CA",
+        "fips": 6031
+    },
+    {
+        "name": "Kittitas County, WA",
+        "fips": 53037
+    },
+    {
+        "name": "LaPorte County, IN",
+        "fips": 18091
+    },
+    {
+        "name": "Lamar County, MS",
+        "fips": 28073
+    },
+    {
+        "name": "Latah County, ID",
+        "fips": 16057
+    },
+    {
+        "name": "Lawrence County, PA",
+        "fips": 42073
+    },
+    {
+        "name": "Lehigh County, PA",
+        "fips": 42077
+    },
+    {
+        "name": "Lincoln County, MO",
+        "fips": 29113
+    },
+    {
+        "name": "Livingston County, IL",
+        "fips": 17105
+    },
+    {
+        "name": "Logan County, OK",
+        "fips": 40083
+    },
+    {
+        "name": "Loving County, TX",
+        "fips": 48301
+    },
+    {
+        "name": "Lycoming County, PA",
+        "fips": 42081
+    },
+    {
+        "name": "Madison County, IN",
+        "fips": 18095
+    },
+    {
+        "name": "Malheur County, OR",
+        "fips": 41045
+    },
+    {
+        "name": "Marion County, MO",
+        "fips": 29127
+    },
+    {
+        "name": "Marshall County, MS",
+        "fips": 28093
+    },
+    {
+        "name": "Mason County, WA",
+        "fips": 53045
+    },
+    {
+        "name": "McClain County, OK",
+        "fips": 40087
+    },
+    {
+        "name": "McKinley County, NM",
+        "fips": 35031
+    },
+    {
+        "name": "Menominee County, MI",
+        "fips": 26109
+    },
+    {
+        "name": "Merrimack County, NH",
+        "fips": 33013
+    },
+    {
+        "name": "Milwaukee County, WI",
+        "fips": 55079
+    },
+    {
+        "name": "Monroe County, IN",
+        "fips": 18105
+    },
+    {
+        "name": "Montgomery County, VA",
+        "fips": 51121
+    },
+    {
+        "name": "Moore County, TN",
+        "fips": 47127
+    },
+    {
+        "name": "Morgan County, UT",
+        "fips": 49029
+    },
+    {
+        "name": "Multnomah County, OR",
+        "fips": 41051
+    },
+    {
+        "name": "Nash County, NC",
+        "fips": 37127
+    },
+    {
+        "name": "Navarro County, TX",
+        "fips": 48349
+    },
+    {
+        "name": "New London County, CT",
+        "fips": 9011
+    },
+    {
+        "name": "Newton County, GA",
+        "fips": 13217
+    },
+    {
+        "name": "Nodaway County, MO",
+        "fips": 29147
+    },
+    {
+        "name": "Nueces County, TX",
+        "fips": 48355
+    },
+    {
+        "name": "Ogle County, IL",
+        "fips": 17141
+    },
+    {
+        "name": "Oktibbeha County, MS",
+        "fips": 28105
+    },
+    {
+        "name": "Ontario County, NY",
+        "fips": 36069
+    },
+    {
+        "name": "Orangeburg County, SC",
+        "fips": 45075
+    },
+    {
+        "name": "Otsego County, NY",
+        "fips": 36077
+    },
+    {
+        "name": "Ouray County, CO",
+        "fips": 8091
+    },
+    {
+        "name": "Park County, CO",
+        "fips": 8093
+    },
+    {
+        "name": "Passaic County, NJ",
+        "fips": 34031
+    },
+    {
+        "name": "Petersburg city, VA",
+        "fips": 51730
+    },
+    {
+        "name": "Pierce County, NE",
+        "fips": 31139
+    },
+    {
+        "name": "Pitt County, NC",
+        "fips": 37147
+    },
+    {
+        "name": "Polk County, GA",
+        "fips": 13233
+    },
+    {
+        "name": "Portsmouth city, VA",
+        "fips": 51740
+    },
+    {
+        "name": "Prince William County, VA",
+        "fips": 51153
+    },
+    {
+        "name": "Pulaski County, KY",
+        "fips": 21199
+    },
+    {
+        "name": "Putnam County, WV",
+        "fips": 54079
+    },
+    {
+        "name": "Randolph County, WV",
+        "fips": 54083
+    },
+    {
+        "name": "Rhea County, TN",
+        "fips": 47143
+    },
+    {
+        "name": "Richmond County, NY",
+        "fips": 36085
+    },
+    {
+        "name": "Robertson County, TN",
+        "fips": 47147
+    },
+    {
+        "name": "Routt County, CO",
+        "fips": 8107
+    },
+    {
+        "name": "Saluda County, SC",
+        "fips": 45081
+    },
+    {
+        "name": "San Miguel County, NM",
+        "fips": 35047
+    },
+    {
+        "name": "Saratoga County, NY",
+        "fips": 36091
+    },
+    {
+        "name": "Scott County, IN",
+        "fips": 18143
+    },
+    {
+        "name": "Sedgwick County, KS",
+        "fips": 20173
+    },
+    {
+        "name": "Sharp County, AR",
+        "fips": 5135
+    },
+    {
+        "name": "Sheridan County, WY",
+        "fips": 56033
+    },
+    {
+        "name": "Somerset County, MD",
+        "fips": 24039
+    },
+    {
+        "name": "Spokane County, WA",
+        "fips": 53063
+    },
+    {
+        "name": "St. Francois County, MO",
+        "fips": 29187
+    },
+    {
+        "name": "St. Louis County, MN",
+        "fips": 27137
+    },
+    {
+        "name": "Stanton County, NE",
+        "fips": 31167
+    },
+    {
+        "name": "Stephens County, OK",
+        "fips": 40137
+    },
+    {
+        "name": "Stokes County, NC",
+        "fips": 37169
+    },
+    {
+        "name": "Island County, WA",
+        "fips": 53029
+    },
+    {
+        "name": "Jackson County, NC",
+        "fips": 37099
+    },
+    {
+        "name": "Jefferson County, IA",
+        "fips": 19101
+    },
+    {
+        "name": "Jefferson Parish, LA",
+        "fips": 22051
+    },
+    {
+        "name": "Johnson County, TX",
+        "fips": 48251
+    },
+    {
+        "name": "Juneau City and Borough, AK",
+        "fips": 2110
+    },
+    {
+        "name": "Kankakee County, IL",
+        "fips": 17091
+    },
+    {
+        "name": "Kenedy County, TX",
+        "fips": 48261
+    },
+    {
+        "name": "Kenton County, KY",
+        "fips": 21117
+    },
+    {
+        "name": "King and Queen County, VA",
+        "fips": 51097
+    },
+    {
+        "name": "Knox County, IL",
+        "fips": 17095
+    },
+    {
+        "name": "Lafayette County, MO",
+        "fips": 29107
+    },
+    {
+        "name": "Lake County, OH",
+        "fips": 39085
+    },
+    {
+        "name": "Lanier County, GA",
+        "fips": 13173
+    },
+    {
+        "name": "Lawrence County, IN",
+        "fips": 18093
+    },
+    {
+        "name": "Lee County, GA",
+        "fips": 13177
+    },
+    {
+        "name": "Lewis County, MO",
+        "fips": 29111
+    },
+    {
+        "name": "Lincoln County, GA",
+        "fips": 13181
+    },
+    {
+        "name": "Lincoln County, SD",
+        "fips": 46083
+    },
+    {
+        "name": "Litchfield County, CT",
+        "fips": 9005
+    },
+    {
+        "name": "Logan County, NE",
+        "fips": 31113
+    },
+    {
+        "name": "Love County, OK",
+        "fips": 40085
+    },
+    {
+        "name": "Luna County, NM",
+        "fips": 35029
+    },
+    {
+        "name": "Macomb County, MI",
+        "fips": 26099
+    },
+    {
+        "name": "Madison County, GA",
+        "fips": 13195
+    },
+    {
+        "name": "Madison County, NE",
+        "fips": 31119
+    },
+    {
+        "name": "Manatee County, FL",
+        "fips": 12081
+    },
+    {
+        "name": "Marion County, IL",
+        "fips": 17121
+    },
+    {
+        "name": "Marquette County, MI",
+        "fips": 26103
+    },
+    {
+        "name": "Martinsville city, VA",
+        "fips": 51690
+    },
+    {
+        "name": "Matanuska-Susitna Borough, AK",
+        "fips": 2170
+    },
+    {
+        "name": "McDowell County, NC",
+        "fips": 37111
+    },
+    {
+        "name": "McLeod County, MN",
+        "fips": 27085
+    },
+    {
+        "name": "Medina County, TX",
+        "fips": 48325
+    },
+    {
+        "name": "Mercer County, PA",
+        "fips": 42085
+    },
+    {
+        "name": "Miami County, OH",
+        "fips": 39109
+    },
+    {
+        "name": "Mille Lacs County, MN",
+        "fips": 27095
+    },
+    {
+        "name": "Mississippi County, AR",
+        "fips": 5093
+    },
+    {
+        "name": "Monroe County, FL",
+        "fips": 12087
+    },
+    {
+        "name": "Monterey County, CA",
+        "fips": 6053
+    },
+    {
+        "name": "Montgomery County, TN",
+        "fips": 47125
+    },
+    {
+        "name": "Mora County, NM",
+        "fips": 35033
+    },
+    {
+        "name": "Morgan County, IN",
+        "fips": 18109
+    },
+    {
+        "name": "Murray County, GA",
+        "fips": 13213
+    },
+    {
+        "name": "Nassau County, FL",
+        "fips": 12089
+    },
+    {
+        "name": "New Haven County, CT",
+        "fips": 9009
+    },
+    {
+        "name": "Newton County, MO",
+        "fips": 29145
+    },
+    {
+        "name": "Norfolk County, MA",
+        "fips": 25021
+    },
+    {
+        "name": "Oakland County, MI",
+        "fips": 26125
+    },
+    {
+        "name": "Ohio County, IN",
+        "fips": 18115
+    },
+    {
+        "name": "Oldham County, TX",
+        "fips": 48359
+    },
+    {
+        "name": "Orange County, NY",
+        "fips": 36071
+    },
+    {
+        "name": "Osceola County, FL",
+        "fips": 12097
+    },
+    {
+        "name": "Ouachita County, AR",
+        "fips": 5103
+    },
+    {
+        "name": "Palo Pinto County, TX",
+        "fips": 48363
+    },
+    {
+        "name": "Pawnee County, OK",
+        "fips": 40117
+    },
+    {
+        "name": "Peoria County, IL",
+        "fips": 17143
+    },
+    {
+        "name": "Phelps County, MO",
+        "fips": 29161
+    },
+    {
+        "name": "Pickens County, GA",
+        "fips": 13227
+    },
+    {
+        "name": "Pike County, MS",
+        "fips": 28113
+    },
+    {
+        "name": "Plymouth County, MA",
+        "fips": 25023
+    },
+    {
+        "name": "Polk County, TN",
+        "fips": 47139
+    },
+    {
+        "name": "Powhatan County, VA",
+        "fips": 51145
+    },
+    {
+        "name": "Putnam County, IN",
+        "fips": 18133
+    },
+    {
+        "name": "Ralls County, MO",
+        "fips": 29173
+    },
+    {
+        "name": "Ray County, MO",
+        "fips": 29177
+    },
+    {
+        "name": "Richland County, SC",
+        "fips": 45079
+    },
+    {
+        "name": "Roanoke city, VA",
+        "fips": 51770
+    },
+    {
+        "name": "Rockingham County, NC",
+        "fips": 37157
+    },
+    {
+        "name": "Rutherford County, TN",
+        "fips": 47149
+    },
+    {
+        "name": "Salt Lake County, UT",
+        "fips": 49035
+    },
+    {
+        "name": "San Mateo County, CA",
+        "fips": 6081
+    },
+    {
+        "name": "Sarasota County, FL",
+        "fips": 12115
+    },
+    {
+        "name": "Scott County, IA",
+        "fips": 19163
+    },
+    {
+        "name": "Seminole County, FL",
+        "fips": 12117
+    },
+    {
+        "name": "Shasta County, CA",
+        "fips": 6089
+    },
+    {
+        "name": "Shiawassee County, MI",
+        "fips": 26155
+    },
+    {
+        "name": "Sonoma County, CA",
+        "fips": 6097
+    },
+    {
+        "name": "St. Clair County, MI",
+        "fips": 26147
+    },
+    {
+        "name": "St. Lawrence County, NY",
+        "fips": 36089
+    },
+    {
+        "name": "Stanley County, SD",
+        "fips": 46117
+    },
+    {
+        "name": "Staunton city, VA",
+        "fips": 51790
+    },
+    {
+        "name": "Jackson County, IN",
+        "fips": 18071
+    },
+    {
+        "name": "Jackson County, OH",
+        "fips": 39079
+    },
+    {
+        "name": "Jefferson County, AR",
+        "fips": 5069
+    },
+    {
+        "name": "Jefferson County, MO",
+        "fips": 29099
+    },
+    {
+        "name": "Jerauld County, SD",
+        "fips": 46073
+    },
+    {
+        "name": "Jones County, GA",
+        "fips": 13169
+    },
+    {
+        "name": "Kalkaska County, MI",
+        "fips": 26079
+    },
+    {
+        "name": "Kaufman County, TX",
+        "fips": 48257
+    },
+    {
+        "name": "Kenosha County, WI",
+        "fips": 55059
+    },
+    {
+        "name": "Kerr County, TX",
+        "fips": 48265
+    },
+    {
+        "name": "Kitsap County, WA",
+        "fips": 53035
+    },
+    {
+        "name": "Kootenai County, ID",
+        "fips": 16055
+    },
+    {
+        "name": "Lake County, IN",
+        "fips": 18089
+    },
+    {
+        "name": "Larue County, KY",
+        "fips": 21123
+    },
+    {
+        "name": "Lawrence County, AL",
+        "fips": 1079
+    },
+    {
+        "name": "Lee County, AL",
+        "fips": 1081
+    },
+    {
+        "name": "Lewis and Clark County, MT",
+        "fips": 30049
+    },
+    {
+        "name": "Lincoln County, OR",
+        "fips": 41041
+    },
+    {
+        "name": "Logan County, IL",
+        "fips": 17107
+    },
+    {
+        "name": "Loudoun County, VA",
+        "fips": 51107
+    },
+    {
+        "name": "Luzerne County, PA",
+        "fips": 42079
+    },
+    {
+        "name": "Macon County, IL",
+        "fips": 17115
+    },
+    {
+        "name": "Madison County, IA",
+        "fips": 19121
+    },
+    {
+        "name": "Madison County, NY",
+        "fips": 36053
+    },
+    {
+        "name": "Manassas city, VA",
+        "fips": 51683
+    },
+    {
+        "name": "Marion County, IA",
+        "fips": 19125
+    },
+    {
+        "name": "Marlboro County, SC",
+        "fips": 45069
+    },
+    {
+        "name": "Martin County, TX",
+        "fips": 48317
+    },
+    {
+        "name": "Maui County, HI",
+        "fips": 15009
+    },
+    {
+        "name": "McHenry County, IL",
+        "fips": 17111
+    },
+    {
+        "name": "McMinn County, TN",
+        "fips": 47107
+    },
+    {
+        "name": "Meade County, SD",
+        "fips": 46093
+    },
+    {
+        "name": "Menominee County, WI",
+        "fips": 55078
+    },
+    {
+        "name": "Middlesex County, MA",
+        "fips": 25017
+    },
+    {
+        "name": "Moffat County, CO",
+        "fips": 8081
+    },
+    {
+        "name": "Montgomery County, AL",
+        "fips": 1101
+    },
+    {
+        "name": "Montgomery County, TX",
+        "fips": 48339
+    },
+    {
+        "name": "Morgan County, IL",
+        "fips": 17137
+    },
+    {
+        "name": "Muhlenberg County, KY",
+        "fips": 21177
+    },
+    {
+        "name": "Napa County, CA",
+        "fips": 6055
+    },
+    {
+        "name": "Navajo County, AZ",
+        "fips": 4017
+    },
+    {
+        "name": "New Kent County, VA",
+        "fips": 51127
+    },
+    {
+        "name": "Newton County, IN",
+        "fips": 18111
+    },
+    {
+        "name": "Nolan County, TX",
+        "fips": 48353
+    },
+    {
+        "name": "Nye County, NV",
+        "fips": 32023
+    },
+    {
+        "name": "Oglethorpe County, GA",
+        "fips": 13221
+    },
+    {
+        "name": "Oldham County, KY",
+        "fips": 21185
+    },
+    {
+        "name": "Orange County, TX",
+        "fips": 48361
+    },
+    {
+        "name": "Oswego County, NY",
+        "fips": 36075
+    },
+    {
+        "name": "Ouachita Parish, LA",
+        "fips": 22073
+    },
+    {
+        "name": "Pasquotank County, NC",
+        "fips": 37139
+    },
+    {
+        "name": "Pendleton County, KY",
+        "fips": 21191
+    },
+    {
+        "name": "Perry County, PA",
+        "fips": 42099
+    },
+    {
+        "name": "Pickaway County, OH",
+        "fips": 39129
+    },
+    {
+        "name": "Pike County, AL",
+        "fips": 1109
+    },
+    {
+        "name": "Pinellas County, FL",
+        "fips": 12103
+    },
+    {
+        "name": "Platte County, MO",
+        "fips": 29165
+    },
+    {
+        "name": "Polk County, MO",
+        "fips": 29167
+    },
+    {
+        "name": "Portage County, OH",
+        "fips": 39133
+    },
+    {
+        "name": "Pottawattamie County, IA",
+        "fips": 19155
+    },
+    {
+        "name": "Providence County, RI",
+        "fips": 44007
+    },
+    {
+        "name": "Radford city, VA",
+        "fips": 51750
+    },
+    {
+        "name": "Rapides Parish, LA",
+        "fips": 22079
+    },
+    {
+        "name": "Richmond County, GA",
+        "fips": 13245
+    },
+    {
+        "name": "Roane County, TN",
+        "fips": 47145
+    },
+    {
+        "name": "Rockdale County, GA",
+        "fips": 13247
+    },
+    {
+        "name": "Roosevelt County, NM",
+        "fips": 35041
+    },
+    {
+        "name": "Sacramento County, CA",
+        "fips": 6067
+    },
+    {
+        "name": "Saline County, MO",
+        "fips": 29195
+    },
+    {
+        "name": "San Luis Obispo County, CA",
+        "fips": 6079
+    },
+    {
+        "name": "Santa Cruz County, CA",
+        "fips": 6087
+    },
+    {
+        "name": "Schuyler County, MO",
+        "fips": 29197
+    },
+    {
+        "name": "Seneca County, NY",
+        "fips": 36099
+    },
+    {
+        "name": "Shawnee County, KS",
+        "fips": 20177
+    },
+    {
+        "name": "Silver Bow County, MT",
+        "fips": 30093
+    },
+    {
+        "name": "Snyder County, PA",
+        "fips": 42109
+    },
+    {
+        "name": "St. Charles Parish, LA",
+        "fips": 22089
+    },
+    {
+        "name": "St. Joseph County, IN",
+        "fips": 18141
+    },
+    {
+        "name": "St. Mary's County, MD",
+        "fips": 24037
+    },
+    {
+        "name": "Starr County, TX",
+        "fips": 48427
+    },
+    {
+        "name": "Steele County, MN",
+        "fips": 27147
+    },
+    {
+        "name": "Stewart County, TN",
+        "fips": 47161
+    },
+    {
+        "name": "Jackson County, MI",
+        "fips": 26075
+    },
+    {
+        "name": "James City County, VA",
+        "fips": 51095
+    },
+    {
+        "name": "Jasper County, MO",
+        "fips": 29097
+    },
+    {
+        "name": "Jefferson County, IL",
+        "fips": 17081
+    },
+    {
+        "name": "Jefferson County, TN",
+        "fips": 47089
+    },
+    {
+        "name": "Jerome County, ID",
+        "fips": 16053
+    },
+    {
+        "name": "Johnston County, NC",
+        "fips": 37101
+    },
+    {
+        "name": "Kalamazoo County, MI",
+        "fips": 26077
+    },
+    {
+        "name": "Kauai County, HI",
+        "fips": 15007
+    },
+    {
+        "name": "Kennebec County, ME",
+        "fips": 23011
+    },
+    {
+        "name": "Kern County, CA",
+        "fips": 6029
+    },
+    {
+        "name": "Kings County, NY",
+        "fips": 36047
+    },
+    {
+        "name": "La Crosse County, WI",
+        "fips": 55063
+    },
+    {
+        "name": "Lafayette Parish, LA",
+        "fips": 22055
+    },
+    {
+        "name": "Lancaster County, SC",
+        "fips": 45057
+    },
+    {
+        "name": "Lauderdale County, MS",
+        "fips": 28075
+    },
+    {
+        "name": "Lawrence County, SD",
+        "fips": 46081
+    },
+    {
+        "name": "Lee County, IA",
+        "fips": 19111
+    },
+    {
+        "name": "Lenawee County, MI",
+        "fips": 26091
+    },
+    {
+        "name": "Liberty County, GA",
+        "fips": 13179
+    },
+    {
+        "name": "Lincoln County, MS",
+        "fips": 28085
+    },
+    {
+        "name": "Lincoln County, WV",
+        "fips": 54043
+    },
+    {
+        "name": "Livingston County, KY",
+        "fips": 21139
+    },
+    {
+        "name": "Logan County, WV",
+        "fips": 54045
+    },
+    {
+        "name": "Lowndes County, MS",
+        "fips": 28087
+    },
+    {
+        "name": "Macon County, TN",
+        "fips": 47111
+    },
+    {
+        "name": "Madison County, ID",
+        "fips": 16065
+    },
+    {
+        "name": "Madison County, OH",
+        "fips": 39097
+    },
+    {
+        "name": "Manitowoc County, WI",
+        "fips": 55071
+    },
+    {
+        "name": "Marion County, IN",
+        "fips": 18097
+    },
+    {
+        "name": "Marshall County, IA",
+        "fips": 19127
+    },
+    {
+        "name": "Mason County, MI",
+        "fips": 26105
+    },
+    {
+        "name": "McCracken County, KY",
+        "fips": 21145
+    },
+    {
+        "name": "McLennan County, TX",
+        "fips": 48309
+    },
+    {
+        "name": "Medina County, OH",
+        "fips": 39103
+    },
+    {
+        "name": "Merced County, CA",
+        "fips": 6047
+    },
+    {
+        "name": "Mesa County, CO",
+        "fips": 8077
+    },
+    {
+        "name": "Middlesex County, NJ",
+        "fips": 34023
+    },
+    {
+        "name": "Mineral County, WV",
+        "fips": 54057
+    },
+    {
+        "name": "Mohave County, AZ",
+        "fips": 4015
+    },
+    {
+        "name": "Monroe County, MI",
+        "fips": 26115
+    },
+    {
+        "name": "Montgomery County, NY",
+        "fips": 36057
+    },
+    {
+        "name": "Moore County, NC",
+        "fips": 37125
+    },
+    {
+        "name": "Morgan County, TN",
+        "fips": 47129
+    },
+    {
+        "name": "Muskogee County, OK",
+        "fips": 40101
+    },
+    {
+        "name": "Nelson County, VA",
+        "fips": 51125
+    },
+    {
+        "name": "Newberry County, SC",
+        "fips": 45071
+    },
+    {
+        "name": "Noble County, IN",
+        "fips": 18113
+    },
+    {
+        "name": "Northumberland County, PA",
+        "fips": 42097
+    },
+    {
+        "name": "Oconee County, SC",
+        "fips": 45073
+    },
+    {
+        "name": "Okmulgee County, OK",
+        "fips": 40111
+    },
+    {
+        "name": "Orange County, VT",
+        "fips": 50017
+    },
+    {
+        "name": "Ottawa County, OH",
+        "fips": 39123
+    },
+    {
+        "name": "Pamlico County, NC",
+        "fips": 37137
+    },
+    {
+        "name": "Pearl River County, MS",
+        "fips": 28109
+    },
+    {
+        "name": "Pettis County, MO",
+        "fips": 29159
+    },
+    {
+        "name": "Pike County, IN",
+        "fips": 18125
+    },
+    {
+        "name": "Placer County, CA",
+        "fips": 6061
+    },
+    {
+        "name": "Polk County, IA",
+        "fips": 19153
+    },
+    {
+        "name": "Porter County, IN",
+        "fips": 18127
+    },
+    {
+        "name": "Power County, ID",
+        "fips": 16077
+    },
+    {
+        "name": "Pulaski County, MO",
+        "fips": 29169
+    },
+    {
+        "name": "Queen Anne's County, MD",
+        "fips": 24035
+    },
+    {
+        "name": "Ramsey County, MN",
+        "fips": 27123
+    },
+    {
+        "name": "Rappahannock County, VA",
+        "fips": 51157
+    },
+    {
+        "name": "Richland County, ND",
+        "fips": 38077
+    },
+    {
+        "name": "Rio Arriba County, NM",
+        "fips": 35039
+    },
+    {
+        "name": "Robertson County, TX",
+        "fips": 48395
+    },
+    {
+        "name": "Rockingham County, NH",
+        "fips": 33015
+    },
+    {
+        "name": "Rusk County, TX",
+        "fips": 48401
+    },
+    {
+        "name": "Saginaw County, MI",
+        "fips": 26145
+    },
+    {
+        "name": "San Bernardino County, CA",
+        "fips": 6071
+    },
+    {
+        "name": "Sandusky County, OH",
+        "fips": 39143
+    },
+    {
+        "name": "Sarpy County, NE",
+        "fips": 31153
+    },
+    {
+        "name": "Schuylkill County, PA",
+        "fips": 42107
+    },
+    {
+        "name": "Scott County, MN",
+        "fips": 27139
+    },
+    {
+        "name": "Seneca County, OH",
+        "fips": 39147
+    },
+    {
+        "name": "Seward County, NE",
+        "fips": 31159
+    },
+    {
+        "name": "Shelby County, TN",
+        "fips": 47157
+    },
+    {
+        "name": "Snohomish County, WA",
+        "fips": 53061
+    },
+    {
+        "name": "St. Charles County, MO",
+        "fips": 29183
+    },
+    {
+        "name": "Jackson County, TN",
+        "fips": 47087
+    },
+    {
+        "name": "Jefferson County, AL",
+        "fips": 1073
+    },
+    {
+        "name": "Jefferson County, KY",
+        "fips": 21111
+    },
+    {
+        "name": "Jefferson County, WV",
+        "fips": 54037
+    },
+    {
+        "name": "Jim Wells County, TX",
+        "fips": 48249
+    },
+    {
+        "name": "Johnson County, KS",
+        "fips": 20091
+    },
+    {
+        "name": "Kanawha County, WV",
+        "fips": 54039
+    },
+    {
+        "name": "Kearny County, KS",
+        "fips": 20093
+    },
+    {
+        "name": "Kent County, MI",
+        "fips": 26081
+    },
+    {
+        "name": "Kleberg County, TX",
+        "fips": 48273
+    },
+    {
+        "name": "Kosciusko County, IN",
+        "fips": 18085
+    },
+    {
+        "name": "Lafayette County, MS",
+        "fips": 28071
+    },
+    {
+        "name": "Lake County, MN",
+        "fips": 27075
+    },
+    {
+        "name": "Lane County, OR",
+        "fips": 41039
+    },
+    {
+        "name": "Lawrence County, OH",
+        "fips": 39087
+    },
+    {
+        "name": "Lee County, FL",
+        "fips": 12071
+    },
+    {
+        "name": "Leflore County, MS",
+        "fips": 28083
+    },
+    {
+        "name": "Lexington County, SC",
+        "fips": 45063
+    },
+    {
+        "name": "Lincoln County, OK",
+        "fips": 40081
+    },
+    {
+        "name": "Linn County, OR",
+        "fips": 41043
+    },
+    {
+        "name": "Logan County, OH",
+        "fips": 39091
+    },
+    {
+        "name": "Lowndes County, AL",
+        "fips": 1085
+    },
+    {
+        "name": "Lyon County, MN",
+        "fips": 27083
+    },
+    {
+        "name": "Madison County, IL",
+        "fips": 17119
+    },
+    {
+        "name": "Madison County, TN",
+        "fips": 47113
+    },
+    {
+        "name": "Marion County, FL",
+        "fips": 12083
+    },
+    {
+        "name": "Marshall County, IL",
+        "fips": 17123
+    },
+    {
+        "name": "Marshall County, WV",
+        "fips": 54051
+    },
+    {
+        "name": "Massac County, IL",
+        "fips": 17127
+    },
+    {
+        "name": "McIntosh County, GA",
+        "fips": 13191
+    },
+    {
+        "name": "McPherson County, NE",
+        "fips": 31117
+    },
+    {
+        "name": "Mecosta County, MI",
+        "fips": 26107
+    },
+    {
+        "name": "Mercer County, IL",
+        "fips": 17131
+    },
+    {
+        "name": "Metcalfe County, KY",
+        "fips": 21169
+    },
+    {
+        "name": "Midland County, MI",
+        "fips": 26111
+    },
+    {
+        "name": "Minidoka County, ID",
+        "fips": 16067
+    },
+    {
+        "name": "Moniteau County, MO",
+        "fips": 29135
+    },
+    {
+        "name": "Monroe County, NY",
+        "fips": 36055
+    },
+    {
+        "name": "Montgomery County, KY",
+        "fips": 21173
+    },
+    {
+        "name": "Moore County, TX",
+        "fips": 48341
+    },
+    {
+        "name": "Morris County, NJ",
+        "fips": 34027
+    },
+    {
+        "name": "Nacogdoches County, TX",
+        "fips": 48347
+    },
+    {
+        "name": "Nelson County, KY",
+        "fips": 21179
+    },
+    {
+        "name": "New York County, NY",
+        "fips": 36061
+    },
+    {
+        "name": "Nobles County, MN",
+        "fips": 27105
+    },
+    {
+        "name": "Oconto County, WI",
+        "fips": 55083
+    },
+    {
+        "name": "Onondaga County, NY",
+        "fips": 36067
+    },
+    {
+        "name": "Orleans Parish, LA",
+        "fips": 22071
+    },
+    {
+        "name": "Ottawa County, MI",
+        "fips": 26139
+    },
+    {
+        "name": "Overton County, TN",
+        "fips": 47133
+    },
+    {
+        "name": "Pasco County, FL",
+        "fips": 12101
+    },
+    {
+        "name": "Pender County, NC",
+        "fips": 37141
+    },
+    {
+        "name": "Person County, NC",
+        "fips": 37145
+    },
+    {
+        "name": "Pierce County, GA",
+        "fips": 13229
+    },
+    {
+        "name": "Pima County, AZ",
+        "fips": 4019
+    },
+    {
+        "name": "Platte County, NE",
+        "fips": 31141
+    },
+    {
+        "name": "Pontotoc County, MS",
+        "fips": 28115
+    },
+    {
+        "name": "Prentiss County, MS",
+        "fips": 28117
+    },
+    {
+        "name": "Pueblo County, CO",
+        "fips": 8101
+    },
+    {
+        "name": "Raleigh County, WV",
+        "fips": 54081
+    },
+    {
+        "name": "Rankin County, MS",
+        "fips": 28121
+    },
+    {
+        "name": "Richmond County, NC",
+        "fips": 37153
+    },
+    {
+        "name": "Roanoke County, VA",
+        "fips": 51161
+    },
+    {
+        "name": "Rockland County, NY",
+        "fips": 36087
+    },
+    {
+        "name": "Rutherford County, NC",
+        "fips": 37161
+    },
+    {
+        "name": "Salem city, VA",
+        "fips": 51775
+    },
+    {
+        "name": "San Francisco County, CA",
+        "fips": 6075
+    },
+    {
+        "name": "Santa Cruz County, AZ",
+        "fips": 4023
+    },
+    {
+        "name": "Schley County, GA",
+        "fips": 13249
+    },
+    {
+        "name": "Scurry County, TX",
+        "fips": 48415
+    },
+    {
+        "name": "Shelby County, AL",
+        "fips": 1117
+    },
+    {
+        "name": "Simpson County, MS",
+        "fips": 28127
+    },
+    {
+        "name": "Southampton County, VA",
+        "fips": 51175
+    },
+    {
+        "name": "St. Croix County, WI",
+        "fips": 55109
+    },
+    {
+        "name": "St. Louis city, MO",
+        "fips": 29510
+    },
+    {
+        "name": "Stark County, IL",
+        "fips": 17175
+    },
+    {
+        "name": "Stephens County, GA",
+        "fips": 13257
+    },
+    {
+        "name": "Stillwater County, MT",
+        "fips": 30095
+    },
+    {
+        "name": "Suffolk city, VA",
+        "fips": 51800
+    },
+    {
+        "name": "Sumner County, TN",
+        "fips": 47165
+    },
+    {
+        "name": "Sussex County, VA",
+        "fips": 51183
+    },
+    {
+        "name": "Taos County, NM",
+        "fips": 35055
+    },
+    {
+        "name": "Jefferson County, IN",
+        "fips": 18077
+    },
+    {
+        "name": "Jefferson County, TX",
+        "fips": 48245
+    },
+    {
+        "name": "Jersey County, IL",
+        "fips": 17083
+    },
+    {
+        "name": "Johnson County, MO",
+        "fips": 29101
+    },
+    {
+        "name": "Juab County, UT",
+        "fips": 49023
+    },
+    {
+        "name": "Kane County, IL",
+        "fips": 17089
+    },
+    {
+        "name": "Kendall County, TX",
+        "fips": 48259
+    },
+    {
+        "name": "Kent County, RI",
+        "fips": 44003
+    },
+    {
+        "name": "King William County, VA",
+        "fips": 51101
+    },
+    {
+        "name": "Knox County, OH",
+        "fips": 39083
+    },
+    {
+        "name": "Lackawanna County, PA",
+        "fips": 42069
+    },
+    {
+        "name": "Lake County, FL",
+        "fips": 12069
+    },
+    {
+        "name": "Lancaster County, NE",
+        "fips": 31109
+    },
+    {
+        "name": "Laramie County, WY",
+        "fips": 56021
+    },
+    {
+        "name": "Laurens County, GA",
+        "fips": 13175
+    },
+    {
+        "name": "Lawrence County, TN",
+        "fips": 47099
+    },
+    {
+        "name": "Lee County, IL",
+        "fips": 17103
+    },
+    {
+        "name": "Lenoir County, NC",
+        "fips": 37107
+    },
+    {
+        "name": "Liberty County, TX",
+        "fips": 48291
+    },
+    {
+        "name": "Lincoln County, NC",
+        "fips": 37109
+    },
+    {
+        "name": "Lincoln Parish, LA",
+        "fips": 22061
+    },
+    {
+        "name": "Livingston County, MI",
+        "fips": 26093
+    },
+    {
+        "name": "Long County, GA",
+        "fips": 13183
+    },
+    {
+        "name": "Lowndes County, GA",
+        "fips": 13185
+    },
+    {
+        "name": "Lyon County, NV",
+        "fips": 32019
+    },
+    {
+        "name": "Madison County, NC",
+        "fips": 37115
+    },
+    {
+        "name": "Marathon County, WI",
+        "fips": 55073
+    },
+    {
+        "name": "Marshall County, AL",
+        "fips": 1095
+    },
+    {
+        "name": "Mason County, KY",
+        "fips": 21161
+    },
+    {
+        "name": "Maury County, TN",
+        "fips": 47119
+    },
+    {
+        "name": "McLean County, IL",
+        "fips": 17113
+    },
+    {
+        "name": "Menard County, IL",
+        "fips": 17129
+    },
+    {
+        "name": "Mercer County, WV",
+        "fips": 54055
+    },
+    {
+        "name": "Miami-Dade County, FL",
+        "fips": 12086
+    },
+    {
+        "name": "Miller County, AR",
+        "fips": 5091
+    },
+    {
+        "name": "Missoula County, MT",
+        "fips": 30063
+    },
+    {
+        "name": "Monroe County, IL",
+        "fips": 17133
+    },
+    {
+        "name": "Montgomery County, IN",
+        "fips": 18107
+    },
+    {
+        "name": "Montgomery County, MD",
+        "fips": 24031
+    },
+    {
+        "name": "Morgan County, AL",
+        "fips": 1103
+    },
+    {
+        "name": "Morrow County, OR",
+        "fips": 41049
+    },
+    {
+        "name": "Muskegon County, MI",
+        "fips": 26121
+    },
+    {
+        "name": "Nassau County, NY",
+        "fips": 36059
+    },
+    {
+        "name": "New Castle County, DE",
+        "fips": 10003
+    },
+    {
+        "name": "Newport County, RI",
+        "fips": 44005
+    },
+    {
+        "name": "Nicollet County, MN",
+        "fips": 27103
+    },
+    {
+        "name": "Northampton County, PA",
+        "fips": 42095
+    },
+    {
+        "name": "Oconee County, GA",
+        "fips": 13219
+    },
+    {
+        "name": "Oklahoma County, OK",
+        "fips": 40109
+    },
+    {
+        "name": "Olmsted County, MN",
+        "fips": 27109
+    },
+    {
+        "name": "Orange County, FL",
+        "fips": 12095
+    },
+    {
+        "name": "Osage County, MO",
+        "fips": 29151
+    },
+    {
+        "name": "Ottawa County, OK",
+        "fips": 40115
+    },
+    {
+        "name": "Ozaukee County, WI",
+        "fips": 55089
+    },
+    {
+        "name": "Payne County, OK",
+        "fips": 40119
+    },
+    {
+        "name": "Perquimans County, NC",
+        "fips": 37143
+    },
+    {
+        "name": "Philadelphia County, PA",
+        "fips": 42101
+    },
+    {
+        "name": "Pickens County, SC",
+        "fips": 45077
+    },
+    {
+        "name": "Pike County, PA",
+        "fips": 42103
+    },
+    {
+        "name": "Plaquemines Parish, LA",
+        "fips": 22075
+    },
+    {
+        "name": "Polk County, OR",
+        "fips": 41053
+    },
+    {
+        "name": "Portage County, WI",
+        "fips": 55097
+    },
+    {
+        "name": "Potter County, TX",
+        "fips": 48375
+    },
+    {
+        "name": "Pulaski County, AR",
+        "fips": 5119
+    },
+    {
+        "name": "Putnam County, TN",
+        "fips": 47141
+    },
+    {
+        "name": "Randall County, TX",
+        "fips": 48381
+    },
+    {
+        "name": "Rice County, MN",
+        "fips": 27131
+    },
+    {
+        "name": "Riverside County, CA",
+        "fips": 6065
+    },
+    {
+        "name": "Rock Island County, IL",
+        "fips": 17161
+    },
+    {
+        "name": "Rogers County, OK",
+        "fips": 40131
+    },
+    {
+        "name": "Rutland County, VT",
+        "fips": 50021
+    },
+    {
+        "name": "Saline County, KS",
+        "fips": 20169
+    },
+    {
+        "name": "San Juan County, NM",
+        "fips": 35045
+    },
+    {
+        "name": "Santa Barbara County, CA",
+        "fips": 6083
+    },
+    {
+        "name": "Schenectady County, NY",
+        "fips": 36093
+    },
+    {
+        "name": "Scotts Bluff County, NE",
+        "fips": 31157
+    },
+    {
+        "name": "Sevier County, TN",
+        "fips": 47155
+    },
+    {
+        "name": "Shelby County, IN",
+        "fips": 18145
+    },
+    {
+        "name": "Sioux County, NE",
+        "fips": 31165
+    },
+    {
+        "name": "Somerset County, PA",
+        "fips": 42111
+    },
+    {
+        "name": "St. Bernard Parish, LA",
+        "fips": 22087
+    },
+    {
+        "name": "St. Helena Parish, LA",
+        "fips": 22091
+    },
+    {
+        "name": "Jessamine County, KY",
+        "fips": 21113
+    },
+    {
+        "name": "Jones County, IA",
+        "fips": 19105
+    },
+    {
+        "name": "Kearney County, NE",
+        "fips": 31099
+    },
+    {
+        "name": "Kewaunee County, WI",
+        "fips": 55061
+    },
+    {
+        "name": "Knox County, IN",
+        "fips": 18083
+    },
+    {
+        "name": "LaSalle County, IL",
+        "fips": 17099
+    },
+    {
+        "name": "Lafourche Parish, LA",
+        "fips": 22057
+    },
+    {
+        "name": "Lamar County, TX",
+        "fips": 48277
+    },
+    {
+        "name": "Lapeer County, MI",
+        "fips": 26087
+    },
+    {
+        "name": "Laurel County, KY",
+        "fips": 21125
+    },
+    {
+        "name": "Lea County, NM",
+        "fips": 35025
+    },
+    {
+        "name": "Lee County, NC",
+        "fips": 37105
+    },
+    {
+        "name": "Levy County, FL",
+        "fips": 12075
+    },
+    {
+        "name": "Limestone County, AL",
+        "fips": 1083
+    },
+    {
+        "name": "Lincoln County, NM",
+        "fips": 35027
+    },
+    {
+        "name": "Linn County, KS",
+        "fips": 20107
+    },
+    {
+        "name": "Livingston Parish, LA",
+        "fips": 22063
+    },
+    {
+        "name": "Los Angeles County, CA",
+        "fips": 6037
+    },
+    {
+        "name": "Lynn County, TX",
+        "fips": 48305
+    },
+    {
+        "name": "Madison County, AL",
+        "fips": 1089
+    },
+    {
+        "name": "Madison County, VA",
+        "fips": 51113
+    },
+    {
+        "name": "Marinette County, WI",
+        "fips": 55075
+    },
+    {
+        "name": "Marion County, TN",
+        "fips": 47115
+    },
+    {
+        "name": "Martin County, FL",
+        "fips": 12085
+    },
+    {
+        "name": "Matagorda County, TX",
+        "fips": 48321
+    },
+    {
+        "name": "McDonough County, IL",
+        "fips": 17109
+    },
+    {
+        "name": "McKean County, PA",
+        "fips": 42083
+    },
+    {
+        "name": "Menifee County, KY",
+        "fips": 21165
+    },
+    {
+        "name": "Meriwether County, GA",
+        "fips": 13199
+    },
+    {
+        "name": "Middlesex County, CT",
+        "fips": 9007
+    },
+    {
+        "name": "Mobile County, AL",
+        "fips": 1097
+    },
+    {
+        "name": "Montgomery County, GA",
+        "fips": 13209
+    },
+    {
+        "name": "Montour County, PA",
+        "fips": 42093
+    },
+    {
+        "name": "Morgan County, GA",
+        "fips": 13211
+    },
+    {
+        "name": "Mower County, MN",
+        "fips": 27099
+    },
+    {
+        "name": "Natrona County, WY",
+        "fips": 56025
+    },
+    {
+        "name": "Newport News city, VA",
+        "fips": 51700
+    },
+    {
+        "name": "Northampton County, NC",
+        "fips": 37131
+    },
+    {
+        "name": "Okeechobee County, FL",
+        "fips": 12093
+    },
+    {
+        "name": "Orange County, CA",
+        "fips": 6059
+    },
+    {
+        "name": "Orleans County, NY",
+        "fips": 36073
+    },
+    {
+        "name": "Ottawa County, KS",
+        "fips": 20143
+    },
+    {
+        "name": "Outagamie County, WI",
+        "fips": 55087
+    },
+    {
+        "name": "Parke County, IN",
+        "fips": 18121
+    },
+    {
+        "name": "Paulding County, GA",
+        "fips": 13223
+    },
+    {
+        "name": "Pennington County, SD",
+        "fips": 46103
+    },
+    {
+        "name": "Perry County, OH",
+        "fips": 39127
+    },
+    {
+        "name": "Piatt County, IL",
+        "fips": 17147
+    },
+    {
+        "name": "Pierce County, WI",
+        "fips": 55093
+    },
+    {
+        "name": "Pinal County, AZ",
+        "fips": 4021
+    },
+    {
+        "name": "Pittsburg County, OK",
+        "fips": 40121
+    },
+    {
+        "name": "Pointe Coupee Parish, LA",
+        "fips": 22077
+    },
+    {
+        "name": "Poquoson city, VA",
+        "fips": 51735
+    },
+    {
+        "name": "Prince George's County, MD",
+        "fips": 24033
+    },
+    {
+        "name": "Pulaski County, VA",
+        "fips": 51155
+    },
+    {
+        "name": "Queens County, NY",
+        "fips": 36081
+    },
+    {
+        "name": "Reno County, KS",
+        "fips": 20155
+    },
+    {
+        "name": "Rock County, WI",
+        "fips": 55105
+    },
+    {
+        "name": "Ross County, OH",
+        "fips": 39141
+    },
+    {
+        "name": "Sagadahoc County, ME",
+        "fips": 23023
+    },
+    {
+        "name": "San Joaquin County, CA",
+        "fips": 6077
+    },
+    {
+        "name": "Santa Clara County, CA",
+        "fips": 6085
+    },
+    {
+        "name": "Santa Rosa County, FL",
+        "fips": 12113
+    },
+    {
+        "name": "Scott County, KY",
+        "fips": 21209
+    },
+    {
+        "name": "Seward County, KS",
+        "fips": 20175
+    },
+    {
+        "name": "Shelby County, OH",
+        "fips": 39149
+    },
+    {
+        "name": "Smith County, TN",
+        "fips": 47159
+    },
+    {
+        "name": "Spartanburg County, SC",
+        "fips": 45083
+    },
+    {
+        "name": "St. John the Baptist Parish, LA",
+        "fips": 22095
+    },
+    {
+        "name": "St. Mary Parish, LA",
+        "fips": 22101
+    },
+    {
+        "name": "Stark County, OH",
+        "fips": 39151
+    },
+    {
+        "name": "Stevens County, WA",
+        "fips": 53065
+    },
+    {
+        "name": "Stutsman County, ND",
+        "fips": 38093
+    },
+    {
+        "name": "Summit County, OH",
+        "fips": 39153
+    },
+    {
+        "name": "Taney County, MO",
+        "fips": 29213
+    },
+    {
+        "name": "Teller County, CO",
+        "fips": 8119
+    },
+    {
+        "name": "Titus County, TX",
+        "fips": 48449
+    },
+    {
+        "name": "Trousdale County, TN",
+        "fips": 47169
+    },
+    {
+        "name": "Twiggs County, GA",
+        "fips": 13289
+    },
+    {
+        "name": "Union County, NJ",
+        "fips": 34039
+    },
+    {
+        "name": "Vanderburgh County, IN",
+        "fips": 18163
+    },
+    {
+        "name": "Johnson County, IN",
+        "fips": 18081
+    },
+    {
+        "name": "Josephine County, OR",
+        "fips": 41033
+    },
+    {
+        "name": "Kendall County, IL",
+        "fips": 17093
+    },
+    {
+        "name": "King County, WA",
+        "fips": 53033
+    },
+    {
+        "name": "Knox County, TN",
+        "fips": 47093
+    },
+    {
+        "name": "Laclede County, MO",
+        "fips": 29105
+    },
+    {
+        "name": "Lake County, IL",
+        "fips": 17097
+    },
+    {
+        "name": "Lancaster County, PA",
+        "fips": 42071
+    },
+    {
+        "name": "Lauderdale County, AL",
+        "fips": 1077
+    },
+    {
+        "name": "Lebanon County, PA",
+        "fips": 42075
+    },
+    {
+        "name": "Lewis County, WA",
+        "fips": 53041
+    },
+    {
+        "name": "Lincoln County, KY",
+        "fips": 21137
+    },
+    {
+        "name": "Little River County, AR",
+        "fips": 5081
+    },
+    {
+        "name": "Lonoke County, AR",
+        "fips": 5085
+    },
+    {
+        "name": "Loudon County, TN",
+        "fips": 47105
+    },
+    {
+        "name": "Lubbock County, TX",
+        "fips": 48303
+    },
+    {
+        "name": "Lynchburg city, VA",
+        "fips": 51680
+    },
+    {
+        "name": "Madera County, CA",
+        "fips": 6039
+    },
+    {
+        "name": "Madison County, KY",
+        "fips": 21151
+    },
+    {
+        "name": "Mahaska County, IA",
+        "fips": 19123
+    },
+    {
+        "name": "Marin County, CA",
+        "fips": 6041
+    },
+    {
+        "name": "Marion County, OR",
+        "fips": 41047
+    },
+    {
+        "name": "Marshall County, TN",
+        "fips": 47117
+    },
+    {
+        "name": "Maverick County, TX",
+        "fips": 48323
+    },
+    {
+        "name": "McLean County, KY",
+        "fips": 21149
+    },
+    {
+        "name": "Mendocino County, CA",
+        "fips": 6045
+    },
+    {
+        "name": "Mercer County, OH",
+        "fips": 39107
+    },
+    {
+        "name": "Miami County, KS",
+        "fips": 20121
+    },
+    {
+        "name": "Mifflin County, PA",
+        "fips": 42087
+    },
+    {
+        "name": "Missaukee County, MI",
+        "fips": 26113
+    },
+    {
+        "name": "Monongalia County, WV",
+        "fips": 54061
+    },
+    {
+        "name": "Montcalm County, MI",
+        "fips": 26117
+    },
+    {
+        "name": "Montgomery County, OH",
+        "fips": 39113
+    },
+    {
+        "name": "Morehouse Parish, LA",
+        "fips": 22067
+    },
+    {
+        "name": "Morrow County, OH",
+        "fips": 39117
+    },
+    {
+        "name": "Muscatine County, IA",
+        "fips": 19139
+    },
+    {
+        "name": "Nevada County, AR",
+        "fips": 5099
+    },
+    {
+        "name": "Niagara County, NY",
+        "fips": 36063
+    },
+    {
+        "name": "Ocean County, NJ",
+        "fips": 34029
+    },
+    {
+        "name": "Oliver County, ND",
+        "fips": 38065
+    },
+    {
+        "name": "Osage County, KS",
+        "fips": 20139
+    },
+    {
+        "name": "Owyhee County, ID",
+        "fips": 16073
+    },
+    {
+        "name": "Peach County, GA",
+        "fips": 13225
+    },
+    {
+        "name": "Perry County, MS",
+        "fips": 28111
+    },
+    {
+        "name": "Pierce County, WA",
+        "fips": 53053
+    },
+    {
+        "name": "Poinsett County, AR",
+        "fips": 5111
+    },
+    {
+        "name": "Pope County, AR",
+        "fips": 5115
+    },
+    {
+        "name": "Pottawatomie County, KS",
+        "fips": 20149
+    },
+    {
+        "name": "Prince George County, VA",
+        "fips": 51149
+    },
+    {
+        "name": "Putnam County, NY",
+        "fips": 36079
+    },
+    {
+        "name": "Randolph County, MO",
+        "fips": 29175
+    },
+    {
+        "name": "Rensselaer County, NY",
+        "fips": 36083
+    },
+    {
+        "name": "Richland County, OH",
+        "fips": 39139
+    },
+    {
+        "name": "Riley County, KS",
+        "fips": 20161
+    },
+    {
+        "name": "Roberts County, TX",
+        "fips": 48393
+    },
+    {
+        "name": "Rowan County, NC",
+        "fips": 37159
+    },
+    {
+        "name": "San Benito County, CA",
+        "fips": 6069
+    },
+    {
+        "name": "Sangamon County, IL",
+        "fips": 17167
+    },
+    {
+        "name": "Saunders County, NE",
+        "fips": 31155
+    },
+    {
+        "name": "Scotland County, NC",
+        "fips": 37165
+    },
+    {
+        "name": "Scott County, VA",
+        "fips": 51169
+    },
+    {
+        "name": "Sequoyah County, OK",
+        "fips": 40135
+    },
+    {
+        "name": "Sheboygan County, WI",
+        "fips": 55117
+    },
+    {
+        "name": "Sherburne County, MN",
+        "fips": 27141
+    },
+    {
+        "name": "Smith County, TX",
+        "fips": 48423
+    },
+    {
+        "name": "Spalding County, GA",
+        "fips": 13255
+    },
+    {
+        "name": "St. Clair County, IL",
+        "fips": 17163
+    },
+    {
+        "name": "St. Louis County, MO",
+        "fips": 29189
+    },
+    {
+        "name": "Stanislaus County, CA",
+        "fips": 6099
+    },
+    {
+        "name": "Stearns County, MN",
+        "fips": 27145
+    },
+    {
+        "name": "Strafford County, NH",
+        "fips": 33017
+    },
+    {
+        "name": "Summit County, UT",
+        "fips": 49043
+    },
+    {
+        "name": "Tangipahoa Parish, LA",
+        "fips": 22105
+    },
+    {
+        "name": "Tehama County, CA",
+        "fips": 6103
+    },
+    {
+        "name": "Thomas County, GA",
+        "fips": 13275
+    },
+    {
+        "name": "Torrance County, NM",
+        "fips": 35057
+    },
+    {
+        "name": "Turner County, SD",
+        "fips": 46125
+    },
+    {
+        "name": "Union County, NC",
+        "fips": 37179
+    },
+    {
+        "name": "Vance County, NC",
+        "fips": 37181
+    },
+    {
+        "name": "Virginia Beach city, VA",
+        "fips": 51810
+    },
+    {
+        "name": "Walker County, AL",
+        "fips": 1127
+    },
+    {
+        "name": "Wapello County, IA",
+        "fips": 19179
+    },
+    {
+        "name": "Labette County, KS",
+        "fips": 20099
+    },
+    {
+        "name": "Lake County, CA",
+        "fips": 6033
+    },
+    {
+        "name": "Lampasas County, TX",
+        "fips": 48281
+    },
+    {
+        "name": "Lassen County, CA",
+        "fips": 6035
+    },
+    {
+        "name": "Le Sueur County, MN",
+        "fips": 27079
+    },
+    {
+        "name": "Lee County, MS",
+        "fips": 28081
+    },
+    {
+        "name": "Leon County, FL",
+        "fips": 12073
+    },
+    {
+        "name": "Licking County, OH",
+        "fips": 39089
+    },
+    {
+        "name": "Lincoln County, NE",
+        "fips": 31111
+    },
+    {
+        "name": "Linn County, IA",
+        "fips": 19113
+    },
+    {
+        "name": "Livingston County, NY",
+        "fips": 36051
+    },
+    {
+        "name": "Lorain County, OH",
+        "fips": 39093
+    },
+    {
+        "name": "Lucas County, OH",
+        "fips": 39095
+    },
+    {
+        "name": "Macoupin County, IL",
+        "fips": 17117
+    },
+    {
+        "name": "Madison County, MS",
+        "fips": 28089
+    },
+    {
+        "name": "Manassas Park city, VA",
+        "fips": 51685
+    },
+    {
+        "name": "Marion County, GA",
+        "fips": 13197
+    },
+    {
+        "name": "Marion County, WV",
+        "fips": 54049
+    },
+    {
+        "name": "Martin County, MN",
+        "fips": 27091
+    },
+    {
+        "name": "Mathews County, VA",
+        "fips": 51115
+    },
+    {
+        "name": "McHenry County, ND",
+        "fips": 38049
+    },
+    {
+        "name": "McPherson County, KS",
+        "fips": 20113
+    },
+    {
+        "name": "Mecklenburg County, NC",
+        "fips": 37119
+    },
+    {
+        "name": "Mercer County, NJ",
+        "fips": 34021
+    },
+    {
+        "name": "Miami County, IN",
+        "fips": 18103
+    },
+    {
+        "name": "Midland County, TX",
+        "fips": 48329
+    },
+    {
+        "name": "Minnehaha County, SD",
+        "fips": 46099
+    },
+    {
+        "name": "Monmouth County, NJ",
+        "fips": 34025
+    },
+    {
+        "name": "Monroe County, PA",
+        "fips": 42089
+    },
+    {
+        "name": "Montgomery County, PA",
+        "fips": 42091
+    },
+    {
+        "name": "Morgan County, CO",
+        "fips": 8087
+    },
+    {
+        "name": "Morton County, ND",
+        "fips": 38059
+    },
+    {
+        "name": "Muskingum County, OH",
+        "fips": 39119
+    },
+    {
+        "name": "Natchitoches Parish, LA",
+        "fips": 22069
+    },
+    {
+        "name": "New Hanover County, NC",
+        "fips": 37129
+    },
+    {
+        "name": "Newton County, AR",
+        "fips": 5101
+    },
+    {
+        "name": "Norton city, VA",
+        "fips": 51720
+    },
+    {
+        "name": "Okaloosa County, FL",
+        "fips": 12091
+    },
+    {
+        "name": "Onslow County, NC",
+        "fips": 37133
+    },
+    {
+        "name": "Otero County, NM",
+        "fips": 35035
+    },
+    {
+        "name": "Owen County, IN",
+        "fips": 18119
+    },
+    {
+        "name": "Parker County, TX",
+        "fips": 48367
+    },
+    {
+        "name": "Penobscot County, ME",
+        "fips": 23019
+    },
+    {
+        "name": "Pickens County, AL",
+        "fips": 1107
+    },
+    {
+        "name": "Pitkin County, CO",
+        "fips": 8097
+    },
+    {
+        "name": "Polk County, FL",
+        "fips": 12105
+    },
+    {
+        "name": "Pontotoc County, OK",
+        "fips": 40123
+    },
+    {
+        "name": "Posey County, IN",
+        "fips": 18129
+    },
+    {
+        "name": "Preston County, WV",
+        "fips": 54077
+    },
+    {
+        "name": "Putnam County, FL",
+        "fips": 12107
+    },
+    {
+        "name": "Quitman County, GA",
+        "fips": 13239
+    },
+    {
+        "name": "Reeves County, TX",
+        "fips": 48389
+    },
+    {
+        "name": "Richmond city, VA",
+        "fips": 51760
+    },
+    {
+        "name": "Robeson County, NC",
+        "fips": 37155
+    },
+    {
+        "name": "Rockingham County, VA",
+        "fips": 51165
+    },
+    {
+        "name": "Russell County, AL",
+        "fips": 1113
+    },
+    {
+        "name": "Salem County, NJ",
+        "fips": 34033
+    },
+    {
+        "name": "San Diego County, CA",
+        "fips": 6073
+    },
+    {
+        "name": "San Patricio County, TX",
+        "fips": 48409
+    },
+    {
+        "name": "Santa Fe County, NM",
+        "fips": 35049
+    },
+    {
+        "name": "Schoharie County, NY",
+        "fips": 36095
+    },
+    {
+        "name": "Scott County, IL",
+        "fips": 17171
+    },
+    {
+        "name": "Sebastian County, AR",
+        "fips": 5131
+    },
+    {
+        "name": "Shawano County, WI",
+        "fips": 55115
+    },
+    {
+        "name": "Skagit County, WA",
+        "fips": 53057
+    },
+    {
+        "name": "Somerset County, NJ",
+        "fips": 34035
+    },
+    {
+        "name": "Spotsylvania County, VA",
+        "fips": 51177
+    },
+    {
+        "name": "St. James Parish, LA",
+        "fips": 22093
+    },
+    {
+        "name": "St. Martin Parish, LA",
+        "fips": 22099
+    },
+    {
+        "name": "Stark County, ND",
+        "fips": 38089
+    },
+    {
+        "name": "Stephenson County, IL",
+        "fips": 17177
+    },
+    {
+        "name": "Stone County, MS",
+        "fips": 28131
+    },
+    {
+        "name": "Leavenworth County, KS",
+        "fips": 20103
+    },
+    {
+        "name": "Leelanau County, MI",
+        "fips": 26089
+    },
+    {
+        "name": "Lincoln County, AR",
+        "fips": 5079
+    },
+    {
+        "name": "Lincoln County, WI",
+        "fips": 55069
+    },
+    {
+        "name": "Logan County, CO",
+        "fips": 8075
+    },
+    {
+        "name": "Los Alamos County, NM",
+        "fips": 35028
+    },
+    {
+        "name": "Lyon County, KS",
+        "fips": 20111
+    },
+    {
+        "name": "Madison County, AR",
+        "fips": 5087
+    },
+    {
+        "name": "Mahoning County, OH",
+        "fips": 39099
+    },
+    {
+        "name": "Maricopa County, AZ",
+        "fips": 4013
+    },
+    {
+        "name": "Marion County, OH",
+        "fips": 39101
+    },
+    {
+        "name": "Marshall County, IN",
+        "fips": 18099
+    },
+    {
+        "name": "Mason County, WV",
+        "fips": 54053
+    },
+    {
+        "name": "McCook County, SD",
+        "fips": 46087
+    },
+    {
+        "name": "McDuffie County, GA",
+        "fips": 13189
+    },
+    {
+        "name": "Meade County, KY",
+        "fips": 21163
+    },
+    {
+        "name": "Merrick County, NE",
+        "fips": 31121
+    },
+    {
+        "name": "Mills County, IA",
+        "fips": 19129
+    },
+    {
+        "name": "Monroe County, GA",
+        "fips": 13207
+    },
+    {
+        "name": "Montgomery County, KS",
+        "fips": 20125
+    },
+    {
+        "name": "Montrose County, CO",
+        "fips": 8085
+    },
+    {
+        "name": "Morgan County, WV",
+        "fips": 54065
+    },
+    {
+        "name": "Muscogee County, GA",
+        "fips": 13215
+    },
+    {
+        "name": "Nevada County, CA",
+        "fips": 6057
+    },
+    {
+        "name": "Nez Perce County, ID",
+        "fips": 16069
+    },
+    {
+        "name": "Norfolk city, VA",
+        "fips": 51710
+    },
+    {
+        "name": "Obion County, TN",
+        "fips": 47131
+    },
+    {
+        "name": "Ohio County, WV",
+        "fips": 54069
+    },
+    {
+        "name": "Oneida County, NY",
+        "fips": 36065
+    },
+    {
+        "name": "Orange County, NC",
+        "fips": 37135
+    },
+    {
+        "name": "Osage County, OK",
+        "fips": 40113
+    },
+    {
+        "name": "Otter Tail County, MN",
+        "fips": 27111
+    },
+    {
+        "name": "Palm Beach County, FL",
+        "fips": 12099
+    },
+    {
+        "name": "Payette County, ID",
+        "fips": 16075
+    },
+    {
+        "name": "Perry County, AR",
+        "fips": 5105
+    },
+    {
+        "name": "Phillips County, AR",
+        "fips": 5107
+    },
+    {
+        "name": "Pike County, GA",
+        "fips": 13231
+    },
+    {
+        "name": "Pittsylvania County, VA",
+        "fips": 51143
+    },
+    {
+        "name": "Polk County, MN",
+        "fips": 27119
+    },
+    {
+        "name": "Pottawatomie County, OK",
+        "fips": 40125
+    },
+    {
+        "name": "Putnam County, IL",
+        "fips": 17155
+    },
+    {
+        "name": "Racine County, WI",
+        "fips": 55101
+    },
+    {
+        "name": "Randolph County, NC",
+        "fips": 37151
+    },
+    {
+        "name": "Renville County, ND",
+        "fips": 38075
+    },
+    {
+        "name": "Ripley County, MO",
+        "fips": 29181
+    },
+    {
+        "name": "Rockwall County, TX",
+        "fips": 48397
+    },
+    {
+        "name": "Saline County, AR",
+        "fips": 5125
+    },
+    {
+        "name": "Sandoval County, NM",
+        "fips": 35043
+    },
+    {
+        "name": "Sauk County, WI",
+        "fips": 55111
+    },
+    {
+        "name": "Scioto County, OH",
+        "fips": 39145
+    },
+    {
+        "name": "Scott County, MO",
+        "fips": 29201
+    },
+    {
+        "name": "Sequatchie County, TN",
+        "fips": 47153
+    },
+    {
+        "name": "Shelby County, KY",
+        "fips": 21211
+    },
+    {
+        "name": "Skamania County, WA",
+        "fips": 53059
+    },
+    {
+        "name": "Solano County, CA",
+        "fips": 6095
+    },
+    {
+        "name": "Spencer County, KY",
+        "fips": 21215
+    },
+    {
+        "name": "St. Clair County, AL",
+        "fips": 1115
+    },
+    {
+        "name": "St. Johns County, FL",
+        "fips": 12109
+    },
+    {
+        "name": "St. Lucie County, FL",
+        "fips": 12111
+    },
+    {
+        "name": "Stafford County, VA",
+        "fips": 51179
+    },
+    {
+        "name": "Steuben County, NY",
+        "fips": 36101
+    },
+    {
+        "name": "Suffolk County, NY",
+        "fips": 36103
+    },
+    {
+        "name": "Surry County, NC",
+        "fips": 37171
+    },
+    {
+        "name": "St. Francis County, AR",
+        "fips": 5123
+    },
+    {
+        "name": "St. Landry Parish, LA",
+        "fips": 22097
+    },
+    {
+        "name": "Stanly County, NC",
+        "fips": 37167
+    },
+    {
+        "name": "Sterling County, TX",
+        "fips": 48431
+    },
+    {
+        "name": "Storey County, NV",
+        "fips": 32029
+    },
+    {
+        "name": "Sullivan County, TN",
+        "fips": 47163
+    },
+    {
+        "name": "Sumter County, SC",
+        "fips": 45085
+    },
+    {
+        "name": "Swain County, NC",
+        "fips": 37173
+    },
+    {
+        "name": "Tazewell County, IL",
+        "fips": 17179
+    },
+    {
+        "name": "Texas County, OK",
+        "fips": 40139
+    },
+    {
+        "name": "Tom Green County, TX",
+        "fips": 48451
+    },
+    {
+        "name": "Trigg County, KY",
+        "fips": 21221
+    },
+    {
+        "name": "Tuscaloosa County, AL",
+        "fips": 1125
+    },
+    {
+        "name": "Union County, AR",
+        "fips": 5139
+    },
+    {
+        "name": "Upshur County, TX",
+        "fips": 48459
+    },
+    {
+        "name": "Vermilion Parish, LA",
+        "fips": 22113
+    },
+    {
+        "name": "Wabash County, IN",
+        "fips": 18169
+    },
+    {
+        "name": "Waller County, TX",
+        "fips": 48473
+    },
+    {
+        "name": "Warren County, MS",
+        "fips": 28149
+    },
+    {
+        "name": "Wasatch County, UT",
+        "fips": 49051
+    },
+    {
+        "name": "Washington County, OH",
+        "fips": 39167
+    },
+    {
+        "name": "Washington County, VT",
+        "fips": 50023
+    },
+    {
+        "name": "Wayne County, OH",
+        "fips": 39169
+    },
+    {
+        "name": "Westchester County, NY",
+        "fips": 36119
+    },
+    {
+        "name": "Wilbarger County, TX",
+        "fips": 48487
+    },
+    {
+        "name": "Wilson County, TN",
+        "fips": 47189
+    },
+    {
+        "name": "Wood County, OH",
+        "fips": 39173
+    },
+    {
+        "name": "Worth County, GA",
+        "fips": 13321
+    },
+    {
+        "name": "Yavapai County, AZ",
+        "fips": 4025
+    },
+    {
+        "name": "Yuba County, CA",
+        "fips": 6115
+    },
+    {
+        "name": "St. Joseph County, MI",
+        "fips": 26149
+    },
+    {
+        "name": "St. Tammany Parish, LA",
+        "fips": 22103
+    },
+    {
+        "name": "Steuben County, IN",
+        "fips": 18151
+    },
+    {
+        "name": "Story County, IA",
+        "fips": 19169
+    },
+    {
+        "name": "Sumner County, KS",
+        "fips": 20191
+    },
+    {
+        "name": "Sussex County, NJ",
+        "fips": 34037
+    },
+    {
+        "name": "Talbot County, GA",
+        "fips": 13263
+    },
+    {
+        "name": "Taylor County, TX",
+        "fips": 48441
+    },
+    {
+        "name": "Thurston County, WA",
+        "fips": 53067
+    },
+    {
+        "name": "Treutlen County, GA",
+        "fips": 13283
+    },
+    {
+        "name": "Twin Falls County, ID",
+        "fips": 16083
+    },
+    {
+        "name": "Unicoi County, TN",
+        "fips": 47171
+    },
+    {
+        "name": "Union County, TN",
+        "fips": 47173
+    },
+    {
+        "name": "Valencia County, NM",
+        "fips": 35061
+    },
+    {
+        "name": "Vernon Parish, LA",
+        "fips": 22115
+    },
+    {
+        "name": "Wakulla County, FL",
+        "fips": 12129
+    },
+    {
+        "name": "Ward County, ND",
+        "fips": 38101
+    },
+    {
+        "name": "Warren County, PA",
+        "fips": 42123
+    },
+    {
+        "name": "Washington County, MN",
+        "fips": 27163
+    },
+    {
+        "name": "Washington County, TX",
+        "fips": 48477
+    },
+    {
+        "name": "Wayne County, GA",
+        "fips": 13305
+    },
+    {
+        "name": "Webster Parish, LA",
+        "fips": 22119
+    },
+    {
+        "name": "Whitley County, IN",
+        "fips": 18183
+    },
+    {
+        "name": "Wilkin County, MN",
+        "fips": 27167
+    },
+    {
+        "name": "Winnebago County, IL",
+        "fips": 17201
+    },
+    {
+        "name": "Woodward County, OK",
+        "fips": 40153
+    },
+    {
+        "name": "Yakima County, WA",
+        "fips": 53077
+    },
+    {
+        "name": "Yazoo County, MS",
+        "fips": 28163
+    },
+    {
+        "name": "Yuma County, AZ",
+        "fips": 4027
+    },
+    {
+        "name": "Stewart County, GA",
+        "fips": 13259
+    },
+    {
+        "name": "Suffolk County, MA",
+        "fips": 25025
+    },
+    {
+        "name": "Sunflower County, MS",
+        "fips": 28133
+    },
+    {
+        "name": "Talbot County, MD",
+        "fips": 24041
+    },
+    {
+        "name": "Taylor County, KY",
+        "fips": 21217
+    },
+    {
+        "name": "Terrebonne Parish, LA",
+        "fips": 22109
+    },
+    {
+        "name": "Tift County, GA",
+        "fips": 13277
+    },
+    {
+        "name": "Tooele County, UT",
+        "fips": 49045
+    },
+    {
+        "name": "Tunica County, MS",
+        "fips": 28143
+    },
+    {
+        "name": "Umatilla County, OR",
+        "fips": 41059
+    },
+    {
+        "name": "Union Parish, LA",
+        "fips": 22111
+    },
+    {
+        "name": "Van Wert County, OH",
+        "fips": 39161
+    },
+    {
+        "name": "Volusia County, FL",
+        "fips": 12127
+    },
+    {
+        "name": "Walton County, GA",
+        "fips": 13297
+    },
+    {
+        "name": "Warren County, NY",
+        "fips": 36113
+    },
+    {
+        "name": "Washington County, AR",
+        "fips": 5143
+    },
+    {
+        "name": "Washington County, PA",
+        "fips": 42125
+    },
+    {
+        "name": "Washtenaw County, MI",
+        "fips": 26161
+    },
+    {
+        "name": "Waynesboro city, VA",
+        "fips": 51820
+    },
+    {
+        "name": "Weston County, WY",
+        "fips": 56045
+    },
+    {
+        "name": "Wichita County, TX",
+        "fips": 48485
+    },
+    {
+        "name": "Williamson County, TN",
+        "fips": 47187
+    },
+    {
+        "name": "Sullivan County, IN",
+        "fips": 18153
+    },
+    {
+        "name": "Sumter County, GA",
+        "fips": 13261
+    },
+    {
+        "name": "Sweetwater County, WY",
+        "fips": 56037
+    },
+    {
+        "name": "Taylor County, WV",
+        "fips": 54091
+    },
+    {
+        "name": "Tipton County, TN",
+        "fips": 47167
+    },
+    {
+        "name": "Troup County, GA",
+        "fips": 13285
+    },
+    {
+        "name": "Tuscarawas County, OH",
+        "fips": 39157
+    },
+    {
+        "name": "Union County, IN",
+        "fips": 18161
+    },
+    {
+        "name": "Union County, SD",
+        "fips": 46127
+    },
+    {
+        "name": "Val Verde County, TX",
+        "fips": 48465
+    },
+    {
+        "name": "Victoria County, TX",
+        "fips": 48469
+    },
+    {
+        "name": "Walker County, TX",
+        "fips": 48471
+    },
+    {
+        "name": "Warren County, NJ",
+        "fips": 34041
+    },
+    {
+        "name": "Wasco County, OR",
+        "fips": 41065
+    },
+    {
+        "name": "Washington County, NE",
+        "fips": 31177
+    },
+    {
+        "name": "Washington County, RI",
+        "fips": 44009
+    },
+    {
+        "name": "Waukesha County, WI",
+        "fips": 55133
+    },
+    {
+        "name": "Wayne County, WV",
+        "fips": 54099
+    },
+    {
+        "name": "Sullivan County, NH",
+        "fips": 33019
+    },
+    {
+        "name": "Sumter County, FL",
+        "fips": 12119
+    },
+    {
+        "name": "Sutter County, CA",
+        "fips": 6101
+    },
+    {
+        "name": "Tarrant County, TX",
+        "fips": 48439
+    },
+    {
+        "name": "Teton County, ID",
+        "fips": 16081
+    },
+    {
+        "name": "Tompkins County, NY",
+        "fips": 36109
+    },
+    {
+        "name": "Trumbull County, OH",
+        "fips": 39155
+    },
+    {
+        "name": "Uintah County, UT",
+        "fips": 49047
+    },
+    {
+        "name": "Union County, PA",
+        "fips": 42119
+    },
+    {
+        "name": "Uvalde County, TX",
+        "fips": 48463
+    },
+    {
+        "name": "Vigo County, IN",
+        "fips": 18167
+    },
+    {
+        "name": "Walla Walla County, WA",
+        "fips": 53071
+    },
+    {
+        "name": "Warren County, MO",
+        "fips": 29219
+    },
+    {
+        "name": "Warrick County, IN",
+        "fips": 18173
+    },
+    {
+        "name": "Washington County, OK",
+        "fips": 40147
+    },
+    {
+        "name": "Washington Parish, LA",
+        "fips": 22117
+    },
+    {
+        "name": "Wayne County, MI",
+        "fips": 26163
+    },
+    {
+        "name": "Webb County, TX",
+        "fips": 48479
+    },
+    {
+        "name": "West Baton Rouge Parish, LA",
+        "fips": 22121
+    },
+    {
+        "name": "Wharton County, TX",
+        "fips": 48481
+    },
+    {
+        "name": "Whitman County, WA",
+        "fips": 53075
+    },
+    {
+        "name": "Will County, IL",
+        "fips": 17197
+    },
+    {
+        "name": "Williamson County, TX",
+        "fips": 48491
+    },
+    {
+        "name": "Wirt County, WV",
+        "fips": 54105
+    },
+    {
+        "name": "Wood County, WV",
+        "fips": 54107
+    },
+    {
+        "name": "Wyoming County, PA",
+        "fips": 42131
+    },
+    {
+        "name": "York County, PA",
+        "fips": 42133
+    },
+    {
+        "name": "Summit County, CO",
+        "fips": 8117
+    },
+    {
+        "name": "Sussex County, DE",
+        "fips": 10005
+    },
+    {
+        "name": "Tallapoosa County, AL",
+        "fips": 1123
+    },
+    {
+        "name": "Tazewell County, VA",
+        "fips": 51185
+    },
+    {
+        "name": "Tippecanoe County, IN",
+        "fips": 18157
+    },
+    {
+        "name": "Transylvania County, NC",
+        "fips": 37175
+    },
+    {
+        "name": "Tulsa County, OK",
+        "fips": 40143
+    },
+    {
+        "name": "Ulster County, NY",
+        "fips": 36111
+    },
+    {
+        "name": "Union County, OH",
+        "fips": 39159
+    },
+    {
+        "name": "Upson County, GA",
+        "fips": 13293
+    },
+    {
+        "name": "Venango County, PA",
+        "fips": 42121
+    },
+    {
+        "name": "Vermillion County, IN",
+        "fips": 18165
+    },
+    {
+        "name": "Wake County, NC",
+        "fips": 37183
+    },
+    {
+        "name": "Ware County, GA",
+        "fips": 13299
+    },
+    {
+        "name": "Warren County, TN",
+        "fips": 47177
+    },
+    {
+        "name": "Washington County, MD",
+        "fips": 24043
+    },
+    {
+        "name": "Washington County, TN",
+        "fips": 47179
+    },
+    {
+        "name": "Watauga County, NC",
+        "fips": 37189
+    },
+    {
+        "name": "Weber County, UT",
+        "fips": 49057
+    },
+    {
+        "name": "West Feliciana Parish, LA",
+        "fips": 22125
+    },
+    {
+        "name": "Whitfield County, GA",
+        "fips": 13313
+    },
+    {
+        "name": "Willacy County, TX",
+        "fips": 48489
+    },
+    {
+        "name": "Winchester city, VA",
+        "fips": 51840
+    },
+    {
+        "name": "Woodford County, KY",
+        "fips": 21239
+    },
+    {
+        "name": "Yamhill County, OR",
+        "fips": 41071
+    },
+    {
+        "name": "York County, VA",
+        "fips": 51199
+    },
+    {
+        "name": "Talladega County, AL",
+        "fips": 1121
+    },
+    {
+        "name": "Tate County, MS",
+        "fips": 28137
+    },
+    {
+        "name": "Teton County, WY",
+        "fips": 56039
+    },
+    {
+        "name": "Tolland County, CT",
+        "fips": 9013
+    },
+    {
+        "name": "Travis County, TX",
+        "fips": 48453
+    },
+    {
+        "name": "Uinta County, WY",
+        "fips": 56041
+    },
+    {
+        "name": "Union County, SC",
+        "fips": 45087
+    },
+    {
+        "name": "Vermilion County, IL",
+        "fips": 17183
+    },
+    {
+        "name": "Wabaunsee County, KS",
+        "fips": 20197
+    },
+    {
+        "name": "Walker County, GA",
+        "fips": 13295
+    },
+    {
+        "name": "Warren County, IA",
+        "fips": 19181
+    },
+    {
+        "name": "Washington County, AL",
+        "fips": 1129
+    },
+    {
+        "name": "Washington County, NY",
+        "fips": 36115
+    },
+    {
+        "name": "Washoe County, NV",
+        "fips": 32031
+    },
+    {
+        "name": "Weakley County, TN",
+        "fips": 47183
+    },
+    {
+        "name": "Wexford County, MI",
+        "fips": 26165
+    },
+    {
+        "name": "Wicomico County, MD",
+        "fips": 24045
+    },
+    {
+        "name": "Wilson County, TX",
+        "fips": 48493
+    },
+    {
+        "name": "Wise County, VA",
+        "fips": 51195
+    },
+    {
+        "name": "Wright County, MN",
+        "fips": 27171
+    },
+    {
+        "name": "York County, SC",
+        "fips": 45091
+    },
+    {
+        "name": "Terrell County, GA",
+        "fips": 13273
+    },
+    {
+        "name": "Tioga County, NY",
+        "fips": 36107
+    },
+    {
+        "name": "Toombs County, GA",
+        "fips": 13279
+    },
+    {
+        "name": "Tulare County, CA",
+        "fips": 6107
+    },
+    {
+        "name": "Tuolumne County, CA",
+        "fips": 6109
+    },
+    {
+        "name": "Union County, OR",
+        "fips": 41061
+    },
+    {
+        "name": "Utah County, UT",
+        "fips": 49049
+    },
+    {
+        "name": "Ventura County, CA",
+        "fips": 6111
+    },
+    {
+        "name": "Wabasha County, MN",
+        "fips": 27157
+    },
+    {
+        "name": "Walton County, FL",
+        "fips": 12131
+    },
+    {
+        "name": "Warren County, IN",
+        "fips": 18171
+    },
+    {
+        "name": "Washington County, IA",
+        "fips": 19183
+    },
+    {
+        "name": "Washington County, UT",
+        "fips": 49053
+    },
+    {
+        "name": "Wayne County, IN",
+        "fips": 18177
+    },
+    {
+        "name": "Weld County, CO",
+        "fips": 8123
+    },
+    {
+        "name": "Whitley County, KY",
+        "fips": 21235
+    },
+    {
+        "name": "Williamson County, IL",
+        "fips": 17199
+    },
+    {
+        "name": "Windham County, CT",
+        "fips": 9015
+    },
+    {
+        "name": "Wood County, WI",
+        "fips": 55141
+    },
+    {
+        "name": "Worth County, IA",
+        "fips": 19195
+    },
+    {
+        "name": "Yates County, NY",
+        "fips": 36123
+    },
+    {
+        "name": "Wagoner County, OK",
+        "fips": 40145
+    },
+    {
+        "name": "Walworth County, WI",
+        "fips": 55127
+    },
+    {
+        "name": "Warren County, OH",
+        "fips": 39165
+    },
+    {
+        "name": "Washington County, MS",
+        "fips": 28151
+    },
+    {
+        "name": "Washington County, VA",
+        "fips": 51191
+    },
+    {
+        "name": "Wayne County, NY",
+        "fips": 36117
+    },
+    {
+        "name": "Webster County, MO",
+        "fips": 29225
+    },
+    {
+        "name": "Whatcom County, WA",
+        "fips": 53073
+    },
+    {
+        "name": "Williams County, ND",
+        "fips": 38105
+    },
+    {
+        "name": "Winnebago County, WI",
+        "fips": 55139
+    },
+    {
+        "name": "Woodford County, IL",
+        "fips": 17203
+    },
+    {
+        "name": "Yadkin County, NC",
+        "fips": 37197
+    },
+    {
+        "name": "Yolo County, CA",
+        "fips": 6113
+    },
+    {
+        "name": "Zapata County, TX",
+        "fips": 48505
+    },
+    {
+        "name": "Warren County, KY",
+        "fips": 21227
+    },
+    {
+        "name": "Warren County, VA",
+        "fips": 51187
+    },
+    {
+        "name": "Washington County, IN",
+        "fips": 18175
+    },
+    {
+        "name": "Washington County, OR",
+        "fips": 41067
+    },
+    {
+        "name": "Washington County, WI",
+        "fips": 55131
+    },
+    {
+        "name": "Wayne County, NC",
+        "fips": 37191
+    },
+    {
+        "name": "Webster County, MS",
+        "fips": 28155
+    },
+    {
+        "name": "White County, AR",
+        "fips": 5145
+    },
+    {
+        "name": "Williamsburg city, VA",
+        "fips": 51830
+    },
+    {
+        "name": "Windsor County, VT",
+        "fips": 50027
+    },
+    {
+        "name": "Worcester County, MA",
+        "fips": 25027
+    },
+    {
+        "name": "Yankton County, SD",
+        "fips": 46135
+    },
+    {
+        "name": "York County, ME",
+        "fips": 23031
+    },
+    {
+        "name": "Webster County, IA",
+        "fips": 19187
+    },
+    {
+        "name": "Westmoreland County, PA",
+        "fips": 42129
+    },
+    {
+        "name": "Whiteside County, IL",
+        "fips": 17195
+    },
+    {
+        "name": "Wilkes County, NC",
+        "fips": 37193
+    },
+    {
+        "name": "Wilson County, NC",
+        "fips": 37195
+    },
+    {
+        "name": "Wise County, TX",
+        "fips": 48497
+    },
+    {
+        "name": "Worcester County, MD",
+        "fips": 24047
+    },
+    {
+        "name": "Yellowstone County, MT",
+        "fips": 30111
+    },
+    {
+        "name": "Winona County, MN",
+        "fips": 27169
+    },
+    {
+        "name": "Woodbury County, IA",
+        "fips": 19193
+    },
+    {
+        "name": "Wyandotte County, KS",
+        "fips": 20209
+    },
+    {
+        "name": "Yell County, AR",
+        "fips": 5149
+    },
+    {
+        "name": "Abilene, TX",
+        "fips": 10180
+    },
+    {
+        "name": "Ames, IA",
+        "fips": 11180
+    },
+    {
+        "name": "Anchorage, AK",
+        "fips": 11260
+    },
+    {
+        "name": "Athens-Clarke County, GA",
+        "fips": 12020
+    },
+    {
+        "name": "Auburn-Opelika, AL",
+        "fips": 12220
+    },
+    {
+        "name": "Barnstable Town, MA",
+        "fips": 12700
+    },
+    {
+        "name": "Birmingham-Hoover, AL",
+        "fips": 13820
+    },
+    {
+        "name": "Boston-Cambridge-Newton, MA-NH",
+        "fips": 14460
+    },
+    {
+        "name": "Brunswick, GA",
+        "fips": 15260
+    },
+    {
+        "name": "Carson City, NV",
+        "fips": 16180
+    },
+    {
+        "name": "Coeur d'Alene, ID",
+        "fips": 17660
+    },
+    {
+        "name": "Dayton-Kettering, OH",
+        "fips": 19430
+    },
+    {
+        "name": "El Paso, TX",
+        "fips": 21340
+    },
+    {
+        "name": "Farmington, NM",
+        "fips": 22140
+    },
+    {
+        "name": "Gadsden, AL",
+        "fips": 23460
+    },
+    {
+        "name": "Grand Rapids-Kentwood, MI",
+        "fips": 24340
+    },
+    {
+        "name": "Hagerstown-Martinsburg, MD-WV",
+        "fips": 25180
+    },
+    {
+        "name": "Hickory-Lenoir-Morganton, NC",
+        "fips": 25860
+    },
+    {
+        "name": "Idaho Falls, ID",
+        "fips": 26820
+    },
+    {
+        "name": "Jacksonville, NC",
+        "fips": 27340
+    },
+    {
+        "name": "Kankakee, IL",
+        "fips": 28100
+    },
+    {
+        "name": "Kokomo, IN",
+        "fips": 29020
+    },
+    {
+        "name": "Las Vegas-Henderson-Paradise, NV",
+        "fips": 29820
+    },
+    {
+        "name": "Lima, OH",
+        "fips": 30620
+    },
+    {
+        "name": "Lubbock, TX",
+        "fips": 31180
+    },
+    {
+        "name": "Medford, OR",
+        "fips": 32780
+    },
+    {
+        "name": "Midland, TX",
+        "fips": 33260
+    },
+    {
+        "name": "Morristown, TN",
+        "fips": 34100
+    },
+    {
+        "name": "Nashville-Davidson--Murfreesboro--Franklin, TN",
+        "fips": 34980
+    },
+    {
+        "name": "Odessa, TX",
+        "fips": 36220
+    },
+    {
+        "name": "Oxnard-Thousand Oaks-Ventura, CA",
+        "fips": 37100
+    },
+    {
+        "name": "Pittsburgh, PA",
+        "fips": 38300
+    },
+    {
+        "name": "Redding, CA",
+        "fips": 39820
+    },
+    {
+        "name": "San Antonio-New Braunfels, TX",
+        "fips": 41700
+    },
+    {
+        "name": "Shreveport-Bossier City, LA",
+        "fips": 43340
+    },
+    {
+        "name": "Stockton, CA",
+        "fips": 44700
+    },
+    {
+        "name": "Trenton-Princeton, NJ",
+        "fips": 45940
+    },
+    {
+        "name": "Walla Walla, WA",
+        "fips": 47460
+    },
+    {
+        "name": "Wichita, KS",
+        "fips": 48620
+    },
+    {
+        "name": "Albany-Lebanon, OR",
+        "fips": 10540
+    },
+    {
+        "name": "Ann Arbor, MI",
+        "fips": 11460
+    },
+    {
+        "name": "Austin-Round Rock-Georgetown, TX",
+        "fips": 12420
+    },
+    {
+        "name": "Bay City, MI",
+        "fips": 13020
+    },
+    {
+        "name": "Bloomington, IL",
+        "fips": 14010
+    },
+    {
+        "name": "Burlington-South Burlington, VT",
+        "fips": 15540
+    },
+    {
+        "name": "Casper, WY",
+        "fips": 16220
+    },
+    {
+        "name": "Cheyenne, WY",
+        "fips": 16940
+    },
+    {
+        "name": "College Station-Bryan, TX",
+        "fips": 17780
+    },
+    {
+        "name": "Crestview-Fort Walton Beach-Destin, FL",
+        "fips": 18880
+    },
+    {
+        "name": "Decatur, AL",
+        "fips": 19460
+    },
+    {
+        "name": "Dover, DE",
+        "fips": 20100
+    },
+    {
+        "name": "Elkhart-Goshen, IN",
+        "fips": 21140
+    },
+    {
+        "name": "Fayetteville, NC",
+        "fips": 22180
+    },
+    {
+        "name": "Fort Smith, AR-OK",
+        "fips": 22900
+    },
+    {
+        "name": "Gettysburg, PA",
+        "fips": 23900
+    },
+    {
+        "name": "Greeley, CO",
+        "fips": 24540
+    },
+    {
+        "name": "Hanford-Corcoran, CA",
+        "fips": 25260
+    },
+    {
+        "name": "Houma-Thibodaux, LA",
+        "fips": 26380
+    },
+    {
+        "name": "Iowa City, IA",
+        "fips": 26980
+    },
+    {
+        "name": "Johnstown, PA",
+        "fips": 27780
+    },
+    {
+        "name": "Kennewick-Richland, WA",
+        "fips": 28420
+    },
+    {
+        "name": "Lake Havasu City-Kingman, AZ",
+        "fips": 29420
+    },
+    {
+        "name": "Lincoln, NE",
+        "fips": 30700
+    },
+    {
+        "name": "Lynchburg, VA",
+        "fips": 31340
+    },
+    {
+        "name": "Memphis, TN-MS-AR",
+        "fips": 32820
+    },
+    {
+        "name": "Monroe, MI",
+        "fips": 33780
+    },
+    {
+        "name": "New Bern, NC",
+        "fips": 35100
+    },
+    {
+        "name": "Ogden-Clearfield, UT",
+        "fips": 36260
+    },
+    {
+        "name": "Portland-Vancouver-Hillsboro, OR-WA",
+        "fips": 38900
+    },
+    {
+        "name": "Rochester, MN",
+        "fips": 40340
+    },
+    {
+        "name": "Santa Cruz-Watsonville, CA",
+        "fips": 42100
+    },
+    {
+        "name": "Spokane-Spokane Valley, WA",
+        "fips": 44060
+    },
+    {
+        "name": "Terre Haute, IN",
+        "fips": 45460
+    },
+    {
+        "name": "Warner Robins, GA",
+        "fips": 47580
+    },
+    {
+        "name": "York-Hanover, PA",
+        "fips": 49620
+    },
+    {
+        "name": "Akron, OH",
+        "fips": 10420
+    },
+    {
+        "name": "Anniston-Oxford, AL",
+        "fips": 11500
+    },
+    {
+        "name": "Atlantic City-Hammonton, NJ",
+        "fips": 12100
+    },
+    {
+        "name": "Bangor, ME",
+        "fips": 12620
+    },
+    {
+        "name": "Bend, OR",
+        "fips": 13460
+    },
+    {
+        "name": "Boulder, CO",
+        "fips": 14500
+    },
+    {
+        "name": "Carbondale-Marion, IL",
+        "fips": 16060
+    },
+    {
+        "name": "Charlotte-Concord-Gastonia, NC-SC",
+        "fips": 16740
+    },
+    {
+        "name": "Cincinnati, OH-KY-IN",
+        "fips": 17140
+    },
+    {
+        "name": "Columbus, IN",
+        "fips": 18020
+    },
+    {
+        "name": "Dalton, GA",
+        "fips": 19140
+    },
+    {
+        "name": "Detroit-Warren-Dearborn, MI",
+        "fips": 19820
+    },
+    {
+        "name": "East Stroudsburg, PA",
+        "fips": 20700
+    },
+    {
+        "name": "Evansville, IN-KY",
+        "fips": 21780
+    },
+    {
+        "name": "Florence, SC",
+        "fips": 22500
+    },
+    {
+        "name": "Goldsboro, NC",
+        "fips": 24140
+    },
+    {
+        "name": "Greensboro-High Point, NC",
+        "fips": 24660
+    },
+    {
+        "name": "Homosassa Springs, FL",
+        "fips": 26140
+    },
+    {
+        "name": "Jackson, MI",
+        "fips": 27100
+    },
+    {
+        "name": "Joplin, MO",
+        "fips": 27900
+    },
+    {
+        "name": "Lafayette-West Lafayette, IN",
+        "fips": 29200
+    },
+    {
+        "name": "Lawrence, KS",
+        "fips": 29940
+    },
+    {
+        "name": "Macon-Bibb County, GA",
+        "fips": 31420
+    },
+    {
+        "name": "Minneapolis-St. Paul-Bloomington, MN-WI",
+        "fips": 33460
+    },
+    {
+        "name": "Muncie, IN",
+        "fips": 34620
+    },
+    {
+        "name": "Ocala, FL",
+        "fips": 36100
+    },
+    {
+        "name": "Parkersburg-Vienna, WV",
+        "fips": 37620
+    },
+    {
+        "name": "Pittsfield, MA",
+        "fips": 38340
+    },
+    {
+        "name": "Pueblo, CO",
+        "fips": 39380
+    },
+    {
+        "name": "Reno, NV",
+        "fips": 39900
+    },
+    {
+        "name": "Sacramento-Roseville-Folsom, CA",
+        "fips": 40900
+    },
+    {
+        "name": "San Diego-Chula Vista-Carlsbad, CA",
+        "fips": 41740
+    },
+    {
+        "name": "Scranton--Wilkes-Barre, PA",
+        "fips": 42540
+    },
+    {
+        "name": "Sierra Vista-Douglas, AZ",
+        "fips": 43420
+    },
+    {
+        "name": "Springfield, OH",
+        "fips": 44220
+    },
+    {
+        "name": "Sumter, SC",
+        "fips": 44940
+    },
+    {
+        "name": "Tuscaloosa, AL",
+        "fips": 46220
+    },
+    {
+        "name": "Victoria, TX",
+        "fips": 47020
+    },
+    {
+        "name": "Watertown-Fort Drum, NY",
+        "fips": 48060
+    },
+    {
+        "name": "Winchester, VA-WV",
+        "fips": 49020
+    },
+    {
+        "name": "Albuquerque, NM",
+        "fips": 10740
+    },
+    {
+        "name": "Asheville, NC",
+        "fips": 11700
+    },
+    {
+        "name": "Bakersfield, CA",
+        "fips": 12540
+    },
+    {
+        "name": "Beaumont-Port Arthur, TX",
+        "fips": 13140
+    },
+    {
+        "name": "Billings, MT",
+        "fips": 13740
+    },
+    {
+        "name": "Brownsville-Harlingen, TX",
+        "fips": 15180
+    },
+    {
+        "name": "Champaign-Urbana, IL",
+        "fips": 16580
+    },
+    {
+        "name": "Cleveland-Elyria, OH",
+        "fips": 17460
+    },
+    {
+        "name": "Corvallis, OR",
+        "fips": 18700
+    },
+    {
+        "name": "Deltona-Daytona Beach-Ormond Beach, FL",
+        "fips": 19660
+    },
+    {
+        "name": "Duluth, MN-WI",
+        "fips": 20260
+    },
+    {
+        "name": "Enid, OK",
+        "fips": 21420
+    },
+    {
+        "name": "Flagstaff, AZ",
+        "fips": 22380
+    },
+    {
+        "name": "Fort Wayne, IN",
+        "fips": 23060
+    },
+    {
+        "name": "Grand Island, NE",
+        "fips": 24260
+    },
+    {
+        "name": "Greenville-Anderson, SC",
+        "fips": 24860
+    },
+    {
+        "name": "Hartford-East Hartford-Middletown, CT",
+        "fips": 25540
+    },
+    {
+        "name": "Huntington-Ashland, WV-KY-OH",
+        "fips": 26580
+    },
+    {
+        "name": "Jackson, TN",
+        "fips": 27180
+    },
+    {
+        "name": "Kahului-Wailuku-Lahaina, HI",
+        "fips": 27980
+    },
+    {
+        "name": "Kingston, NY",
+        "fips": 28740
+    },
+    {
+        "name": "Lancaster, PA",
+        "fips": 29540
+    },
+    {
+        "name": "Lebanon, PA",
+        "fips": 30140
+    },
+    {
+        "name": "Longview, WA",
+        "fips": 31020
+    },
+    {
+        "name": "Madison, WI",
+        "fips": 31540
+    },
+    {
+        "name": "Miami-Fort Lauderdale-Pompano Beach, FL",
+        "fips": 33100
+    },
+    {
+        "name": "Modesto, CA",
+        "fips": 33700
+    },
+    {
+        "name": "Myrtle Beach-Conway-North Myrtle Beach, SC-NC",
+        "fips": 34820
+    },
+    {
+        "name": "Niles, MI",
+        "fips": 35660
+    },
+    {
+        "name": "Orlando-Kissimmee-Sanford, FL",
+        "fips": 36740
+    },
+    {
+        "name": "Phoenix-Mesa-Chandler, AZ",
+        "fips": 38060
+    },
+    {
+        "name": "Providence-Warwick, RI-MA",
+        "fips": 39300
+    },
+    {
+        "name": "Roanoke, VA",
+        "fips": 40220
+    },
+    {
+        "name": "Salinas, CA",
+        "fips": 41500
+    },
+    {
+        "name": "Savannah, GA",
+        "fips": 42340
+    },
+    {
+        "name": "Spartanburg, SC",
+        "fips": 43900
+    },
+    {
+        "name": "Staunton, VA",
+        "fips": 44420
+    },
+    {
+        "name": "Tulsa, OK",
+        "fips": 46140
+    },
+    {
+        "name": "Vallejo, CA",
+        "fips": 46700
+    },
+    {
+        "name": "Waterloo-Cedar Falls, IA",
+        "fips": 47940
+    },
+    {
+        "name": "Wilmington, NC",
+        "fips": 48900
+    },
+    {
+        "name": "Yuba City, CA",
+        "fips": 49700
+    },
+    {
+        "name": "Albany, GA",
+        "fips": 10500
+    },
+    {
+        "name": "Appleton, WI",
+        "fips": 11540
+    },
+    {
+        "name": "Baltimore-Columbia-Towson, MD",
+        "fips": 12580
+    },
+    {
+        "name": "Bellingham, WA",
+        "fips": 13380
+    },
+    {
+        "name": "Boise City, ID",
+        "fips": 14260
+    },
+    {
+        "name": "Burlington, NC",
+        "fips": 15500
+    },
+    {
+        "name": "Charleston, WV",
+        "fips": 16620
+    },
+    {
+        "name": "Columbia, SC",
+        "fips": 17900
+    },
+    {
+        "name": "Denver-Aurora-Lakewood, CO",
+        "fips": 19740
+    },
+    {
+        "name": "Erie, PA",
+        "fips": 21500
+    },
+    {
+        "name": "Fresno, CA",
+        "fips": 23420
+    },
+    {
+        "name": "Grand Junction, CO",
+        "fips": 24300
+    },
+    {
+        "name": "Gulfport-Biloxi, MS",
+        "fips": 25060
+    },
+    {
+        "name": "Hattiesburg, MS",
+        "fips": 25620
+    },
+    {
+        "name": "Huntsville, AL",
+        "fips": 26620
+    },
+    {
+        "name": "Jacksonville, FL",
+        "fips": 27260
+    },
+    {
+        "name": "Kalamazoo-Portage, MI",
+        "fips": 28020
+    },
+    {
+        "name": "Knoxville, TN",
+        "fips": 28940
+    },
+    {
+        "name": "Las Cruces, NM",
+        "fips": 29740
+    },
+    {
+        "name": "Lexington-Fayette, KY",
+        "fips": 30460
+    },
+    {
+        "name": "Louisville/Jefferson County, KY-IN",
+        "fips": 31140
+    },
+    {
+        "name": "McAllen-Edinburg-Mission, TX",
+        "fips": 32580
+    },
+    {
+        "name": "Midland, MI",
+        "fips": 33220
+    },
+    {
+        "name": "Morgantown, WV",
+        "fips": 34060
+    },
+    {
+        "name": "Naples-Marco Island, FL",
+        "fips": 34940
+    },
+    {
+        "name": "Ocean City, NJ",
+        "fips": 36140
+    },
+    {
+        "name": "Owensboro, KY",
+        "fips": 36980
+    },
+    {
+        "name": "Philadelphia-Camden-Wilmington, PA-NJ-DE-MD",
+        "fips": 37980
+    },
+    {
+        "name": "Provo-Orem, UT",
+        "fips": 39340
+    },
+    {
+        "name": "Riverside-San Bernardino-Ontario, CA",
+        "fips": 40140
+    },
+    {
+        "name": "Salem, OR",
+        "fips": 41420
+    },
+    {
+        "name": "San Jose-Sunnyvale-Santa Clara, CA",
+        "fips": 41940
+    },
+    {
+        "name": "Sebastian-Vero Beach, FL",
+        "fips": 42680
+    },
+    {
+        "name": "Sioux Falls, SD",
+        "fips": 43620
+    },
+    {
+        "name": "St. George, UT",
+        "fips": 41100
+    },
+    {
+        "name": "Tallahassee, FL",
+        "fips": 45220
+    },
+    {
+        "name": "Topeka, KS",
+        "fips": 45820
+    },
+    {
+        "name": "Waco, TX",
+        "fips": 47380
+    },
+    {
+        "name": "Wichita Falls, TX",
+        "fips": 48660
+    },
+    {
+        "name": "Yuma, AZ",
+        "fips": 49740
+    },
+    {
+        "name": "Albany-Schenectady-Troy, NY",
+        "fips": 10580
+    },
+    {
+        "name": "Atlanta-Sandy Springs-Alpharetta, GA",
+        "fips": 12060
+    },
+    {
+        "name": "Augusta-Richmond County, GA-SC",
+        "fips": 12260
+    },
+    {
+        "name": "Battle Creek, MI",
+        "fips": 12980
+    },
+    {
+        "name": "Bismarck, ND",
+        "fips": 13900
+    },
+    {
+        "name": "Bremerton-Silverdale-Port Orchard, WA",
+        "fips": 14740
+    },
+    {
+        "name": "Cape Girardeau, MO-IL",
+        "fips": 16020
+    },
+    {
+        "name": "Charleston-North Charleston, SC",
+        "fips": 16700
+    },
+    {
+        "name": "Chico, CA",
+        "fips": 17020
+    },
+    {
+        "name": "Columbus, GA-AL",
+        "fips": 17980
+    },
+    {
+        "name": "Dallas-Fort Worth-Arlington, TX",
+        "fips": 19100
+    },
+    {
+        "name": "Des Moines-West Des Moines, IA",
+        "fips": 19780
+    },
+    {
+        "name": "Durham-Chapel Hill, NC",
+        "fips": 20500
+    },
+    {
+        "name": "Eugene-Springfield, OR",
+        "fips": 21660
+    },
+    {
+        "name": "Flint, MI",
+        "fips": 22420
+    },
+    {
+        "name": "Gainesville, GA",
+        "fips": 23580
+    },
+    {
+        "name": "Greenville, NC",
+        "fips": 24780
+    },
+    {
+        "name": "Hinesville, GA",
+        "fips": 25980
+    },
+    {
+        "name": "Ithaca, NY",
+        "fips": 27060
+    },
+    {
+        "name": "Jonesboro, AR",
+        "fips": 27860
+    },
+    {
+        "name": "Lafayette, LA",
+        "fips": 29180
+    },
+    {
+        "name": "Laredo, TX",
+        "fips": 29700
+    },
+    {
+        "name": "Lawton, OK",
+        "fips": 30020
+    },
+    {
+        "name": "Longview, TX",
+        "fips": 30980
+    },
+    {
+        "name": "Madera, CA",
+        "fips": 31460
+    },
+    {
+        "name": "Merced, CA",
+        "fips": 32900
+    },
+    {
+        "name": "Mobile, AL",
+        "fips": 33660
+    },
+    {
+        "name": "Muskegon, MI",
+        "fips": 34740
+    },
+    {
+        "name": "New York-Newark-Jersey City, NY-NJ-PA",
+        "fips": 35620
+    },
+    {
+        "name": "Omaha-Council Bluffs, NE-IA",
+        "fips": 36540
+    },
+    {
+        "name": "Pensacola-Ferry Pass-Brent, FL",
+        "fips": 37860
+    },
+    {
+        "name": "Prescott Valley-Prescott, AZ",
+        "fips": 39150
+    },
+    {
+        "name": "Rapid City, SD",
+        "fips": 39660
+    },
+    {
+        "name": "Rockford, IL",
+        "fips": 40420
+    },
+    {
+        "name": "Salt Lake City, UT",
+        "fips": 41620
+    },
+    {
+        "name": "Santa Maria-Santa Barbara, CA",
+        "fips": 42200
+    },
+    {
+        "name": "Sheboygan, WI",
+        "fips": 43100
+    },
+    {
+        "name": "Springfield, MA",
+        "fips": 44140
+    },
+    {
+        "name": "St. Louis, MO-IL",
+        "fips": 41180
+    },
+    {
+        "name": "The Villages, FL",
+        "fips": 45540
+    },
+    {
+        "name": "Utica-Rome, NY",
+        "fips": 46540
+    },
+    {
+        "name": "Visalia, CA",
+        "fips": 47300
+    },
+    {
+        "name": "Wheeling, WV-OH",
+        "fips": 48540
+    },
+    {
+        "name": "Yakima, WA",
+        "fips": 49420
+    },
+    {
+        "name": "Allentown-Bethlehem-Easton, PA-NJ",
+        "fips": 10900
+    },
+    {
+        "name": "Baton Rouge, LA",
+        "fips": 12940
+    },
+    {
+        "name": "Blacksburg-Christiansburg, VA",
+        "fips": 13980
+    },
+    {
+        "name": "Bridgeport-Stamford-Norwalk, CT",
+        "fips": 14860
+    },
+    {
+        "name": "Cape Coral-Fort Myers, FL",
+        "fips": 15980
+    },
+    {
+        "name": "Chattanooga, TN-GA",
+        "fips": 16860
+    },
+    {
+        "name": "Columbia, MO",
+        "fips": 17860
+    },
+    {
+        "name": "Davenport-Moline-Rock Island, IA-IL",
+        "fips": 19340
+    },
+    {
+        "name": "Elizabethtown-Fort Knox, KY",
+        "fips": 21060
+    },
+    {
+        "name": "Fond du Lac, WI",
+        "fips": 22540
+    },
+    {
+        "name": "Grand Forks, ND-MN",
+        "fips": 24220
+    },
+    {
+        "name": "Harrisonburg, VA",
+        "fips": 25500
+    },
+    {
+        "name": "Jackson, MS",
+        "fips": 27140
+    },
+    {
+        "name": "Kingsport-Bristol, TN-VA",
+        "fips": 28700
+    },
+    {
+        "name": "Lewiston, ID-WA",
+        "fips": 30300
+    },
+    {
+        "name": "Los Angeles-Long Beach-Anaheim, CA",
+        "fips": 31080
+    },
+    {
+        "name": "Manchester-Nashua, NH",
+        "fips": 31700
+    },
+    {
+        "name": "Michigan City-La Porte, IN",
+        "fips": 33140
+    },
+    {
+        "name": "Monroe, LA",
+        "fips": 33740
+    },
+    {
+        "name": "Napa, CA",
+        "fips": 34900
+    },
+    {
+        "name": "North Port-Sarasota-Bradenton, FL",
+        "fips": 35840
+    },
+    {
+        "name": "Oshkosh-Neenah, WI",
+        "fips": 36780
+    },
+    {
+        "name": "Peoria, IL",
+        "fips": 37900
+    },
+    {
+        "name": "Pocatello, ID",
+        "fips": 38540
+    },
+    {
+        "name": "Punta Gorda, FL",
+        "fips": 39460
+    },
+    {
+        "name": "Richmond, VA",
+        "fips": 40060
+    },
+    {
+        "name": "Saginaw, MI",
+        "fips": 40980
+    },
+    {
+        "name": "San Francisco-Oakland-Berkeley, CA",
+        "fips": 41860
+    },
+    {
+        "name": "Seattle-Tacoma-Bellevue, WA",
+        "fips": 42660
+    },
+    {
+        "name": "Sioux City, IA-NE-SD",
+        "fips": 43580
+    },
+    {
+        "name": "St. Cloud, MN",
+        "fips": 41060
+    },
+    {
+        "name": "Syracuse, NY",
+        "fips": 45060
+    },
+    {
+        "name": "Tucson, AZ",
+        "fips": 46060
+    },
+    {
+        "name": "Valdosta, GA",
+        "fips": 46660
+    },
+    {
+        "name": "Washington-Arlington-Alexandria, DC-VA-MD-WV",
+        "fips": 47900
+    },
+    {
+        "name": "Williamsport, PA",
+        "fips": 48700
+    },
+    {
+        "name": "Youngstown-Warren-Boardman, OH-PA",
+        "fips": 49660
+    },
+    {
+        "name": "Alexandria, LA",
+        "fips": 10780
+    },
+    {
+        "name": "Beckley, WV",
+        "fips": 13220
+    },
+    {
+        "name": "Binghamton, NY",
+        "fips": 13780
+    },
+    {
+        "name": "Bowling Green, KY",
+        "fips": 14540
+    },
+    {
+        "name": "Canton-Massillon, OH",
+        "fips": 15940
+    },
+    {
+        "name": "Charlottesville, VA",
+        "fips": 16820
+    },
+    {
+        "name": "Clarksville, TN-KY",
+        "fips": 17300
+    },
+    {
+        "name": "Columbus, OH",
+        "fips": 18140
+    },
+    {
+        "name": "Danville, IL",
+        "fips": 19180
+    },
+    {
+        "name": "Dothan, AL",
+        "fips": 20020
+    },
+    {
+        "name": "Eau Claire, WI",
+        "fips": 20740
+    },
+    {
+        "name": "Fairbanks, AK",
+        "fips": 21820
+    },
+    {
+        "name": "Florence-Muscle Shoals, AL",
+        "fips": 22520
+    },
+    {
+        "name": "Glens Falls, NY",
+        "fips": 24020
+    },
+    {
+        "name": "Green Bay, WI",
+        "fips": 24580
+    },
+    {
+        "name": "Harrisburg-Carlisle, PA",
+        "fips": 25420
+    },
+    {
+        "name": "Houston-The Woodlands-Sugar Land, TX",
+        "fips": 26420
+    },
+    {
+        "name": "Jefferson City, MO",
+        "fips": 27620
+    },
+    {
+        "name": "Killeen-Temple, TX",
+        "fips": 28660
+    },
+    {
+        "name": "Lakeland-Winter Haven, FL",
+        "fips": 29460
+    },
+    {
+        "name": "Logan, UT-ID",
+        "fips": 30860
+    },
+    {
+        "name": "Manhattan, KS",
+        "fips": 31740
+    },
+    {
+        "name": "Milwaukee-Waukesha, WI",
+        "fips": 33340
+    },
+    {
+        "name": "Mount Vernon-Anacortes, WA",
+        "fips": 34580
+    },
+    {
+        "name": "Norwich-New London, CT",
+        "fips": 35980
+    },
+    {
+        "name": "Palm Bay-Melbourne-Titusville, FL",
+        "fips": 37340
+    },
+    {
+        "name": "Port St. Lucie, FL",
+        "fips": 38940
+    },
+    {
+        "name": "Racine, WI",
+        "fips": 39540
+    },
+    {
+        "name": "Rome, GA",
+        "fips": 40660
+    },
+    {
+        "name": "San Luis Obispo-Paso Robles, CA",
+        "fips": 42020
+    },
+    {
+        "name": "Sherman-Denison, TX",
+        "fips": 43300
+    },
+    {
+        "name": "Springfield, MO",
+        "fips": 44180
+    },
+    {
+        "name": "Tampa-St. Petersburg-Clearwater, FL",
+        "fips": 45300
+    },
+    {
+        "name": "Tyler, TX",
+        "fips": 46340
+    },
+    {
+        "name": "Weirton-Steubenville, WV-OH",
+        "fips": 48260
+    },
+    {
+        "name": "Altoona, PA",
+        "fips": 11020
+    },
+    {
+        "name": "Bloomington, IN",
+        "fips": 14020
+    },
+    {
+        "name": "California-Lexington Park, MD",
+        "fips": 15680
+    },
+    {
+        "name": "Cedar Rapids, IA",
+        "fips": 16300
+    },
+    {
+        "name": "Chicago-Naperville-Elgin, IL-IN-WI",
+        "fips": 16980
+    },
+    {
+        "name": "Colorado Springs, CO",
+        "fips": 17820
+    },
+    {
+        "name": "Cumberland, MD-WV",
+        "fips": 19060
+    },
+    {
+        "name": "Decatur, IL",
+        "fips": 19500
+    },
+    {
+        "name": "Dubuque, IA",
+        "fips": 20220
+    },
+    {
+        "name": "Elmira, NY",
+        "fips": 21300
+    },
+    {
+        "name": "Fayetteville-Springdale-Rogers, AR",
+        "fips": 22220
+    },
+    {
+        "name": "Gainesville, FL",
+        "fips": 23540
+    },
+    {
+        "name": "Grants Pass, OR",
+        "fips": 24420
+    },
+    {
+        "name": "Hammond, LA",
+        "fips": 25220
+    },
+    {
+        "name": "Hilton Head Island-Bluffton, SC",
+        "fips": 25940
+    },
+    {
+        "name": "Indianapolis-Carmel-Anderson, IN",
+        "fips": 26900
+    },
+    {
+        "name": "Janesville-Beloit, WI",
+        "fips": 27500
+    },
+    {
+        "name": "Kansas City, MO-KS",
+        "fips": 28140
+    },
+    {
+        "name": "La Crosse-Onalaska, WI-MN",
+        "fips": 29100
+    },
+    {
+        "name": "Lansing-East Lansing, MI",
+        "fips": 29620
+    },
+    {
+        "name": "Little Rock-North Little Rock-Conway, AR",
+        "fips": 30780
+    },
+    {
+        "name": "Mankato, MN",
+        "fips": 31860
+    },
+    {
+        "name": "Missoula, MT",
+        "fips": 33540
+    },
+    {
+        "name": "New Haven-Milford, CT",
+        "fips": 35300
+    },
+    {
+        "name": "Oklahoma City, OK",
+        "fips": 36420
+    },
+    {
+        "name": "Portland-South Portland, ME",
+        "fips": 38860
+    },
+    {
+        "name": "Reading, PA",
+        "fips": 39740
+    },
+    {
+        "name": "Rocky Mount, NC",
+        "fips": 40580
+    },
+    {
+        "name": "San Angelo, TX",
+        "fips": 41660
+    },
+    {
+        "name": "Santa Rosa-Petaluma, CA",
+        "fips": 42220
+    },
+    {
+        "name": "South Bend-Mishawaka, IN-MI",
+        "fips": 43780
+    },
+    {
+        "name": "State College, PA",
+        "fips": 44300
+    },
+    {
+        "name": "Toledo, OH",
+        "fips": 45780
+    },
+    {
+        "name": "Urban Honolulu, HI",
+        "fips": 46520
+    },
+    {
+        "name": "Virginia Beach-Norfolk-Newport News, VA-NC",
+        "fips": 47260
+    },
+    {
+        "name": "Wenatchee, WA",
+        "fips": 48300
+    },
+    {
+        "name": "Worcester, MA-CT",
+        "fips": 49340
+    },
+    {
+        "name": "Amarillo, TX",
+        "fips": 11100
+    },
+    {
+        "name": "Bloomsburg-Berwick, PA",
+        "fips": 14100
+    },
+    {
+        "name": "Buffalo-Cheektowaga, NY",
+        "fips": 15380
+    },
+    {
+        "name": "Chambersburg-Waynesboro, PA",
+        "fips": 16540
+    },
+    {
+        "name": "Cleveland, TN",
+        "fips": 17420
+    },
+    {
+        "name": "Corpus Christi, TX",
+        "fips": 18580
+    },
+    {
+        "name": "Daphne-Fairhope-Foley, AL",
+        "fips": 19300
+    },
+    {
+        "name": "El Centro, CA",
+        "fips": 20940
+    },
+    {
+        "name": "Fargo, ND-MN",
+        "fips": 22020
+    },
+    {
+        "name": "Fort Collins, CO",
+        "fips": 22660
+    },
+    {
+        "name": "Great Falls, MT",
+        "fips": 24500
+    },
+    {
+        "name": "Hot Springs, AR",
+        "fips": 26300
+    },
+    {
+        "name": "Johnson City, TN",
+        "fips": 27740
+    },
+    {
+        "name": "Lake Charles, LA",
+        "fips": 29340
+    },
+    {
+        "name": "Lewiston-Auburn, ME",
+        "fips": 30340
+    },
+    {
+        "name": "Mansfield, OH",
+        "fips": 31900
+    },
+    {
+        "name": "Montgomery, AL",
+        "fips": 33860
+    },
+    {
+        "name": "New Orleans-Metairie, LA",
+        "fips": 35380
+    },
+    {
+        "name": "Olympia-Lacey-Tumwater, WA",
+        "fips": 36500
+    },
+    {
+        "name": "Panama City, FL",
+        "fips": 37460
+    },
+    {
+        "name": "Pine Bluff, AR",
+        "fips": 38220
+    },
+    {
+        "name": "Poughkeepsie-Newburgh-Middletown, NY",
+        "fips": 39100
+    },
+    {
+        "name": "Raleigh-Cary, NC",
+        "fips": 39580
+    },
+    {
+        "name": "Rochester, NY",
+        "fips": 40380
+    },
+    {
+        "name": "Salisbury, MD-DE",
+        "fips": 41540
+    },
+    {
+        "name": "Santa Fe, NM",
+        "fips": 42140
+    },
+    {
+        "name": "Sebring-Avon Park, FL",
+        "fips": 42700
+    },
+    {
+        "name": "Springfield, IL",
+        "fips": 44100
+    },
+    {
+        "name": "St. Joseph, MO-KS",
+        "fips": 41140
+    },
+    {
+        "name": "Texarkana, TX-AR",
+        "fips": 45500
+    },
+    {
+        "name": "Twin Falls, ID",
+        "fips": 46300
+    },
+    {
+        "name": "Vineland-Bridgeton, NJ",
+        "fips": 47220
+    },
+    {
+        "name": "Wausau-Weston, WI",
+        "fips": 48140
+    },
+    {
+        "name": "Winston-Salem, NC",
+        "fips": 49180
+    }
+]
