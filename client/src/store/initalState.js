@@ -9,5 +9,13 @@ export const initalState = {
     county_score: [],
     metro_score: [],
     banner: 'Home',
-    areas
+    areas,
+    filters: {
+        population: [],
+        population_growth: [],
+        gdp_growth: [],
+        gdp_diversity: [],
+        job_growth: [],
+        weather_dmg: [],
+    }
 }

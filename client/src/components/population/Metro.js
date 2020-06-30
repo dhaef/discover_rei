@@ -2,8 +2,10 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import { useStore } from '../../store/index';
+import Score from '../score/Score';
+import Scores from '../score/Scores';
 
-const Metro = (props) => {
+const Metro = () => {
     const { state, dispatch } = useStore();
     const {
         currentCounties,
@@ -12,32 +14,6 @@ const Metro = (props) => {
     const isMounted = useRef(true);
     const [loading, setLoading] = useState(true);
     let { cbsa } = useParams();
-
-    const setOverallScore = () => {
-        let totalClassFill, totalClassText;
-        const totalQualifyingVals = Object.keys(currentMetro).filter(key => key.endsWith('score')).length;
-        if (currentMetro.total >= (totalQualifyingVals * 3) && currentMetro.total <= (totalQualifyingVals * 4)) {
-            totalClassFill = 'bar-great';
-            totalClassText = 'Great';
-        } else if (currentMetro.total >= (totalQualifyingVals * 2) && currentMetro.total < (totalQualifyingVals * 3)) {
-            totalClassFill = 'bar-good';
-            totalClassText = 'Good';
-        } else if (currentMetro.total >= totalQualifyingVals && currentMetro.total < (totalQualifyingVals * 2)) {
-            totalClassFill = 'bar-fair';
-            totalClassText = 'Fair';
-        } else if (currentMetro.total < totalQualifyingVals) {
-            totalClassFill = 'bar-poor';
-            totalClassText = 'Poor';
-        }
-        return <div className="bar-item score-item">
-            <span className="bar-name">Overall</span>
-            <div className="bar">
-                <div className={`bar-fill ${totalClassFill}`}>
-                    <span className="bar-fill-text">{totalClassText}</span>
-                </div>
-            </div>
-        </div>
-    };
 
     useEffect(() => {
         let mounted = true;
@@ -95,50 +71,7 @@ const Metro = (props) => {
             {/* {!currentMetro && <Redirect to="/" />} */}
             {loading && <div className="loading"></div>}
             <div className="container">
-                {!loading && <> <h2 className="center-text mt-1 mb-05">Rating</h2>
-                    <div className="score-container">
-                        {setOverallScore()}
-                        <div className="bar-item score-item">
-                            <span className="bar-name">Pop.</span>
-                            <div className="bar">
-                                <div className={`bar-fill ${currentMetro.pop_score === 4 ? 'bar-great' : currentMetro.pop_score === 3 ? 'bar-good' : currentMetro.pop_score === 2 ? 'bar-fair' : 'bar-poor'}`}>
-                                    <span className="bar-fill-text">{currentMetro.pop_score === 4 ? 'Great' : currentMetro.pop_score === 3 ? 'Good' : currentMetro.pop_score === 2 ? 'Fair' : 'Poor'}</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="bar-item score-item">
-                            <span className="bar-name">Pop Grow.</span>
-                            <div className="bar">
-                                <div className={`bar-fill ${currentMetro.pop_grow_score === 4 ? 'bar-great' : currentMetro.pop_grow_score === 3 ? 'bar-good' : currentMetro.pop_grow_score === 2 ? 'bar-fair' : 'bar-poor'}`}>
-                                    <span className="bar-fill-text">{currentMetro.pop_grow_score === 4 ? 'Great' : currentMetro.pop_grow_score === 3 ? 'Good' : currentMetro.pop_grow_score === 2 ? 'Fair' : 'Poor'}</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="bar-item score-item">
-                            <span className="bar-name">GDP Grow.</span>
-                            <div className="bar">
-                                <div className={`bar-fill ${currentMetro.grp_grow_score === 4 ? 'bar-great' : currentMetro.grp_grow_score === 3 ? 'bar-good' : currentMetro.grp_grow_score === 2 ? 'bar-fair' : 'bar-poor'}`}>
-                                    <span className="bar-fill-text">{currentMetro.grp_grow_score === 4 ? 'Great' : currentMetro.grp_grow_score === 3 ? 'Good' : currentMetro.grp_grow_score === 2 ? 'Fair' : 'Poor'}</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="bar-item score-item">
-                            <span className="bar-name">GDP Div.</span>
-                            <div className="bar">
-                                <div className={`bar-fill ${currentMetro.grp_score === 4 ? 'bar-great' : currentMetro.grp_score === 3 ? 'bar-good' : currentMetro.grp_score === 2 ? 'bar-fair' : 'bar-poor'}`}>
-                                    <span className="bar-fill-text">{currentMetro.grp_score === 4 ? 'Great' : currentMetro.grp_score === 3 ? 'Good' : currentMetro.grp_score === 2 ? 'Fair' : 'Poor'}</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="bar-item score-item">
-                            <span className="bar-name">Job Gro.</span>
-                            <div className="bar">
-                                <div className={`bar-fill ${currentMetro.emp_score === 4 ? 'bar-great' : currentMetro.emp_score === 3 ? 'bar-good' : currentMetro.emp_score === 2 ? 'bar-fair' : 'bar-poor'}`}>
-                                    <span className="bar-fill-text">{currentMetro.emp_score === 4 ? 'Great' : currentMetro.emp_score === 3 ? 'Good' : currentMetro.emp_score === 2 ? 'Fair' : 'Poor'}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div> </>}
+                {!loading && <Score places={currentMetro} />}
                 <div className="table-container">
                     {!loading && <> <h2 className="center-text mt-1 mb-05">Metro Population</h2>
                         <table className="sm-table">
@@ -268,22 +201,7 @@ const Metro = (props) => {
                     {!loading && <h2 className="center-text">Counties</h2>}
                     <div className="county-list-container mt-1">
                         {!loading && currentCounties.map(county => {
-                            return <div key={county.county_area_id} className="county-list mb-1">
-                                <Link
-                                    to={`/county/${county.fips}`}
-                                    className="link"
-                                    onClick={() => dispatch({ type: 'setCurrentCounty', payload: county })}>
-                                    <h3
-                                        className="ml-auto mr-auto county-link"
-                                    >
-                                        {county.county_name}
-                                    </h3>
-                                </Link>
-                                <p className="center-text">2019 Est. Population: <span>{county.popestimate2019.toLocaleString()}</span></p>
-                                <p className="center-text">2019 Est. Pop Growth: <span>{(((county.popestimate2019 - county.popestimate2018) / county.popestimate2018) * 100).toFixed(3)}%</span></p>
-                                <p className="center-text">2018 Avg Annual Income: <span>{`$${(+county.y2018).toLocaleString()}`}</span></p>
-                                <p className="center-text">2018 Avg Annual Income Growth: <span>{(((+county.y2018 - +county.y2017) / +county.y2017) * 100).toFixed(3)}%</span></p>
-                            </div>
+                            return <Scores places={county} placeToShow={'county'} key={county.fips} />
                         })}
                     </div>
                 </div>

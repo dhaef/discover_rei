@@ -13,12 +13,6 @@ export default function rootReducer(state, { type, payload }) {
                 counties: payload.counties,
                 loading: false
             }
-        // case 'setCurrentCounties':
-        //     return {
-        //         ...state,
-        //         currentCounties: payload,
-        //         loading: false,
-        //     }
         case 'setCurrentMetro':
             return {
                 ...state,
@@ -59,69 +53,11 @@ export default function rootReducer(state, { type, payload }) {
                 },
                 loading: false
             }
-        // case 'setCurrentMetro':
-        //     return {
-        //         ...state,
-        //         currentMetro: payload,
-        //         loading: true
-        //     }
         case 'setBanner':
             return {
                 ...state,
                 banner: payload
             }
-        // case 'setMetroPie':
-        //     return {
-        //         ...state,
-        //         currentMetro: {
-        //             ...state.currentMetro,
-        //             pie: {
-        //                 income: payload.find(item => item.description === 'Per capita personal income (dollars) 4/'),
-        //                 employment: payload.find(item => item.description === 'Total employment')
-        //             }
-        //         }
-        //     }
-        // case 'setMetroPop':
-        //     return {
-        //         ...state,
-        //         currentMetro: {
-        //             ...state.currentMetro,
-        //             pop: payload[0]
-        //         }
-        //     }
-        // case 'setMetroGrp':
-        //     return {
-        //         ...state,
-        //         currentMetro: {
-        //             ...state.currentMetro,
-        //             grp_total: payload.find(metro => metro.description === 'All industry total'),
-        //             grp: payload.filter(metro => {
-        //                 if (metro.description === 'All industry total'
-        //                     || metro.description === 'Private industries'
-        //                     || metro.description === 'Durable goods manufacturing'
-        //                     || metro.description === 'Nondurable goods manufacturing'
-        //                     || metro.description === 'Finance and insurance'
-        //                     || metro.description === 'Real estate and rental and leasing'
-        //                     || metro.description === 'Professional, scientific, and technical services'
-        //                     || metro.description === 'Management of companies and enterprises'
-        //                     || metro.description === 'Administrative and support and waste management and remediation services'
-        //                     || metro.description === 'Educational services'
-        //                     || metro.description === 'Health care and social assistance'
-        //                     || metro.description === 'Arts, entertainment, and recreation'
-        //                     || metro.description === 'Accommodation and food services'
-        //                     || metro.description === 'Private goods-producing industries 2/'
-        //                     || metro.description === 'Private services-providing industries 3/'
-        //                     || metro.description === 'Natural resources and mining'
-        //                     || metro.description === 'Trade'
-        //                     || metro.description === 'Transportation and utilities'
-        //                     || metro.description === 'Manufacturing and information') {
-        //                     return null;
-        //                 } else {
-        //                     return metro;
-        //                 }
-        //             }),
-        //         }
-        //     }
         case 'setCurrentCounty':
             return {
                 ...state,
@@ -205,16 +141,42 @@ export default function rootReducer(state, { type, payload }) {
                     }
                 }
             }
-        // case 'unmount':
-        //     return {
-        //         ...state,
-        //         loading: true
-        //     }
         case 'setScore':
             return {
                 ...state,
                 [`${payload.type}_score`]: payload.data,
                 loading: false
+            }
+        case 'setFilter':
+            const name = payload.split('-')[0];
+            return {
+                ...state,
+                filters: {
+                    ...state.filters,
+                    [name]: state.filters[name].length > 0 ? state.filters[name].includes(payload) ? [...state.filters[name]] : [...state.filters[name], payload] : [payload]
+                    // [name]: state.filters[name].length > 0 ? [...state.filters[name].filter(item => item !== payload), payload] : [payload]
+                }
+            }
+        case 'removeFilter':
+            const removeName = payload.split('-')[0];
+            return {
+                ...state,
+                filters: {
+                    ...state.filters,
+                    [removeName]: state.filters[removeName].filter(item => item !== payload)
+                }
+            }
+        case 'clearFilters':
+            return {
+                ...state,
+                filters: {
+                    population: [],
+                    population_growth: [],
+                    gdp_growth: [],
+                    gdp_diversity: [],
+                    job_growth: [],
+                    weather_dmg: [],
+                }
             }
         case "setLoading":
             return {

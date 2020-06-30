@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { useStore } from '../../store';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import Score from '../score/Score';
 
 const County = () => {
     const { state, dispatch } = useStore();
@@ -64,89 +65,12 @@ const County = () => {
         }
     }
 
-    const setOverallScore = () => {
-        let totalClassFill, totalClassText;
-        const totalQualifyingVals = Object.keys(currentCounty).filter(key => key.endsWith('score')).length;
-        if (currentCounty.total >= (totalQualifyingVals * 3) && currentCounty.total <= (totalQualifyingVals * 4)) {
-            totalClassFill = 'bar-great';
-            totalClassText = 'Great';
-        } else if (currentCounty.total >= (totalQualifyingVals * 2) && currentCounty.total < (totalQualifyingVals * 3)) {
-            totalClassFill = 'bar-good';
-            totalClassText = 'Good';
-        } else if (currentCounty.total >= totalQualifyingVals && currentCounty.total < (totalQualifyingVals * 2)) {
-            totalClassFill = 'bar-fair';
-            totalClassText = 'Fair';
-        } else if (currentCounty.total < totalQualifyingVals) {
-            totalClassFill = 'bar-poor';
-            totalClassText = 'Poor';
-        }
-        return <div className="bar-item score-item">
-            <span className="bar-name">Overall</span>
-            <div className="bar">
-                <div className={`bar-fill ${totalClassFill}`}>
-                    <span className="bar-fill-text">{totalClassText}</span>
-                </div>
-            </div>
-        </div>
-    };
-
     return (
         <div>
             {/* {!currentCounty && redirect()} */}
             {loading && <div className="loading"></div>}
             <div className="container">
-                {!loading && <> <h2 className="center-text mt-1 mb-05">Rating</h2>
-                    <div className="score-container">
-                        {setOverallScore()}
-                        <div className="bar-item score-item">
-                            <span className="bar-name">Pop.</span>
-                            <div className="bar">
-                                <div className={`bar-fill ${currentCounty.pop_score === 4 ? 'bar-great' : currentCounty.pop_score === 3 ? 'bar-good' : currentCounty.pop_score === 2 ? 'bar-fair' : 'bar-poor'}`}>
-                                    <span className="bar-fill-text">{currentCounty.pop_score === 4 ? 'Great' : currentCounty.pop_score === 3 ? 'Good' : currentCounty.pop_score === 2 ? 'Fair' : 'Poor'}</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="bar-item score-item">
-                            <span className="bar-name">Pop Grow.</span>
-                            <div className="bar">
-                                <div className={`bar-fill ${currentCounty.pop_grow_score === 4 ? 'bar-great' : currentCounty.pop_grow_score === 3 ? 'bar-good' : currentCounty.pop_grow_score === 2 ? 'bar-fair' : 'bar-poor'}`}>
-                                    <span className="bar-fill-text">{currentCounty.pop_grow_score === 4 ? 'Great' : currentCounty.pop_grow_score === 3 ? 'Good' : currentCounty.pop_grow_score === 2 ? 'Fair' : 'Poor'}</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="bar-item score-item">
-                            <span className="bar-name">GDP Grow.</span>
-                            <div className="bar">
-                                <div className={`bar-fill ${currentCounty.grp_grow_score === 4 ? 'bar-great' : currentCounty.grp_grow_score === 3 ? 'bar-good' : currentCounty.grp_grow_score === 2 ? 'bar-fair' : 'bar-poor'}`}>
-                                    <span className="bar-fill-text">{currentCounty.grp_grow_score === 4 ? 'Great' : currentCounty.grp_grow_score === 3 ? 'Good' : currentCounty.grp_grow_score === 2 ? 'Fair' : 'Poor'}</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="bar-item score-item">
-                            <span className="bar-name">GDP Div.</span>
-                            <div className="bar">
-                                <div className={`bar-fill ${currentCounty.grp_score === 4 ? 'bar-great' : currentCounty.grp_score === 3 ? 'bar-good' : currentCounty.grp_score === 2 ? 'bar-fair' : 'bar-poor'}`}>
-                                    <span className="bar-fill-text">{currentCounty.grp_score === 4 ? 'Great' : currentCounty.grp_score === 3 ? 'Good' : currentCounty.grp_score === 2 ? 'Fair' : 'Poor'}</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="bar-item score-item">
-                            <span className="bar-name">Job Gro.</span>
-                            <div className="bar">
-                                <div className={`bar-fill ${currentCounty.emp_score === 4 ? 'bar-great' : currentCounty.emp_score === 3 ? 'bar-good' : currentCounty.emp_score === 2 ? 'bar-fair' : 'bar-poor'}`}>
-                                    <span className="bar-fill-text">{currentCounty.emp_score === 4 ? 'Great' : currentCounty.emp_score === 3 ? 'Good' : currentCounty.emp_score === 2 ? 'Fair' : 'Poor'}</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="bar-item score-item">
-                            <span className="bar-name">Wea Dmg.</span>
-                            <div className="bar">
-                                <div className={`bar-fill ${currentCounty.sw_score === 4 ? 'bar-great' : currentCounty.sw_score === 3 ? 'bar-good' : currentCounty.sw_score === 2 ? 'bar-fair' : 'bar-poor'}`}>
-                                    <span className="bar-fill-text">{currentCounty.sw_score === 4 ? 'Great' : currentCounty.sw_score === 3 ? 'Good' : currentCounty.sw_score === 2 ? 'Fair' : 'Poor'}</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div> </>}
+                {!loading && <Score places={currentCounty} />}
                 <div className="table-container">
                     {!loading && <> <h2 className="center-text mt-1 mb-05">County Population</h2>
                         <table className="sm-table">

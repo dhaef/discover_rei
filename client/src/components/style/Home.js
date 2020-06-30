@@ -1,13 +1,18 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { useStore } from '../../store/index';
+import Scores from '../score/Scores';
+import FilterSet from '../filter/FilterSet';
+import { handleFilter } from '../../utils/filter';
 
 const Home = ({ placeToShow }) => {
     const { state, dispatch } = useStore();
-    const { loading } = state;
+    const { loading, filters } = state;
     const isMounted = useRef(true);
+    const [limit, setLimit] = useState(1);
+    const [filteredArr, setFilteredArr] = useState([]);
+    const [displayFilters, setDisplayFilters] = useState('Show Filters');
 
     const getData = async () => {
         dispatch({ type: 'setLoading', payload: true });
@@ -33,119 +38,79 @@ const Home = ({ placeToShow }) => {
         // eslint-disable-next-line
     }, [state.county_score, state.metro_score, placeToShow]);
 
+    useEffect(() => {
+        const filteredArray = handleFilter(filters, state[`${placeToShow}_score`]);
+        setFilteredArr(filteredArray);
+    }, [filters]);
+
+    const listOfFilters = [].concat(...Object.values(filters));
+    let placesArr;
+
+    if (listOfFilters.length === 0) {
+        placesArr = state[`${placeToShow}_score`].map(place => <Scores
+            places={place}
+            placeToShow={placeToShow}
+            key={placeToShow === 'county' ? place.fips : place.cbsa} />)
+    } else if (listOfFilters.length > 0) {
+        placesArr = filteredArr.map(place => <Scores
+            places={place}
+            placeToShow={placeToShow}
+            key={placeToShow === 'county' ? place.fips : place.cbsa} />)
+    };
+
     return (
         <div>
             {/* <Banner name={'Home'} /> */}
             {loading && <div className="loading"></div>}
-            <div className="container home-container">
-                {!loading && state[`${placeToShow}_score`]
-                    .filter(place => {
-                        const topVal = Object.keys(place).filter(key => key.endsWith('score')).length * 4;
-                        if (place.total > (topVal - 3) && placeToShow === "metro") {
-                            return place;
-                        } else if (place.total > (topVal - 5) && placeToShow === "county") {
-                            return place;
-                        } else {
-                            return null;
-                        }
-                    })
-                    .sort((a, b) => b.total - a.total)
-                    .map(place => {
-                        let totalClassFill, totalClassText;
-                        const totalQualifyingVals = Object.keys(place).filter(key => key.endsWith('score')).length;
-                        if (place.total >= (totalQualifyingVals * 3) && place.total <= (totalQualifyingVals * 4)) {
-                            totalClassFill = 'bar-great';
-                            totalClassText = 'Great';
-                        } else if (place.total >= (totalQualifyingVals * 2) && place.total < (totalQualifyingVals * 3)) {
-                            totalClassFill = 'bar-good';
-                            totalClassText = 'Good';
-                        } else if (place.total >= totalQualifyingVals && place.total < (totalQualifyingVals * 2)) {
-                            totalClassFill = 'bar-fair';
-                            totalClassText = 'Fair';
-                        } else if (place.total < totalQualifyingVals) {
-                            totalClassFill = 'bar-poor';
-                            totalClassText = 'Poor';
-                        }
-                        const key = placeToShow === 'metro' ? place.cbsa : place.fips;
-                        return <div key={key} className="home-item">
-                            {placeToShow === 'county' && <h5 className="mb-05">
-                                <Link
-                                    to={`county/${place.fips}`}
-                                    className="link"
-                                    onClick={() => dispatch({ type: 'setCurrentCounty', payload: place })}
-                                >
-                                    {place.county_name}
-                                </Link>
-                            </h5>}
-                            {placeToShow === 'metro' && <h5 className="mb-05">
-                                <Link
-                                    // onClick={() => dispatch({ type: 'setLoading' })}
-                                    to={`metro/${place.cbsa}`}
-                                    className="link"
-                                // onClick={() => dispatch({ type: 'setCurrentMetro', payload: place })}
-                                >
-                                    {place.metro_name}
-                                </Link>
-                            </h5>}
-                            <div className="bar-item">
-                                <span className="bar-name">Overall{place.total}</span>
-                                <div className="bar">
-                                    <div className={`bar-fill ${totalClassFill}`}>
-                                        <span className="bar-fill-text">{totalClassText}</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="bar-item">
-                                <span className="bar-name">Pop.</span>
-                                <div className="bar">
-                                    <div className={`bar-fill ${place.pop_score === 4 ? 'bar-great' : place.pop_score === 3 ? 'bar-good' : place.pop_score === 2 ? 'bar-fair' : 'bar-poor'}`}>
-                                        <span className="bar-fill-text">{place.pop_score === 4 ? 'Great' : place.pop_score === 3 ? 'Good' : place.pop_score === 2 ? 'Fair' : 'Poor'}</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="bar-item">
-                                <span className="bar-name">Pop Grow.</span>
-                                <div className="bar">
-                                    <div className={`bar-fill ${place.pop_grow_score === 4 ? 'bar-great' : place.pop_grow_score === 3 ? 'bar-good' : place.pop_grow_score === 2 ? 'bar-fair' : 'bar-poor'}`}>
-                                        <span className="bar-fill-text">{place.pop_grow_score === 4 ? 'Great' : place.pop_grow_score === 3 ? 'Good' : place.pop_grow_score === 2 ? 'Fair' : 'Poor'}</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="bar-item">
-                                <span className="bar-name">GDP Grow.</span>
-                                <div className="bar">
-                                    <div className={`bar-fill ${place.grp_grow_score === 4 ? 'bar-great' : place.grp_grow_score === 3 ? 'bar-good' : place.grp_grow_score === 2 ? 'bar-fair' : 'bar-poor'}`}>
-                                        <span className="bar-fill-text">{place.grp_grow_score === 4 ? 'Great' : place.grp_grow_score === 3 ? 'Good' : place.grp_grow_score === 2 ? 'Fair' : 'Poor'}</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="bar-item">
-                                <span className="bar-name">GDP Div.</span>
-                                <div className="bar">
-                                    <div className={`bar-fill ${place.grp_score === 4 ? 'bar-great' : place.grp_score === 3 ? 'bar-good' : place.grp_score === 2 ? 'bar-fair' : 'bar-poor'}`}>
-                                        <span className="bar-fill-text">{place.grp_score === 4 ? 'Great' : place.grp_score === 3 ? 'Good' : place.grp_score === 2 ? 'Fair' : 'Poor'}</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="bar-item">
-                                <span className="bar-name">Job Gro.</span>
-                                <div className="bar">
-                                    <div className={`bar-fill ${place.emp_score === 4 ? 'bar-great' : place.emp_score === 3 ? 'bar-good' : place.emp_score === 2 ? 'bar-fair' : 'bar-poor'}`}>
-                                        <span className="bar-fill-text">{place.emp_score === 4 ? 'Great' : place.emp_score === 3 ? 'Good' : place.emp_score === 2 ? 'Fair' : 'Poor'}</span>
-                                    </div>
-                                </div>
-                            </div>
-                            {placeToShow === "county" && <div className="bar-item">
-                                <span className="bar-name">Wea Dmg</span>
-                                <div className="bar">
-                                    <div className={`bar-fill ${place.sw_score === 4 ? 'bar-great' : place.sw_score === 3 ? 'bar-good' : place.sw_score === 2 ? 'bar-fair' : 'bar-poor'}`}>
-                                        <span className="bar-fill-text">{place.sw_score === 4 ? 'Great' : place.sw_score === 3 ? 'Good' : place.sw_score === 2 ? 'Fair' : 'Poor'}</span>
-                                    </div>
-                                </div>
-                            </div>}
-                        </div>
-                    })}
+            <div className={`filter-container ${displayFilters === 'Hide Filters' ? 'show-flex' : 'hide'}`}>
+                <FilterSet name='population' title='Population' />
+                <FilterSet name='population_growth' title='Pop. Growth' />
+                <FilterSet name='gdp_growth' title='GDP Growth' />
+                <FilterSet name='gdp_diversity' title='GDP Diversity' />
+                <FilterSet name='job_growth' title='Job Growth' />
+                {placeToShow === 'county' && <FilterSet name='weather_dmg' title='Weather Dmg' />}
             </div>
+            <div className='current-filters mt-05 mb-05'>
+                <button
+                    className="btn ml-05"
+                    onClick={() => setDisplayFilters(displayFilters === 'Hide Filters' ? 'Show Filters' : 'Hide Filters')}>{displayFilters}</button>
+                <button
+                    className="btn ml-05"
+                    onClick={() => dispatch({ type: 'clearFilters' })}>Clear Filters</button>
+                {listOfFilters.length > 0 && listOfFilters.map(item => {
+                    const itemParts = item.split('-');
+                    const options = ['poor', 'fair', 'good', 'great'];
+                    return <div className="current-filters-item" key={item}>
+                        <span className='filter-name'>{`${options[+itemParts[1] - 1]} ${itemParts[0]}`}</span>
+                        <span
+                            className="ml-1 remove-filter"
+                            onClick={() => dispatch({ type: 'removeFilter', payload: item })}>x</span>
+                    </div>
+                })}
+            </div>
+            {!loading && <div className="container home-container">
+                {placesArr
+                    // .filter(place => {
+                    //     const topVal = Object.keys(place).filter(key => key.endsWith('score')).length * 4;
+                    //     if (place.total > (topVal - 3) && placeToShow === "metro") {
+                    //         return place;
+                    //     } else if (place.total > (topVal - 5) && placeToShow === "county") {
+                    //         return place;
+                    //     } else {
+                    //         return null;
+                    //     }
+                    // })
+                    .sort((a, b) => b.total - a.total)
+                    .filter((place, index) => index < (limit * 9))
+                    // .map(place => <Scores
+                    //     places={place}
+                    //     placeToShow={placeToShow}
+                    //     key={placeToShow === 'county' ? place.fips : place.cbsa} />)}
+                }
+                <button
+                    className="btn m-1"
+                    onClick={() => setLimit(limit + 1)} >Load More...</button>
+            </div>}
         </div>
     )
 }
