@@ -66,11 +66,11 @@ const Metro = () => {
     }
 
     return (
-        <div>
+        <div className='grid'>
             {/* {console.log(loading, currentMetro)} */}
             {/* {!currentMetro && <Redirect to="/" />} */}
             {loading && <div className="loading"></div>}
-            <div className="container">
+            <div className="container main-content">
                 {!loading && <Score places={currentMetro} />}
                 <div className="table-container">
                     {!loading && <> <h2 className="center-text mt-1 mb-05">Metro Population</h2>
@@ -197,13 +197,25 @@ const Metro = () => {
                             })}
                         </tbody>
                     </table> </>}
-                <div className="mt-1">
+                {/* <div className="mt-1">
                     {!loading && <h2 className="center-text">Counties</h2>}
                     <div className="county-list-container mt-1">
                         {!loading && currentCounties.map(county => {
                             return <Scores places={county} placeToShow={'county'} key={county.fips} />
                         })}
                     </div>
+                </div> */}
+            </div>
+            <div className="mt-1 side-content">
+                {!loading && <h2 className="center-text">Counties In {currentMetro.metro_name}</h2>}
+                <div className="county-list-container mt-1">
+                    {!loading && currentCounties.map(county => {
+                        return <Scores
+                            places={county}
+                            placeToShow={'county'}
+                            classToBe={'metro-item'}
+                            key={county.fips} />
+                    })}
                 </div>
             </div>
         </div>

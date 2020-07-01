@@ -44,7 +44,11 @@ function Places({ type }) {
         <div className="container">
             {/* {loading && <h2>Loading...</h2>} */}
             <div className="mb-1 mt-1">
-                <select name="year" value={sortYear} onChange={onYearChange}>
+                <select
+                    name="year"
+                    className="select"
+                    value={sortYear}
+                    onChange={onYearChange}>
                     <option value="popestimate2019">2019</option>
                     <option value="popestimate2018">2018</option>
                     <option value="popestimate2017">2017</option>
@@ -56,7 +60,11 @@ function Places({ type }) {
                     <option value="popestimate2011">2011</option>
                     <option value="avg">Avg</option>
                 </select>
-                <select name="pop" value={sortPop} onChange={onPopChange}>
+                <select
+                    name="pop"
+                    className="select ml-05"
+                    value={sortPop}
+                    onChange={onPopChange}>
                     <option value="0">All</option>
                     <option value="250000">250,000+</option>
                     <option value="500000">500,000+</option>
@@ -64,7 +72,7 @@ function Places({ type }) {
                 </select>
             </div>
             <div style={{ overflowX: 'auto' }}>
-                <table>
+                <table style={{ width: '100%' }}>
                     <thead>
                         <tr>
                             <th rowSpan="2">{type === 'metro' ? 'Metro Area' : 'County'}</th>

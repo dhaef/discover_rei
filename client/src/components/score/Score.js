@@ -31,7 +31,7 @@ const Score = ({ places }) => {
 
     return (
         <>
-            <h2 className="center-text mt-1 mb-05">Rating</h2>
+            <h2 className="center-text mt-1 mb-05">Overall Rating</h2>
             <div className="score-container">
                 {setOverallScore()}
                 <div className="bar-item score-item">

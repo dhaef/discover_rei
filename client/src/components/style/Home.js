@@ -13,6 +13,7 @@ const Home = ({ placeToShow }) => {
     const [limit, setLimit] = useState(1);
     const [filteredArr, setFilteredArr] = useState([]);
     const [displayFilters, setDisplayFilters] = useState('Show Filters');
+    const [sortBy, setSortBy] = useState('descending');
 
     const getData = async () => {
         dispatch({ type: 'setLoading', payload: true });
@@ -47,15 +48,9 @@ const Home = ({ placeToShow }) => {
     let placesArr;
 
     if (listOfFilters.length === 0) {
-        placesArr = state[`${placeToShow}_score`].map(place => <Scores
-            places={place}
-            placeToShow={placeToShow}
-            key={placeToShow === 'county' ? place.fips : place.cbsa} />)
+        placesArr = state[`${placeToShow}_score`].map(place => place)
     } else if (listOfFilters.length > 0) {
-        placesArr = filteredArr.map(place => <Scores
-            places={place}
-            placeToShow={placeToShow}
-            key={placeToShow === 'county' ? place.fips : place.cbsa} />)
+        placesArr = filteredArr.map(place => place)
     };
 
     return (
@@ -77,6 +72,14 @@ const Home = ({ placeToShow }) => {
                 <button
                     className="btn ml-05"
                     onClick={() => dispatch({ type: 'clearFilters' })}>Clear Filters</button>
+                <select
+                    value={sortBy}
+                    className="ml-05 select"
+                    onChange={e => setSortBy(e.target.value)}>
+                    <option disabled>Sort By.</option>
+                    <option value="descending">Descending</option>
+                    <option value="ascending">Ascending</option>
+                </select>
                 {listOfFilters.length > 0 && listOfFilters.map(item => {
                     const itemParts = item.split('-');
                     const options = ['poor', 'fair', 'good', 'great'];
@@ -88,29 +91,25 @@ const Home = ({ placeToShow }) => {
                     </div>
                 })}
             </div>
-            {!loading && <div className="container home-container">
+            {!loading && <div className="home-container">
                 {placesArr
-                    // .filter(place => {
-                    //     const topVal = Object.keys(place).filter(key => key.endsWith('score')).length * 4;
-                    //     if (place.total > (topVal - 3) && placeToShow === "metro") {
-                    //         return place;
-                    //     } else if (place.total > (topVal - 5) && placeToShow === "county") {
-                    //         return place;
-                    //     } else {
-                    //         return null;
-                    //     }
-                    // })
-                    .sort((a, b) => b.total - a.total)
+                    .sort((a, b) => {
+                        if (sortBy === 'descending') {
+                            return b.total - a.total;
+                        } else if (sortBy === 'ascending') {
+                            return a.total - b.total;
+                        }
+                    })
                     .filter((place, index) => index < (limit * 9))
-                    // .map(place => <Scores
-                    //     places={place}
-                    //     placeToShow={placeToShow}
-                    //     key={placeToShow === 'county' ? place.fips : place.cbsa} />)}
-                }
-                <button
-                    className="btn m-1"
-                    onClick={() => setLimit(limit + 1)} >Load More...</button>
+                    .map(place => <Scores
+                        places={place}
+                        placeToShow={placeToShow}
+                        classToBe={'home-item'}
+                        key={placeToShow === 'county' ? place.fips : place.cbsa} />)}
             </div>}
+            <button
+                className="btn home-btn"
+                onClick={() => setLimit(limit + 1)} >Load More...</button>
         </div>
     )
 }
