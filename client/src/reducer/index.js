@@ -154,7 +154,6 @@ export default function rootReducer(state, { type, payload }) {
                 filters: {
                     ...state.filters,
                     [name]: state.filters[name].length > 0 ? state.filters[name].includes(payload) ? [...state.filters[name]] : [...state.filters[name], payload] : [payload]
-                    // [name]: state.filters[name].length > 0 ? [...state.filters[name].filter(item => item !== payload), payload] : [payload]
                 }
             }
         case 'removeFilter':
@@ -164,6 +163,14 @@ export default function rootReducer(state, { type, payload }) {
                 filters: {
                     ...state.filters,
                     [removeName]: state.filters[removeName].filter(item => item !== payload)
+                }
+            }
+        case 'removeWeatherFilter':
+            return {
+                ...state,
+                filters: {
+                    ...state.filters,
+                    weather_dmg: []
                 }
             }
         case 'clearFilters':

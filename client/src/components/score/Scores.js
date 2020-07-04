@@ -4,20 +4,16 @@ import { Link } from 'react-router-dom';
 const Scores = ({ places, placeToShow, classToBe }) => {
 
     const setOverallScore = () => {
-        let totalClassFill, totalClassText;
+        let totalClassFill;
         const totalQualifyingVals = Object.keys(places).filter(key => key.endsWith('score')).length;
         if (places.total >= (totalQualifyingVals * 3) && places.total <= (totalQualifyingVals * 4)) {
             totalClassFill = 'bar-great';
-            totalClassText = 'Great';
         } else if (places.total >= (totalQualifyingVals * 2) && places.total < (totalQualifyingVals * 3)) {
             totalClassFill = 'bar-good';
-            totalClassText = 'Good';
         } else if (places.total >= totalQualifyingVals && places.total < (totalQualifyingVals * 2)) {
             totalClassFill = 'bar-fair';
-            totalClassText = 'Fair';
         } else if (places.total < totalQualifyingVals) {
             totalClassFill = 'bar-poor';
-            totalClassText = 'Poor';
         }
         return <div className="bar-item">
             <span className="bar-name">Overall</span>

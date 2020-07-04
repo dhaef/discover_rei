@@ -1,9 +1,10 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import { useStore } from '../../store/index';
 import Score from '../score/Score';
 import Scores from '../score/Scores';
+import Chart from '../chart/Chart';
 
 const Metro = () => {
     const { state, dispatch } = useStore();
@@ -13,6 +14,22 @@ const Metro = () => {
         metros } = state;
     const isMounted = useRef(true);
     const [loading, setLoading] = useState(true);
+    const [chartData, setChartData] = useState({
+        total: [],
+        growth: []
+    });
+    const [chartIncData, setChartIncData] = useState({
+        total: [],
+        growth: []
+    });
+    const [chartGdpData, setChartGdpData] = useState({
+        total: [],
+        growth: []
+    });
+    const [chartEmpData, setChartEmpData] = useState({
+        total: [],
+        growth: []
+    });
     let { cbsa } = useParams();
 
     useEffect(() => {
@@ -44,6 +61,98 @@ const Metro = () => {
         };
 
         getData();
+        // !loading && dispatch({ type: 'setGraph', payload: currentMetro.pop.filter(name => name.startsWith('pop')) });
+        !loading && setChartData({
+            total: [
+                currentMetro.pop.popestimate2011,
+                currentMetro.pop.popestimate2012,
+                currentMetro.pop.popestimate2013,
+                currentMetro.pop.popestimate2014,
+                currentMetro.pop.popestimate2015,
+                currentMetro.pop.popestimate2016,
+                currentMetro.pop.popestimate2017,
+                currentMetro.pop.popestimate2018,
+                currentMetro.pop.popestimate2019
+            ],
+            growth: [
+                (((currentMetro.pop.popestimate2011 - currentMetro.pop.popestimate2010) / currentMetro.pop.popestimate2010) * 100).toFixed(3),
+                (((currentMetro.pop.popestimate2012 - currentMetro.pop.popestimate2011) / currentMetro.pop.popestimate2011) * 100).toFixed(3),
+                (((currentMetro.pop.popestimate2013 - currentMetro.pop.popestimate2012) / currentMetro.pop.popestimate2012) * 100).toFixed(3),
+                (((currentMetro.pop.popestimate2014 - currentMetro.pop.popestimate2013) / currentMetro.pop.popestimate2013) * 100).toFixed(3),
+                (((currentMetro.pop.popestimate2015 - currentMetro.pop.popestimate2014) / currentMetro.pop.popestimate2014) * 100).toFixed(3),
+                (((currentMetro.pop.popestimate2016 - currentMetro.pop.popestimate2015) / currentMetro.pop.popestimate2015) * 100).toFixed(3),
+                (((currentMetro.pop.popestimate2017 - currentMetro.pop.popestimate2016) / currentMetro.pop.popestimate2016) * 100).toFixed(3),
+                (((currentMetro.pop.popestimate2018 - currentMetro.pop.popestimate2017) / currentMetro.pop.popestimate2017) * 100).toFixed(3),
+                (((currentMetro.pop.popestimate2019 - currentMetro.pop.popestimate2018) / currentMetro.pop.popestimate2018) * 100).toFixed(3),
+            ]
+        })
+        !loading && setChartIncData({
+            total: [
+                currentMetro.pie.income.pie_2011,
+                currentMetro.pie.income.pie_2012,
+                currentMetro.pie.income.pie_2013,
+                currentMetro.pie.income.pie_2014,
+                currentMetro.pie.income.pie_2015,
+                currentMetro.pie.income.pie_2016,
+                currentMetro.pie.income.pie_2017,
+                currentMetro.pie.income.pie_2018
+            ],
+            growth: [
+                (((currentMetro.pie.income.pie_2011 - currentMetro.pie.income.pie_2010) / currentMetro.pie.income.pie_2010) * 100).toFixed(3),
+                (((currentMetro.pie.income.pie_2012 - currentMetro.pie.income.pie_2011) / currentMetro.pie.income.pie_2011) * 100).toFixed(3),
+                (((currentMetro.pie.income.pie_2013 - currentMetro.pie.income.pie_2012) / currentMetro.pie.income.pie_2012) * 100).toFixed(3),
+                (((currentMetro.pie.income.pie_2014 - currentMetro.pie.income.pie_2013) / currentMetro.pie.income.pie_2013) * 100).toFixed(3),
+                (((currentMetro.pie.income.pie_2015 - currentMetro.pie.income.pie_2014) / currentMetro.pie.income.pie_2014) * 100).toFixed(3),
+                (((currentMetro.pie.income.pie_2016 - currentMetro.pie.income.pie_2015) / currentMetro.pie.income.pie_2015) * 100).toFixed(3),
+                (((currentMetro.pie.income.pie_2017 - currentMetro.pie.income.pie_2016) / currentMetro.pie.income.pie_2016) * 100).toFixed(3),
+                (((currentMetro.pie.income.pie_2018 - currentMetro.pie.income.pie_2017) / currentMetro.pie.income.pie_2017) * 100).toFixed(3)
+            ]
+        })
+        !loading && setChartGdpData({
+            total: [
+                currentMetro.grp_total.grp_2011,
+                currentMetro.grp_total.grp_2012,
+                currentMetro.grp_total.grp_2013,
+                currentMetro.grp_total.grp_2014,
+                currentMetro.grp_total.grp_2015,
+                currentMetro.grp_total.grp_2016,
+                currentMetro.grp_total.grp_2017,
+                currentMetro.grp_total.grp_2018
+            ],
+            growth: [
+                (((currentMetro.grp_total.grp_2011 - currentMetro.grp_total.grp_2010) / currentMetro.grp_total.grp_2010) * 100).toFixed(3),
+                (((currentMetro.grp_total.grp_2012 - currentMetro.grp_total.grp_2011) / currentMetro.grp_total.grp_2011) * 100).toFixed(3),
+                (((currentMetro.grp_total.grp_2013 - currentMetro.grp_total.grp_2012) / currentMetro.grp_total.grp_2012) * 100).toFixed(3),
+                (((currentMetro.grp_total.grp_2014 - currentMetro.grp_total.grp_2013) / currentMetro.grp_total.grp_2013) * 100).toFixed(3),
+                (((currentMetro.grp_total.grp_2015 - currentMetro.grp_total.grp_2014) / currentMetro.grp_total.grp_2014) * 100).toFixed(3),
+                (((currentMetro.grp_total.grp_2016 - currentMetro.grp_total.grp_2015) / currentMetro.grp_total.grp_2015) * 100).toFixed(3),
+                (((currentMetro.grp_total.grp_2017 - currentMetro.grp_total.grp_2016) / currentMetro.grp_total.grp_2016) * 100).toFixed(3),
+                (((currentMetro.grp_total.grp_2018 - currentMetro.grp_total.grp_2017) / currentMetro.grp_total.grp_2017) * 100).toFixed(3)
+            ]
+        })
+        !loading && setChartEmpData({
+            total: [
+                currentMetro.pie.employment.pie_2011,
+                currentMetro.pie.employment.pie_2012,
+                currentMetro.pie.employment.pie_2013,
+                currentMetro.pie.employment.pie_2014,
+                currentMetro.pie.employment.pie_2015,
+                currentMetro.pie.employment.pie_2016,
+                currentMetro.pie.employment.pie_2017,
+                currentMetro.pie.employment.pie_2018
+            ],
+            growth: [
+                (((currentMetro.pie.employment.pie_2011 - currentMetro.pie.employment.pie_2010) / currentMetro.pie.employment.pie_2010) * 100).toFixed(3),
+                (((currentMetro.pie.employment.pie_2012 - currentMetro.pie.employment.pie_2011) / currentMetro.pie.employment.pie_2011) * 100).toFixed(3),
+                (((currentMetro.pie.employment.pie_2013 - currentMetro.pie.employment.pie_2012) / currentMetro.pie.employment.pie_2012) * 100).toFixed(3),
+                (((currentMetro.pie.employment.pie_2014 - currentMetro.pie.employment.pie_2013) / currentMetro.pie.employment.pie_2013) * 100).toFixed(3),
+                (((currentMetro.pie.employment.pie_2015 - currentMetro.pie.employment.pie_2014) / currentMetro.pie.employment.pie_2014) * 100).toFixed(3),
+                (((currentMetro.pie.employment.pie_2016 - currentMetro.pie.employment.pie_2015) / currentMetro.pie.employment.pie_2015) * 100).toFixed(3),
+                (((currentMetro.pie.employment.pie_2017 - currentMetro.pie.employment.pie_2016) / currentMetro.pie.employment.pie_2016) * 100).toFixed(3),
+                (((currentMetro.pie.employment.pie_2018 - currentMetro.pie.employment.pie_2017) / currentMetro.pie.employment.pie_2017) * 100).toFixed(3)
+            ]
+        })
+
         return () => {
             isMounted.current = false;
             mounted = false;
@@ -72,6 +181,10 @@ const Metro = () => {
             {loading && <div className="loading"></div>}
             <div className="container main-content">
                 {!loading && <Score places={currentMetro} />}
+                {!loading && <Chart data={chartData} income={false} title='Metro Population' />}
+                {!loading && <Chart data={chartIncData} income={true} title='Metro Income' year='2018' />}
+                {!loading && <Chart data={chartGdpData} income={true} title='Metro GDP' year='2018' />}
+                {!loading && <Chart data={chartEmpData} income={false} title='Metro Employment' year='2018' />}
                 <div className="table-container">
                     {!loading && <> <h2 className="center-text mt-1 mb-05">Metro Population</h2>
                         <table className="sm-table">
@@ -197,14 +310,6 @@ const Metro = () => {
                             })}
                         </tbody>
                     </table> </>}
-                {/* <div className="mt-1">
-                    {!loading && <h2 className="center-text">Counties</h2>}
-                    <div className="county-list-container mt-1">
-                        {!loading && currentCounties.map(county => {
-                            return <Scores places={county} placeToShow={'county'} key={county.fips} />
-                        })}
-                    </div>
-                </div> */}
             </div>
             <div className="mt-1 side-content">
                 {!loading && <h2 className="center-text">Counties In {currentMetro.metro_name}</h2>}

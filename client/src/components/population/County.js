@@ -3,6 +3,7 @@ import { useStore } from '../../store';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Score from '../score/Score';
+import Chart from '../chart/Chart';
 
 const County = () => {
     const { state, dispatch } = useStore();
@@ -11,6 +12,22 @@ const County = () => {
     const { id } = useParams();
     const [loading, setLoading] = useState(true);
     const isMounted = useRef(true);
+    const [chartData, setChartData] = useState({
+        total: [],
+        growth: []
+    });
+    const [chartIncData, setChartIncData] = useState({
+        total: [],
+        growth: []
+    });
+    const [chartGdpData, setChartGdpData] = useState({
+        total: [],
+        growth: []
+    });
+    const [chartEmpData, setChartEmpData] = useState({
+        total: [],
+        growth: []
+    });
 
     useEffect(() => {
         let mounted = true;
@@ -44,6 +61,97 @@ const County = () => {
         };
 
         getData();
+
+        !loading && setChartData({
+            total: [
+                currentCounty.pop.popestimate2011,
+                currentCounty.pop.popestimate2012,
+                currentCounty.pop.popestimate2013,
+                currentCounty.pop.popestimate2014,
+                currentCounty.pop.popestimate2015,
+                currentCounty.pop.popestimate2016,
+                currentCounty.pop.popestimate2017,
+                currentCounty.pop.popestimate2018,
+                currentCounty.pop.popestimate2019
+            ],
+            growth: [
+                (((currentCounty.pop.popestimate2011 - currentCounty.pop.popestimate2010) / currentCounty.pop.popestimate2010) * 100).toFixed(3),
+                (((currentCounty.pop.popestimate2012 - currentCounty.pop.popestimate2011) / currentCounty.pop.popestimate2011) * 100).toFixed(3),
+                (((currentCounty.pop.popestimate2013 - currentCounty.pop.popestimate2012) / currentCounty.pop.popestimate2012) * 100).toFixed(3),
+                (((currentCounty.pop.popestimate2014 - currentCounty.pop.popestimate2013) / currentCounty.pop.popestimate2013) * 100).toFixed(3),
+                (((currentCounty.pop.popestimate2015 - currentCounty.pop.popestimate2014) / currentCounty.pop.popestimate2014) * 100).toFixed(3),
+                (((currentCounty.pop.popestimate2016 - currentCounty.pop.popestimate2015) / currentCounty.pop.popestimate2015) * 100).toFixed(3),
+                (((currentCounty.pop.popestimate2017 - currentCounty.pop.popestimate2016) / currentCounty.pop.popestimate2016) * 100).toFixed(3),
+                (((currentCounty.pop.popestimate2018 - currentCounty.pop.popestimate2017) / currentCounty.pop.popestimate2017) * 100).toFixed(3),
+                (((currentCounty.pop.popestimate2019 - currentCounty.pop.popestimate2018) / currentCounty.pop.popestimate2018) * 100).toFixed(3),
+            ]
+        })
+        !loading && setChartIncData({
+            total: [
+                currentCounty.income.y2011,
+                currentCounty.income.y2012,
+                currentCounty.income.y2013,
+                currentCounty.income.y2014,
+                currentCounty.income.y2015,
+                currentCounty.income.y2016,
+                currentCounty.income.y2017,
+                currentCounty.income.y2018
+            ],
+            growth: [
+                (((currentCounty.income.y2011 - currentCounty.income.y2010) / currentCounty.income.y2010) * 100).toFixed(3),
+                (((currentCounty.income.y2012 - currentCounty.income.y2011) / currentCounty.income.y2011) * 100).toFixed(3),
+                (((currentCounty.income.y2013 - currentCounty.income.y2012) / currentCounty.income.y2012) * 100).toFixed(3),
+                (((currentCounty.income.y2014 - currentCounty.income.y2013) / currentCounty.income.y2013) * 100).toFixed(3),
+                (((currentCounty.income.y2015 - currentCounty.income.y2014) / currentCounty.income.y2014) * 100).toFixed(3),
+                (((currentCounty.income.y2016 - currentCounty.income.y2015) / currentCounty.income.y2015) * 100).toFixed(3),
+                (((currentCounty.income.y2017 - currentCounty.income.y2016) / currentCounty.income.y2016) * 100).toFixed(3),
+                (((currentCounty.income.y2018 - currentCounty.income.y2017) / currentCounty.income.y2017) * 100).toFixed(3)
+            ]
+        })
+        !loading && setChartGdpData({
+            total: [
+                currentCounty.grp_total.grp_2011,
+                currentCounty.grp_total.grp_2012,
+                currentCounty.grp_total.grp_2013,
+                currentCounty.grp_total.grp_2014,
+                currentCounty.grp_total.grp_2015,
+                currentCounty.grp_total.grp_2016,
+                currentCounty.grp_total.grp_2017,
+                currentCounty.grp_total.grp_2018
+            ],
+            growth: [
+                (((currentCounty.grp_total.grp_2011 - currentCounty.grp_total.grp_2010) / currentCounty.grp_total.grp_2010) * 100).toFixed(3),
+                (((currentCounty.grp_total.grp_2012 - currentCounty.grp_total.grp_2011) / currentCounty.grp_total.grp_2011) * 100).toFixed(3),
+                (((currentCounty.grp_total.grp_2013 - currentCounty.grp_total.grp_2012) / currentCounty.grp_total.grp_2012) * 100).toFixed(3),
+                (((currentCounty.grp_total.grp_2014 - currentCounty.grp_total.grp_2013) / currentCounty.grp_total.grp_2013) * 100).toFixed(3),
+                (((currentCounty.grp_total.grp_2015 - currentCounty.grp_total.grp_2014) / currentCounty.grp_total.grp_2014) * 100).toFixed(3),
+                (((currentCounty.grp_total.grp_2016 - currentCounty.grp_total.grp_2015) / currentCounty.grp_total.grp_2015) * 100).toFixed(3),
+                (((currentCounty.grp_total.grp_2017 - currentCounty.grp_total.grp_2016) / currentCounty.grp_total.grp_2016) * 100).toFixed(3),
+                (((currentCounty.grp_total.grp_2018 - currentCounty.grp_total.grp_2017) / currentCounty.grp_total.grp_2017) * 100).toFixed(3)
+            ]
+        })
+        !loading && setChartEmpData({
+            total: [
+                currentCounty.employment.emp_2011,
+                currentCounty.employment.emp_2012,
+                currentCounty.employment.emp_2013,
+                currentCounty.employment.emp_2014,
+                currentCounty.employment.emp_2015,
+                currentCounty.employment.emp_2016,
+                currentCounty.employment.emp_2017,
+                currentCounty.employment.emp_2018
+            ],
+            growth: [
+                (((currentCounty.employment.emp_2011 - currentCounty.employment.emp_2010) / currentCounty.employment.emp_2010) * 100).toFixed(3),
+                (((currentCounty.employment.emp_2012 - currentCounty.employment.emp_2011) / currentCounty.employment.emp_2011) * 100).toFixed(3),
+                (((currentCounty.employment.emp_2013 - currentCounty.employment.emp_2012) / currentCounty.employment.emp_2012) * 100).toFixed(3),
+                (((currentCounty.employment.emp_2014 - currentCounty.employment.emp_2013) / currentCounty.employment.emp_2013) * 100).toFixed(3),
+                (((currentCounty.employment.emp_2015 - currentCounty.employment.emp_2014) / currentCounty.employment.emp_2014) * 100).toFixed(3),
+                (((currentCounty.employment.emp_2016 - currentCounty.employment.emp_2015) / currentCounty.employment.emp_2015) * 100).toFixed(3),
+                (((currentCounty.employment.emp_2017 - currentCounty.employment.emp_2016) / currentCounty.employment.emp_2016) * 100).toFixed(3),
+                (((currentCounty.employment.emp_2018 - currentCounty.employment.emp_2017) / currentCounty.employment.emp_2017) * 100).toFixed(3)
+            ]
+        })
         return () => {
             isMounted.current = false;
             mounted = false;
@@ -71,6 +179,10 @@ const County = () => {
             {loading && <div className="loading"></div>}
             <div className="container">
                 {!loading && <Score places={currentCounty} />}
+                {!loading && <Chart data={chartData} income={false} title='County Population' />}
+                {!loading && <Chart data={chartIncData} income={true} title='County Income' year='2018' />}
+                {!loading && <Chart data={chartGdpData} income={true} title='County GDP' year='2018' />}
+                {!loading && <Chart data={chartEmpData} income={false} title='County Employment' year='2018' />}
                 <div className="table-container">
                     {!loading && <> <h2 className="center-text mt-1 mb-05">County Population</h2>
                         <table className="sm-table">

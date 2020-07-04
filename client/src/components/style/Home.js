@@ -40,9 +40,13 @@ const Home = ({ placeToShow }) => {
     }, [state.county_score, state.metro_score, placeToShow]);
 
     useEffect(() => {
+        if (placeToShow === 'metro' && filters.weather_dmg.length > 0) {
+            dispatch({ type: 'removeWeatherFilter' })
+        }
         const filteredArray = handleFilter(filters, state[`${placeToShow}_score`]);
         setFilteredArr(filteredArray);
-    }, [filters]);
+        // eslint-disable-next-line
+    }, [filters, placeToShow]);
 
     const listOfFilters = [].concat(...Object.values(filters));
     let placesArr;

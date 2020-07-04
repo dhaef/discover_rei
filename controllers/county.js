@@ -53,6 +53,18 @@ exports.getCountyEmployment = async (req, res) => {
     res.status(200).json(rows);
 }
 
+exports.getCountyAvgTemp = async (req, res) => {
+    const text = "SELECT * FROM county_avg_temp";
+    // const fips = req.params.id.length === 4 ? `0${req.params.id}` : req.params.id;
+    // const values = [fips];
+    const { rows } = await db.query(text);
+
+
+
+    res.status(200);
+    // res.status(200).json(rows);
+}
+
 exports.getCountySevereWeather = async (req, res) => {
     const text = "SELECT begin_yearmonth, state_fips, cz_fips, damage_property, cz_name, event_type, deaths_direct FROM severe_weather WHERE state_fips = $1 AND cz_fips = $2";
     const stateFips = req.params.id.length === 4 ? req.params.id.slice(0, 1) : req.params.id.slice(0, 2);

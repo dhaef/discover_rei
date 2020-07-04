@@ -10,7 +10,8 @@ const { getCountyEmployment,
     getCountyScores,
     getCountyScore,
     getCountyPop,
-    grabCounties
+    grabCounties,
+    getCountyAvgTemp
 } = require('../controllers/county');
 
 const router = express.Router();
@@ -23,6 +24,7 @@ router.get('/employment/:id', getCountyEmployment);
 router.get('/grp/', getAllCountyGrp);
 router.get('/grp/:id', getCountyGrp);
 router.get('/income/:id', getCountyIncome);
+router.get('/avg-temp', getCountyAvgTemp);
 router.get('/severe_weather/', getAllCountySw);
 router.get('/severe_weather/:id', getCountySevereWeather);
 router.get('/grab', grabCounties);
