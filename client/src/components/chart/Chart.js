@@ -1,8 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
 import 'chartjs-plugin-datalabels';
+import { defaults } from 'react-chartjs-2';
+
+defaults.global.defaultFontFamily = "Gill Sans";
 
 const Chart = ({ data, income, title, year }) => {
+    const [dimensions, setDimensions] = useState(window.innerWidth);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setDimensions(window.innerWidth);
+        };
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, [dimensions]);
+
     const labels = year === '2018' ? ['2011', '2012', '2013', '2014', '2015', '2016', '2017',
         '2018'] : ['2011', '2012', '2013', '2014', '2015', '2016', '2017',
             '2018', '2019'];
@@ -10,6 +23,7 @@ const Chart = ({ data, income, title, year }) => {
         responsive: true,
         maintainAspectRatio: false,
         labels: labels,
+
         legend: {
             position: 'bottom'
         },
@@ -29,7 +43,8 @@ const Chart = ({ data, income, title, year }) => {
         title: {
             display: true,
             text: title,
-            fontSize: 20
+            fontSize: 20,
+            padding: 20
         },
         scales: {
             xAxes: [
@@ -105,7 +120,7 @@ const Chart = ({ data, income, title, year }) => {
                         datalabels: {
                             align: 'end',
                             anchor: 'end',
-                            display: 'auto',
+                            display: dimensions >= 768 ? 'auto' : false,
                             clamp: true,
                             labels: {
                                 title: {
@@ -129,7 +144,7 @@ const Chart = ({ data, income, title, year }) => {
                         datalabels: {
                             align: 'end',
                             anchor: 'end',
-                            display: 'auto',
+                            display: dimensions >= 768 ? 'auto' : false,
                             color: 'black',
                             clamp: true,
                             labels: {

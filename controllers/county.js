@@ -45,24 +45,21 @@ exports.getCountyGrp = async (req, res) => {
     res.status(200).json(rows);
 }
 
+exports.getCountyTemp = async (req, res) => {
+    const text = "SELECT * FROM county_temperature WHERE fips = $1";
+    const fips = req.params.id.length === 4 ? `0${req.params.id}` : req.params.id;
+    // console.log(req.params.id, fips);
+    const values = [fips];
+    const { rows } = await db.query(text, values);
+    res.status(200).json(rows);
+}
+
 exports.getCountyEmployment = async (req, res) => {
     const text = "SELECT * FROM employment_by_area WHERE geofips = $1";
     const fips = req.params.id.length === 4 ? `0${req.params.id}` : req.params.id;
     const values = [fips];
     const { rows } = await db.query(text, values);
     res.status(200).json(rows);
-}
-
-exports.getCountyAvgTemp = async (req, res) => {
-    const text = "SELECT * FROM county_avg_temp";
-    // const fips = req.params.id.length === 4 ? `0${req.params.id}` : req.params.id;
-    // const values = [fips];
-    const { rows } = await db.query(text);
-
-
-
-    res.status(200);
-    // res.status(200).json(rows);
 }
 
 exports.getCountySevereWeather = async (req, res) => {

@@ -49,7 +49,7 @@ const Navbar = () => {
                     <div className="search-results">
                         {search.length > 0 && search.map((item, index) => {
                             if (index < 10) {
-                                const link = item.name.split(' ')[1].startsWith('County')
+                                const link = item.name.split(' ').includes('County,')
                                     ? `/county/${item.fips}`
                                     : `/metro/${item.fips}`;
                                 return <p className="search-results-item" key={item.fips}>
@@ -78,15 +78,15 @@ const Navbar = () => {
                 </div>
                 <div className="nav-dropdown nav-item">
                     <input
-                        className={`search mr-1 ${dimensions < 768 ? 'show-nav' : 'hide'}`}
+                        className={`search mr-1 ${dimensions <= 768 ? 'show-nav' : 'hide'}`}
                         value={searchVal}
                         type="text"
                         placeholder="Search Markets..."
                         onChange={onChangeSearch} />
-                    <div className={`search-results ${dimensions < 768 ? 'show' : 'hide'}`}>
+                    <div className={`search-results ${dimensions <= 768 ? 'show' : 'hide'}`}>
                         {search.length > 0 && search.map((item, index) => {
                             if (index < 10) {
-                                const link = item.name.split(' ')[1].startsWith('County')
+                                const link = item.name.split(' ').includes('County,')
                                     ? `/county/${item.fips}`
                                     : `/metro/${item.fips}`;
                                 return <p className="search-results-item" key={item.fips}>
@@ -107,12 +107,12 @@ const Navbar = () => {
                         onClick={() => setDropdown(!dropdown)}>•••</button>
                     <div className={`dropdown-content ${dropdown && 'show'}`}>
                         <Link
-                            className={`nav-item dropdown-item ${dimensions < 768 ? 'show' : 'hide'}`}
+                            className={`nav-item dropdown-item ${dimensions <= 768 ? 'show' : 'hide'}`}
                             to="/"
                             onClick={() => setDropdown(false)}
                         >Metros</Link>
                         <Link
-                            className={`nav-item dropdown-item ${dimensions < 768 ? 'show' : 'hide'}`}
+                            className={`nav-item dropdown-item ${dimensions <= 768 ? 'show' : 'hide'}`}
                             to="/counties"
                             onClick={() => setDropdown(false)}
                         >Counties</Link>

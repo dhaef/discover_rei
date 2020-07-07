@@ -98,6 +98,7 @@ export default function rootReducer(state, { type, payload }) {
             return {
                 ...state,
                 loading: false,
+                countyMetro: payload.countyMetro[0],
                 currentCounty: {
                     // ...state.currentCounty,
                     ...payload.score[0],
@@ -130,6 +131,7 @@ export default function rootReducer(state, { type, payload }) {
                     }),
                     grp_total: payload.grp.find(county => county.description === 'All industry total'),
                     employment: payload.employment[0],
+                    temperature: payload.temperature[0],
                     severe_weather: payload.severe_weather,
                     severe_weather_total: {
                         pd_2020: total2020,

@@ -91,6 +91,11 @@
     margin: auto;
 }
 
+.center-div {
+    width: fit-content;
+    margin: auto;
+}
+
 .great {
     background-color: green;
 }
@@ -125,6 +130,10 @@
 
 .ml-05 {
     margin-left: 0.5rem;
+}
+
+.mr-05 {
+    margin-right: 0.5rem;
 }
 
 .mb-05 {
@@ -323,6 +332,86 @@ nav li {
     display: none;
 }
 
+/* FEEDBACK */
+
+.feedback-container {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 98;
+    /* margin: 5px; */
+}
+
+.feedback-form {
+    background-color: lightgrey;
+    border-radius: 5px;
+    /* height: 250px; */
+    width: 250px;
+}
+
+.feedback-email {
+    width: 90%;
+    margin: 1rem auto 0 auto;
+    display: block;
+    padding: 1%;
+}
+
+.feedback-msg {
+    width: 95%;
+    margin: 1rem auto 0 auto;
+    display: block;
+    height: 150px;
+    padding: 1%;
+    outline: none;
+}
+
+.fixed-btn {
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #a1caf1;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.fixed-btn:hover {
+    background-color: black;
+    color: white;
+}
+
+/* EMAIL */
+
+.email-list-container {
+    position: fixed;
+    bottom: 0;
+    /* height: 50px; */
+    width: 100%;
+    background-color: lightgrey;
+    z-index: 99;
+    display: flex;
+}
+
+.email-list-email {
+    display: block;
+    padding: 0.25rem;
+    margin: 0.5rem auto 0 auto;
+    width: 75%;
+}
+
+.email-list-text {
+    display: block;
+}
+
+.email-list-btn-container {
+    position: fixed;
+    bottom: 0;
+    z-index: 99;
+}
+
+.email-list-btn {
+}
+
 /* TABLE */
 
 table {
@@ -397,6 +486,21 @@ th {
     box-shadow: 2.5px 2.5px 4px lightgrey;
     padding: 0.35rem;
     border-radius: 10px;
+}
+
+.county-item {
+    width: 90%;
+    /* background-color: #a1caf1; */
+    text-align: center;
+    border: 2px solid #a1caf1;
+    margin: 0.5rem auto;
+    box-shadow: 2.5px 2.5px 4px lightgrey;
+    padding: 0.35rem;
+    border-radius: 10px;
+}
+
+.not-available {
+    color: red;
 }
 
 .home-btn {
@@ -562,6 +666,13 @@ th {
 }
 
 @media only screen and (min-width: 768px) {
+    .home-item {
+        width: 45%;
+    }
+}
+
+/* @media only screen and (min-width: 768px) { */
+@media only screen and (min-width: 839px) {
     .grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -580,6 +691,10 @@ th {
 
     .home-item {
         width: 30%;
+    }
+
+    .county-item {
+        width: 40%;
     }
 
     .county-list {

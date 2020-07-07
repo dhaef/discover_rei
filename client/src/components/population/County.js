@@ -3,15 +3,19 @@ import { useStore } from '../../store';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Score from '../score/Score';
+import Scores from '../score/Scores';
 import Chart from '../chart/Chart';
+import TempChart from '../chart/TempChart';
 
 const County = () => {
     const { state, dispatch } = useStore();
     const { currentCounty,
+        countyMetro
     } = state;
     const { id } = useParams();
     const [loading, setLoading] = useState(true);
     const isMounted = useRef(true);
+    const [emptyData, setEmptyData] = useState([]);
     const [chartData, setChartData] = useState({
         total: [],
         growth: []
@@ -28,10 +32,11 @@ const County = () => {
         total: [],
         growth: []
     });
+    const [chartTempData, setChartTempData] = useState([]);
 
     useEffect(() => {
         let mounted = true;
-        currentCounty && dispatch({ type: 'setBanner', payload: currentCounty.county_name });
+        currentCounty.county_name && dispatch({ type: 'setBanner', payload: currentCounty.county_name });
 
         const getData = async () => {
             try {
@@ -41,6 +46,8 @@ const County = () => {
                 const resGrp = await axios.get(`/county/grp/${id}`);
                 const resEmploy = await axios.get(`/county/employment/${id}`);
                 const resSWeath = await axios.get(`/county/severe_weather/${id}`);
+                const resTemp = await axios.get(`/county/temperature/${id}`);
+                const resMetro = await axios.get(`/metro/score/${res.data[0].cbsa}`);
                 if (mounted) {
                     dispatch({
                         type: 'setCountyData',
@@ -50,7 +57,9 @@ const County = () => {
                             income: resIncome.data,
                             grp: resGrp.data,
                             employment: resEmploy.data,
-                            severe_weather: resSWeath.data
+                            severe_weather: resSWeath.data,
+                            countyMetro: resMetro.data,
+                            temperature: resTemp.data
                         }
                     });
                     setLoading(false);
@@ -62,96 +71,148 @@ const County = () => {
 
         getData();
 
-        !loading && setChartData({
-            total: [
-                currentCounty.pop.popestimate2011,
-                currentCounty.pop.popestimate2012,
-                currentCounty.pop.popestimate2013,
-                currentCounty.pop.popestimate2014,
-                currentCounty.pop.popestimate2015,
-                currentCounty.pop.popestimate2016,
-                currentCounty.pop.popestimate2017,
-                currentCounty.pop.popestimate2018,
-                currentCounty.pop.popestimate2019
-            ],
-            growth: [
-                (((currentCounty.pop.popestimate2011 - currentCounty.pop.popestimate2010) / currentCounty.pop.popestimate2010) * 100).toFixed(3),
-                (((currentCounty.pop.popestimate2012 - currentCounty.pop.popestimate2011) / currentCounty.pop.popestimate2011) * 100).toFixed(3),
-                (((currentCounty.pop.popestimate2013 - currentCounty.pop.popestimate2012) / currentCounty.pop.popestimate2012) * 100).toFixed(3),
-                (((currentCounty.pop.popestimate2014 - currentCounty.pop.popestimate2013) / currentCounty.pop.popestimate2013) * 100).toFixed(3),
-                (((currentCounty.pop.popestimate2015 - currentCounty.pop.popestimate2014) / currentCounty.pop.popestimate2014) * 100).toFixed(3),
-                (((currentCounty.pop.popestimate2016 - currentCounty.pop.popestimate2015) / currentCounty.pop.popestimate2015) * 100).toFixed(3),
-                (((currentCounty.pop.popestimate2017 - currentCounty.pop.popestimate2016) / currentCounty.pop.popestimate2016) * 100).toFixed(3),
-                (((currentCounty.pop.popestimate2018 - currentCounty.pop.popestimate2017) / currentCounty.pop.popestimate2017) * 100).toFixed(3),
-                (((currentCounty.pop.popestimate2019 - currentCounty.pop.popestimate2018) / currentCounty.pop.popestimate2018) * 100).toFixed(3),
-            ]
-        })
-        !loading && setChartIncData({
-            total: [
-                currentCounty.income.y2011,
-                currentCounty.income.y2012,
-                currentCounty.income.y2013,
-                currentCounty.income.y2014,
-                currentCounty.income.y2015,
-                currentCounty.income.y2016,
-                currentCounty.income.y2017,
-                currentCounty.income.y2018
-            ],
-            growth: [
-                (((currentCounty.income.y2011 - currentCounty.income.y2010) / currentCounty.income.y2010) * 100).toFixed(3),
-                (((currentCounty.income.y2012 - currentCounty.income.y2011) / currentCounty.income.y2011) * 100).toFixed(3),
-                (((currentCounty.income.y2013 - currentCounty.income.y2012) / currentCounty.income.y2012) * 100).toFixed(3),
-                (((currentCounty.income.y2014 - currentCounty.income.y2013) / currentCounty.income.y2013) * 100).toFixed(3),
-                (((currentCounty.income.y2015 - currentCounty.income.y2014) / currentCounty.income.y2014) * 100).toFixed(3),
-                (((currentCounty.income.y2016 - currentCounty.income.y2015) / currentCounty.income.y2015) * 100).toFixed(3),
-                (((currentCounty.income.y2017 - currentCounty.income.y2016) / currentCounty.income.y2016) * 100).toFixed(3),
-                (((currentCounty.income.y2018 - currentCounty.income.y2017) / currentCounty.income.y2017) * 100).toFixed(3)
-            ]
-        })
-        !loading && setChartGdpData({
-            total: [
-                currentCounty.grp_total.grp_2011,
-                currentCounty.grp_total.grp_2012,
-                currentCounty.grp_total.grp_2013,
-                currentCounty.grp_total.grp_2014,
-                currentCounty.grp_total.grp_2015,
-                currentCounty.grp_total.grp_2016,
-                currentCounty.grp_total.grp_2017,
-                currentCounty.grp_total.grp_2018
-            ],
-            growth: [
-                (((currentCounty.grp_total.grp_2011 - currentCounty.grp_total.grp_2010) / currentCounty.grp_total.grp_2010) * 100).toFixed(3),
-                (((currentCounty.grp_total.grp_2012 - currentCounty.grp_total.grp_2011) / currentCounty.grp_total.grp_2011) * 100).toFixed(3),
-                (((currentCounty.grp_total.grp_2013 - currentCounty.grp_total.grp_2012) / currentCounty.grp_total.grp_2012) * 100).toFixed(3),
-                (((currentCounty.grp_total.grp_2014 - currentCounty.grp_total.grp_2013) / currentCounty.grp_total.grp_2013) * 100).toFixed(3),
-                (((currentCounty.grp_total.grp_2015 - currentCounty.grp_total.grp_2014) / currentCounty.grp_total.grp_2014) * 100).toFixed(3),
-                (((currentCounty.grp_total.grp_2016 - currentCounty.grp_total.grp_2015) / currentCounty.grp_total.grp_2015) * 100).toFixed(3),
-                (((currentCounty.grp_total.grp_2017 - currentCounty.grp_total.grp_2016) / currentCounty.grp_total.grp_2016) * 100).toFixed(3),
-                (((currentCounty.grp_total.grp_2018 - currentCounty.grp_total.grp_2017) / currentCounty.grp_total.grp_2017) * 100).toFixed(3)
-            ]
-        })
-        !loading && setChartEmpData({
-            total: [
-                currentCounty.employment.emp_2011,
-                currentCounty.employment.emp_2012,
-                currentCounty.employment.emp_2013,
-                currentCounty.employment.emp_2014,
-                currentCounty.employment.emp_2015,
-                currentCounty.employment.emp_2016,
-                currentCounty.employment.emp_2017,
-                currentCounty.employment.emp_2018
-            ],
-            growth: [
-                (((currentCounty.employment.emp_2011 - currentCounty.employment.emp_2010) / currentCounty.employment.emp_2010) * 100).toFixed(3),
-                (((currentCounty.employment.emp_2012 - currentCounty.employment.emp_2011) / currentCounty.employment.emp_2011) * 100).toFixed(3),
-                (((currentCounty.employment.emp_2013 - currentCounty.employment.emp_2012) / currentCounty.employment.emp_2012) * 100).toFixed(3),
-                (((currentCounty.employment.emp_2014 - currentCounty.employment.emp_2013) / currentCounty.employment.emp_2013) * 100).toFixed(3),
-                (((currentCounty.employment.emp_2015 - currentCounty.employment.emp_2014) / currentCounty.employment.emp_2014) * 100).toFixed(3),
-                (((currentCounty.employment.emp_2016 - currentCounty.employment.emp_2015) / currentCounty.employment.emp_2015) * 100).toFixed(3),
-                (((currentCounty.employment.emp_2017 - currentCounty.employment.emp_2016) / currentCounty.employment.emp_2016) * 100).toFixed(3),
-                (((currentCounty.employment.emp_2018 - currentCounty.employment.emp_2017) / currentCounty.employment.emp_2017) * 100).toFixed(3)
-            ]
-        })
+        const setDataIfNotNull = () => {
+            currentCounty.pop && setChartData({
+                total: [
+                    currentCounty.pop.popestimate2011,
+                    currentCounty.pop.popestimate2012,
+                    currentCounty.pop.popestimate2013,
+                    currentCounty.pop.popestimate2014,
+                    currentCounty.pop.popestimate2015,
+                    currentCounty.pop.popestimate2016,
+                    currentCounty.pop.popestimate2017,
+                    currentCounty.pop.popestimate2018,
+                    currentCounty.pop.popestimate2019
+                ],
+                growth: [
+                    (((currentCounty.pop.popestimate2011 - currentCounty.pop.popestimate2010) / currentCounty.pop.popestimate2010) * 100).toFixed(3),
+                    (((currentCounty.pop.popestimate2012 - currentCounty.pop.popestimate2011) / currentCounty.pop.popestimate2011) * 100).toFixed(3),
+                    (((currentCounty.pop.popestimate2013 - currentCounty.pop.popestimate2012) / currentCounty.pop.popestimate2012) * 100).toFixed(3),
+                    (((currentCounty.pop.popestimate2014 - currentCounty.pop.popestimate2013) / currentCounty.pop.popestimate2013) * 100).toFixed(3),
+                    (((currentCounty.pop.popestimate2015 - currentCounty.pop.popestimate2014) / currentCounty.pop.popestimate2014) * 100).toFixed(3),
+                    (((currentCounty.pop.popestimate2016 - currentCounty.pop.popestimate2015) / currentCounty.pop.popestimate2015) * 100).toFixed(3),
+                    (((currentCounty.pop.popestimate2017 - currentCounty.pop.popestimate2016) / currentCounty.pop.popestimate2016) * 100).toFixed(3),
+                    (((currentCounty.pop.popestimate2018 - currentCounty.pop.popestimate2017) / currentCounty.pop.popestimate2017) * 100).toFixed(3),
+                    (((currentCounty.pop.popestimate2019 - currentCounty.pop.popestimate2018) / currentCounty.pop.popestimate2018) * 100).toFixed(3),
+                ]
+            })
+            if (!currentCounty.income) {
+                if (emptyData.length === 0) {
+                    setEmptyData([...emptyData, 'Income Data'])
+                } else if (emptyData.length > 0 && !emptyData.includes('Income Data')) {
+                    setEmptyData([...emptyData, 'Income Data'])
+                }
+            } else if (currentCounty.income) {
+                setChartIncData({
+                    total: [
+                        currentCounty.income.y2011,
+                        currentCounty.income.y2012,
+                        currentCounty.income.y2013,
+                        currentCounty.income.y2014,
+                        currentCounty.income.y2015,
+                        currentCounty.income.y2016,
+                        currentCounty.income.y2017,
+                        currentCounty.income.y2018
+                    ],
+                    growth: [
+                        (((currentCounty.income.y2011 - currentCounty.income.y2010) / currentCounty.income.y2010) * 100).toFixed(3),
+                        (((currentCounty.income.y2012 - currentCounty.income.y2011) / currentCounty.income.y2011) * 100).toFixed(3),
+                        (((currentCounty.income.y2013 - currentCounty.income.y2012) / currentCounty.income.y2012) * 100).toFixed(3),
+                        (((currentCounty.income.y2014 - currentCounty.income.y2013) / currentCounty.income.y2013) * 100).toFixed(3),
+                        (((currentCounty.income.y2015 - currentCounty.income.y2014) / currentCounty.income.y2014) * 100).toFixed(3),
+                        (((currentCounty.income.y2016 - currentCounty.income.y2015) / currentCounty.income.y2015) * 100).toFixed(3),
+                        (((currentCounty.income.y2017 - currentCounty.income.y2016) / currentCounty.income.y2016) * 100).toFixed(3),
+                        (((currentCounty.income.y2018 - currentCounty.income.y2017) / currentCounty.income.y2017) * 100).toFixed(3)
+                    ]
+                })
+            }
+
+            if (!currentCounty.grp_total) {
+                if (emptyData.length === 0) {
+                    setEmptyData([...emptyData, 'GDP Data'])
+                } else if (emptyData.length > 0 && !emptyData.includes('GDP Data')) {
+                    setEmptyData([...emptyData, 'GDP Data'])
+                }
+            } else if (currentCounty.grp_total) {
+                setChartGdpData({
+                    total: [
+                        currentCounty.grp_total.grp_2011,
+                        currentCounty.grp_total.grp_2012,
+                        currentCounty.grp_total.grp_2013,
+                        currentCounty.grp_total.grp_2014,
+                        currentCounty.grp_total.grp_2015,
+                        currentCounty.grp_total.grp_2016,
+                        currentCounty.grp_total.grp_2017,
+                        currentCounty.grp_total.grp_2018
+                    ],
+                    growth: [
+                        (((currentCounty.grp_total.grp_2011 - currentCounty.grp_total.grp_2010) / currentCounty.grp_total.grp_2010) * 100).toFixed(3),
+                        (((currentCounty.grp_total.grp_2012 - currentCounty.grp_total.grp_2011) / currentCounty.grp_total.grp_2011) * 100).toFixed(3),
+                        (((currentCounty.grp_total.grp_2013 - currentCounty.grp_total.grp_2012) / currentCounty.grp_total.grp_2012) * 100).toFixed(3),
+                        (((currentCounty.grp_total.grp_2014 - currentCounty.grp_total.grp_2013) / currentCounty.grp_total.grp_2013) * 100).toFixed(3),
+                        (((currentCounty.grp_total.grp_2015 - currentCounty.grp_total.grp_2014) / currentCounty.grp_total.grp_2014) * 100).toFixed(3),
+                        (((currentCounty.grp_total.grp_2016 - currentCounty.grp_total.grp_2015) / currentCounty.grp_total.grp_2015) * 100).toFixed(3),
+                        (((currentCounty.grp_total.grp_2017 - currentCounty.grp_total.grp_2016) / currentCounty.grp_total.grp_2016) * 100).toFixed(3),
+                        (((currentCounty.grp_total.grp_2018 - currentCounty.grp_total.grp_2017) / currentCounty.grp_total.grp_2017) * 100).toFixed(3)
+                    ]
+                })
+            }
+            if (!currentCounty.employment) {
+                if (emptyData.length === 0) {
+                    setEmptyData([...emptyData, 'Employment Data'])
+                } else if (emptyData.length > 0 && !emptyData.includes('Employment Data')) {
+                    setEmptyData([...emptyData, 'Employment Data'])
+                }
+            } else if (currentCounty.employment) {
+                setChartEmpData({
+                    total: [
+                        currentCounty.employment.emp_2011,
+                        currentCounty.employment.emp_2012,
+                        currentCounty.employment.emp_2013,
+                        currentCounty.employment.emp_2014,
+                        currentCounty.employment.emp_2015,
+                        currentCounty.employment.emp_2016,
+                        currentCounty.employment.emp_2017,
+                        currentCounty.employment.emp_2018
+                    ],
+                    growth: [
+                        (((currentCounty.employment.emp_2011 - currentCounty.employment.emp_2010) / currentCounty.employment.emp_2010) * 100).toFixed(3),
+                        (((currentCounty.employment.emp_2012 - currentCounty.employment.emp_2011) / currentCounty.employment.emp_2011) * 100).toFixed(3),
+                        (((currentCounty.employment.emp_2013 - currentCounty.employment.emp_2012) / currentCounty.employment.emp_2012) * 100).toFixed(3),
+                        (((currentCounty.employment.emp_2014 - currentCounty.employment.emp_2013) / currentCounty.employment.emp_2013) * 100).toFixed(3),
+                        (((currentCounty.employment.emp_2015 - currentCounty.employment.emp_2014) / currentCounty.employment.emp_2014) * 100).toFixed(3),
+                        (((currentCounty.employment.emp_2016 - currentCounty.employment.emp_2015) / currentCounty.employment.emp_2015) * 100).toFixed(3),
+                        (((currentCounty.employment.emp_2017 - currentCounty.employment.emp_2016) / currentCounty.employment.emp_2016) * 100).toFixed(3),
+                        (((currentCounty.employment.emp_2018 - currentCounty.employment.emp_2017) / currentCounty.employment.emp_2017) * 100).toFixed(3)
+                    ]
+                })
+            }
+            if (!currentCounty.temperature) {
+                if (emptyData.length === 0) {
+                    setEmptyData([...emptyData, 'Temperature Data'])
+                } else if (emptyData.length > 0 && !emptyData.includes('Temperature Data')) {
+                    setEmptyData([...emptyData, 'Temperature Data'])
+                }
+            } else if (currentCounty.temperature) {
+                setChartTempData([
+                    currentCounty.temperature.temp_jan,
+                    currentCounty.temperature.temp_feb,
+                    currentCounty.temperature.temp_mar,
+                    currentCounty.temperature.temp_apr,
+                    currentCounty.temperature.temp_may,
+                    currentCounty.temperature.temp_jun,
+                    currentCounty.temperature.temp_jul,
+                    currentCounty.temperature.temp_aug,
+                    currentCounty.temperature.temp_sep,
+                    currentCounty.temperature.temp_oct,
+                    currentCounty.temperature.temp_nov,
+                    currentCounty.temperature.temp_dec,
+                ])
+            }
+        }
+
+        !loading && setDataIfNotNull()
+
         return () => {
             isMounted.current = false;
             mounted = false;
@@ -174,17 +235,19 @@ const County = () => {
     }
 
     return (
-        <div>
-            {/* {!currentCounty && redirect()} */}
+        <>
             {loading && <div className="loading"></div>}
-            <div className="container">
-                {!loading && <Score places={currentCounty} />}
-                {!loading && <Chart data={chartData} income={false} title='County Population' />}
-                {!loading && <Chart data={chartIncData} income={true} title='County Income' year='2018' />}
-                {!loading && <Chart data={chartGdpData} income={true} title='County GDP' year='2018' />}
-                {!loading && <Chart data={chartEmpData} income={false} title='County Employment' year='2018' />}
-                <div className="table-container">
-                    {!loading && <> <h2 className="center-text mt-1 mb-05">County Population</h2>
+            {!loading && <div>
+                {/* {!currentCounty && redirect()} */}
+                <div className="container">
+                    {<Score places={currentCounty} />}
+                    {chartData.total.length > 0 && <Chart data={chartData} income={false} title='County Population' />}
+                    {chartIncData.total.length > 0 && <Chart data={chartIncData} income={true} title='County Income' year='2018' />}
+                    {chartGdpData.total.length > 0 && <Chart data={chartGdpData} income={true} title='County GDP' year='2018' />}
+                    {chartEmpData.total.length > 0 && <Chart data={chartEmpData} income={false} title='County Employment' year='2018' />}
+                    {chartTempData.length > 0 && <TempChart data={chartTempData} />}
+                    {currentCounty.pop && <div className="table-container">
+                        <h2 className="center-text mt-1 mb-05">County Population</h2>
                         <table className="sm-table">
                             <thead>
                                 <tr>
@@ -207,10 +270,9 @@ const County = () => {
                                         </tr>
                                     })}
                             </tbody>
-                        </table> </>}
-                </div>
-                <div className="table-container">
-                    {!loading && <> <h2 className="center-text mt-1 mb-05">County Income</h2>
+                        </table> </div>}
+                    {currentCounty.income && <div className="table-container">
+                        <h2 className="center-text mt-1 mb-05">County Income</h2>
                         <table className="sm-table">
                             <thead>
                                 <tr>
@@ -232,10 +294,10 @@ const County = () => {
                                         </tr>
                                     })}
                             </tbody>
-                        </table> </>}
-                </div>
-                <div className="table-container">
-                    {!loading && <> <h2 className="center-text mt-1 mb-05">County Jobs</h2>
+                        </table>
+                    </div>}
+                    {currentCounty.employment && <div className="table-container">
+                        <h2 className="center-text mt-1 mb-05">County Jobs</h2>
                         <table className="sm-table">
                             <thead>
                                 <tr>
@@ -257,10 +319,10 @@ const County = () => {
                                         </tr>
                                     })}
                             </tbody>
-                        </table> </>}
-                </div>
-                <div className="table-container">
-                    {!loading && <> <h2 className="center-text mt-1 mb-05">County GDP</h2>
+                        </table>
+                    </div>}
+                    {currentCounty.grp_total && <div className="table-container">
+                        <h2 className="center-text mt-1 mb-05">County GDP</h2>
                         <table className="sm-table">
                             <thead>
                                 <tr>
@@ -282,10 +344,10 @@ const County = () => {
                                         </tr>
                                     })}
                             </tbody>
-                        </table> </>}
-                </div>
-                <div className="table-container">
-                    {!loading && <> <h2 className="center-text mt-1 mb-05">County Severe Weather Damage</h2>
+                        </table>
+                    </div>}
+                    {currentCounty.severe_weather_total && <div className="table-container">
+                        <h2 className="center-text mt-1 mb-05">County Severe Weather Damage</h2>
                         <table className="sm-table">
                             <thead>
                                 <tr>
@@ -303,34 +365,49 @@ const County = () => {
                                         </tr>
                                     })}
                             </tbody>
-                        </table> </>}
-                </div>
-                {!loading && <> <h2 className="center-text mt-1">County GDP</h2>
-                    <table className="mt-1">
-                        <thead>
-                            <tr>
-                                <th>Industry</th>
-                                <th>% of Economy</th>
-                                <th>Value</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Top 3 Total</td>
-                                <td>{`${getTopThree().growth.toFixed(3)}%`}</td>
-                                <td>{`$${(+getTopThree().total * 1000).toLocaleString()}`}</td>
-                            </tr>
-                            {currentCounty.grp.map((county, index) => {
-                                return <tr key={index}>
-                                    <td>{county.description}</td>
-                                    <td>{county.grp_2018 === '(D)' ? 'N/A' : `${((county.grp_2018 / currentCounty.grp_total.grp_2018) * 100).toFixed(3)}%`}</td>
-                                    <td>{county.grp_2018 === '(D)' ? 'N/A' : `$${(+county.grp_2018 * 1000).toLocaleString()}`}</td>
+                        </table>
+                    </div>}
+                    {currentCounty.grp.length > 0 && <> <h2 className="center-text mt-1">County GDP</h2>
+                        <table className="mt-1">
+                            <thead>
+                                <tr>
+                                    <th>Industry</th>
+                                    <th>% of Economy</th>
+                                    <th>Value</th>
                                 </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Top 3 Total</td>
+                                    <td>{`${getTopThree().growth.toFixed(3)}%`}</td>
+                                    <td>{`$${(+getTopThree().total * 1000).toLocaleString()}`}</td>
+                                </tr>
+                                {currentCounty.grp.map((county, index) => {
+                                    return <tr key={index}>
+                                        <td>{county.description}</td>
+                                        <td>{county.grp_2018 === '(D)' ? 'N/A' : `${((county.grp_2018 / currentCounty.grp_total.grp_2018) * 100).toFixed(3)}%`}</td>
+                                        <td>{county.grp_2018 === '(D)' ? 'N/A' : `$${(+county.grp_2018 * 1000).toLocaleString()}`}</td>
+                                    </tr>
+                                })}
+                            </tbody>
+                        </table> </>}
+                    {countyMetro && <> <h3 className="center-text mt-05">County Metro</h3>
+                        <Scores
+                            places={countyMetro}
+                            placeToShow={'metro'}
+                            classToBe={'county-item'} /> </>}
+                    {emptyData.length > 0 && <div>
+                        <h5 className="center-text mt-05">The following data was unavailable</h5>
+                        <div style={{ width: 'fit-content' }} className="center mb-05">
+                            {emptyData.map((item, index) => {
+                                const text = index !== (emptyData.length - 1) ? `${item}, ` : item;
+                                return <span key={index}>{text}</span>
                             })}
-                        </tbody>
-                    </table></>}
-            </div>
-        </div>
+                        </div>
+                    </div>}
+                </div>
+            </div>}
+        </>
     )
 }
 

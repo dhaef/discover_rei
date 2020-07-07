@@ -120,3 +120,260 @@ exports.getSevereDmg = async (req, res) => {
         res.status(200).json(result.rows);
     });
 }
+
+exports.getCountyAvgTemp = async (req, res) => {
+    const text = "SELECT * FROM county_avg_temp";
+    // const fips = req.params.id.length === 4 ? `0${req.params.id}` : req.params.id;
+    // const values = [fips];
+    const { rows } = await db.query(text);
+
+    const results = [];
+
+    rows.map((item, index) => {
+        // if (index < 5000) {
+        const inResults = results.find(place => place.fips === item.fips);
+        // console.log(inResults);
+        if (inResults) {
+            const itemIndex = results.findIndex(place => place.fips === item.fips);
+            results[itemIndex] = {
+                ...results[itemIndex],
+                data: {
+                    jan: [...results[itemIndex].data.jan, item.jan],
+                    feb: [...results[itemIndex].data.feb, item.feb],
+                    mar: [...results[itemIndex].data.mar, item.mar],
+                    apr: [...results[itemIndex].data.apr, item.apr],
+                    may: [...results[itemIndex].data.may, item.may],
+                    jun: [...results[itemIndex].data.jun, item.jun],
+                    jul: [...results[itemIndex].data.jul, item.jul],
+                    aug: [...results[itemIndex].data.aug, item.aug],
+                    sep: [...results[itemIndex].data.sep, item.sep],
+                    oct: [...results[itemIndex].data.oct, item.oct],
+                    nov: [...results[itemIndex].data.nov, item.nov],
+                    dec: [...results[itemIndex].data.dec, item.dec],
+                }
+                // data: [...results[itemIndex].data, [
+                //     item.year,
+                //     item.jan,
+                //     item.feb,
+                //     item.mar,
+                //     item.apr,
+                //     item.may,
+                //     item.jun,
+                //     item.jul,
+                //     item.aug,
+                //     item.sep,
+                //     item.oct,
+                //     item.nov,
+                //     item.dec,
+                // ]]
+            }
+        } else if (!inResults) {
+            results.push({
+                fips: item.fips,
+                data: {
+                    jan: [item.jan],
+                    feb: [item.feb],
+                    mar: [item.mar],
+                    apr: [item.apr],
+                    may: [item.may],
+                    jun: [item.jun],
+                    jul: [item.jul],
+                    aug: [item.aug],
+                    sep: [item.sep],
+                    oct: [item.oct],
+                    nov: [item.nov],
+                    dec: [item.dec],
+                }
+                // data: [
+                //     [
+                //         item.year,
+                //         item.jan,
+                //         item.feb,
+                //         item.mar,
+                //         item.apr,
+                //         item.may,
+                //         item.jun,
+                //         item.jul,
+                //         item.aug,
+                //         item.sep,
+                //         item.oct,
+                //         item.nov,
+                //         item.dec,
+                //     ]
+                // ]
+            })
+        }
+        // }
+    });
+    const avgTemps = [];
+    let num = 1;
+    results.map(async place => {
+        try {
+            // console.log(+(place.fips.toString()[0]))
+            let newFips;
+            if (place.fips.toString().startsWith('3') && place.fips.toString().length === 4) {
+                newFips = `2${place.fips.toString().slice(1)}`
+            } else if (place.fips.toString().startsWith('1') && place.fips.toString().length === 4) {
+                newFips = `1${place.fips.toString().slice(1)}`
+            } else if (place.fips.toString().startsWith('2') && place.fips.toString().length === 4) {
+                newFips = `4${place.fips.toString().slice(1)}`
+            } else if (place.fips.toString().startsWith('4') && place.fips.toString().length === 4) {
+                newFips = `6${place.fips.toString().slice(1)}`
+            } else if (place.fips.toString().startsWith('5') && place.fips.toString().length === 4) {
+                newFips = `8${place.fips.toString().slice(1)}`
+            } else if (place.fips.toString().startsWith('6') && place.fips.toString().length === 4) {
+                newFips = `9${place.fips.toString().slice(1)}`
+            } else if (place.fips.toString().startsWith('7') && place.fips.toString().length === 4) {
+                newFips = `10${place.fips.toString().slice(1)}`
+            } else if (place.fips.toString().startsWith('8') && place.fips.toString().length === 4) {
+                newFips = `12${place.fips.toString().slice(1)}`
+            } else if (place.fips.toString().startsWith('9') && place.fips.toString().length === 4) {
+                newFips = `13${place.fips.toString().slice(1)}`
+            } else if (place.fips.toString().startsWith('10') && place.fips.toString().length === 5) {
+                newFips = `16${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('11') && place.fips.toString().length === 5) {
+                newFips = `17${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('12') && place.fips.toString().length === 5) {
+                newFips = `18${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('13') && place.fips.toString().length === 5) {
+                newFips = `19${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('14') && place.fips.toString().length === 5) {
+                newFips = `20${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('15') && place.fips.toString().length === 5) {
+                newFips = `21${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('16') && place.fips.toString().length === 5) {
+                newFips = `22${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('17') && place.fips.toString().length === 5) {
+                newFips = `23${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('18') && place.fips.toString().length === 5) {
+                newFips = `24${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('19') && place.fips.toString().length === 5) {
+                newFips = `25${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('20') && place.fips.toString().length === 5) {
+                newFips = `26${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('21') && place.fips.toString().length === 5) {
+                newFips = `27${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('22') && place.fips.toString().length === 5) {
+                newFips = `28${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('23') && place.fips.toString().length === 5) {
+                newFips = `29${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('24') && place.fips.toString().length === 5) {
+                newFips = `30${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('25') && place.fips.toString().length === 5) {
+                newFips = `31${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('26') && place.fips.toString().length === 5) {
+                newFips = `32${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('27') && place.fips.toString().length === 5) {
+                newFips = `33${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('28') && place.fips.toString().length === 5) {
+                newFips = `34${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('29') && place.fips.toString().length === 5) {
+                newFips = `35${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('30') && place.fips.toString().length === 5) {
+                newFips = `36${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('31') && place.fips.toString().length === 5) {
+                newFips = `37${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('32') && place.fips.toString().length === 5) {
+                newFips = `38${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('33') && place.fips.toString().length === 5) {
+                newFips = `39${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('34') && place.fips.toString().length === 5) {
+                newFips = `40${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('35') && place.fips.toString().length === 5) {
+                newFips = `41${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('36') && place.fips.toString().length === 5) {
+                newFips = `42${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('37') && place.fips.toString().length === 5) {
+                newFips = `44${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('38') && place.fips.toString().length === 5) {
+                newFips = `45${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('39') && place.fips.toString().length === 5) {
+                newFips = `46${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('40') && place.fips.toString().length === 5) {
+                newFips = `47${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('41') && place.fips.toString().length === 5) {
+                newFips = `48${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('42') && place.fips.toString().length === 5) {
+                newFips = `49${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('43') && place.fips.toString().length === 5) {
+                newFips = `50${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('44') && place.fips.toString().length === 5) {
+                newFips = `51${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('45') && place.fips.toString().length === 5) {
+                newFips = `53${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('46') && place.fips.toString().length === 5) {
+                newFips = `54${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('47') && place.fips.toString().length === 5) {
+                newFips = `55${place.fips.toString().slice(2)}`
+            } else if (place.fips.toString().startsWith('48') && place.fips.toString().length === 5) {
+                newFips = `56${place.fips.toString().slice(2)}`
+            } else {
+                newFips = `${num}`
+                num = num + 1
+            }
+            // console.log(newFips);
+            const q_text = 'INSERT INTO county_temperature(fips, temp_jan, temp_feb, temp_mar, temp_apr, temp_may, temp_jun, temp_jul, temp_aug, temp_sep, temp_oct, temp_nov, temp_dec) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)';
+            const values = [
+                +newFips,
+                +((place.data.jan.reduce((a, b) => +a + +b, 0)) / place.data.jan.length).toFixed(2),
+                +((place.data.feb.reduce((a, b) => +a + +b, 0)) / place.data.feb.length).toFixed(2),
+                +((place.data.mar.reduce((a, b) => +a + +b, 0)) / place.data.mar.length).toFixed(2),
+                +((place.data.apr.reduce((a, b) => +a + +b, 0)) / place.data.apr.length).toFixed(2),
+                +((place.data.may.reduce((a, b) => +a + +b, 0)) / place.data.may.length).toFixed(2),
+                +((place.data.jun.reduce((a, b) => +a + +b, 0)) / place.data.jun.length).toFixed(2),
+                +((place.data.jul.reduce((a, b) => +a + +b, 0)) / place.data.jul.length).toFixed(2),
+                +((place.data.aug.reduce((a, b) => +a + +b, 0)) / place.data.aug.length).toFixed(2),
+                +((place.data.sep.reduce((a, b) => +a + +b, 0)) / place.data.sep.length).toFixed(2),
+                +((place.data.oct.reduce((a, b) => +a + +b, 0)) / place.data.oct.length).toFixed(2),
+                +((place.data.nov.reduce((a, b) => +a + +b, 0)) / place.data.nov.length).toFixed(2),
+                +((place.data.dec.reduce((a, b) => +a + +b, 0)) / place.data.dec.length).toFixed(2),
+            ]
+            // const avgObj = {
+            //     fips: place.fips,
+            //     avg_temps: {
+            //         jan: +((place.data.jan.reduce((a, b) => +a + +b, 0)) / place.data.jan.length).toFixed(2),
+            //         feb: +((place.data.feb.reduce((a, b) => +a + +b, 0)) / place.data.feb.length).toFixed(2),
+            //         mar: +((place.data.mar.reduce((a, b) => +a + +b, 0)) / place.data.mar.length).toFixed(2),
+            //         apr: +((place.data.apr.reduce((a, b) => +a + +b, 0)) / place.data.apr.length).toFixed(2),
+            //         may: +((place.data.may.reduce((a, b) => +a + +b, 0)) / place.data.may.length).toFixed(2),
+            //         jun: +((place.data.jun.reduce((a, b) => +a + +b, 0)) / place.data.jun.length).toFixed(2),
+            //         jul: +((place.data.jul.reduce((a, b) => +a + +b, 0)) / place.data.jul.length).toFixed(2),
+            //         aug: +((place.data.aug.reduce((a, b) => +a + +b, 0)) / place.data.aug.length).toFixed(2),
+            //         sep: +((place.data.sep.reduce((a, b) => +a + +b, 0)) / place.data.sep.length).toFixed(2),
+            //         oct: +((place.data.oct.reduce((a, b) => +a + +b, 0)) / place.data.oct.length).toFixed(2),
+            //         nov: +((place.data.nov.reduce((a, b) => +a + +b, 0)) / place.data.nov.length).toFixed(2),
+            //         dec: +((place.data.dec.reduce((a, b) => +a + +b, 0)) / place.data.dec.length).toFixed(2),
+            //     }
+            // }
+
+            await db.query(q_text, values);
+            // avgTemps.push(avgObj);
+        } catch (error) {
+            console.log(error)
+        }
+    });
+
+    // avgTemps.map(async place => {
+    //     const values = [
+    //         place.fips,
+    //         place.jan,
+    //         place.feb,
+    //         place.mar,
+    //         place.apr,
+    //         place.may,
+    //         place.jun,
+    //         place.jul,
+    //         place.aug,
+    //         place.sep,
+    //         place.oct,
+    //         place.nov,
+    //         place.dec
+    //     ];
+    //     await db.query(q_text, values);
+    // });
+
+    // console.log(results)
+    // res.status(200);
+    res.status(200).json(avgTemps[30]);
+    // res.status(200).json(rows);
+}

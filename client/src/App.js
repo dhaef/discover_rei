@@ -13,6 +13,8 @@ import { initalState } from './store/initalState';
 import { Provider } from './store/index';
 import Navbar from './layout/navbar/Navbar';
 import Home from './components/style/Home';
+import Feedback from './components/style/Feedback';
+import EmailList from './components/style/EmailList';
 
 function App() {
   const [state, dispatch] = useReducer(rootReducer, initalState);
@@ -20,7 +22,9 @@ function App() {
   return (
     <Router>
       <Provider value={{ state, dispatch }}>
-        <div>
+        <div className={{ position: 'relative' }}>
+          <EmailList />
+          <Feedback />
           <Navbar />
           <Switch>
             <Route exact path="/" component={Home}></Route>
