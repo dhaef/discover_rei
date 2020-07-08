@@ -37,7 +37,7 @@ const Navbar = () => {
 
     return (
         <nav>
-            <span className="nav-title"><Link to="/" className="link">{dimensions > 768 ? 'Discover REI' : 'D-REI'}</Link></span>
+            <span className="nav-title"><Link to="/" className="link">{dimensions > 768 ? 'ExplorPlaces' : 'D-REI'}</Link></span>
             <div className="nav-link-container">
                 <div className={`lg-nav ${dimensions > 768 ? 'show-nav' : 'hide'}`}>
                     <input
@@ -67,7 +67,7 @@ const Navbar = () => {
                     </div>
                     <Link
                         className="nav-item"
-                        to="/"
+                        to="/metros"
                         onClick={() => setDropdown(false)}
                     >Metros</Link>
                     <Link
@@ -108,7 +108,7 @@ const Navbar = () => {
                     <div className={`dropdown-content ${dropdown && 'show'}`}>
                         <Link
                             className={`nav-item dropdown-item ${dimensions <= 768 ? 'show' : 'hide'}`}
-                            to="/"
+                            to="/metros"
                             onClick={() => setDropdown(false)}
                         >Metros</Link>
                         <Link

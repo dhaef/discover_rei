@@ -24,6 +24,7 @@ export default function rootReducer(state, { type, payload }) {
                         employment: payload.pie.find(item => item.description === 'Total employment')
                     },
                     pop: payload.pop[0],
+                    temperature: payload.temp[0],
                     grp_total: payload.grp.find(metro => metro.description === 'All industry total'),
                     grp: payload.grp.filter(metro => {
                         if (metro.description === 'All industry total'
@@ -191,6 +192,16 @@ export default function rootReducer(state, { type, payload }) {
             return {
                 ...state,
                 loading: true
+            }
+        case 'showAddToEmailList':
+            return {
+                ...state,
+                addToEmailList: true
+            }
+        case 'hideAddToEmailList':
+            return {
+                ...state,
+                addToEmailList: false
             }
         default:
             return {

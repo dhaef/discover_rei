@@ -13,6 +13,7 @@ import { initalState } from './store/initalState';
 import { Provider } from './store/index';
 import Navbar from './layout/navbar/Navbar';
 import Home from './components/style/Home';
+import ScoreLayout from './components/score/ScoreLayout';
 import Feedback from './components/style/Feedback';
 import EmailList from './components/style/EmailList';
 
@@ -30,8 +31,8 @@ function App() {
             <Route exact path="/" component={Home}></Route>
             <Route exact path="/metro/:cbsa" component={Metro}></Route>
             <Route exact path="/county/:id" component={County}></Route>
-            <Route exact path="/metros" render={() => <Home placeToShow={'metro'} />}></Route>
-            <Route exact path="/counties" render={() => <Home placeToShow={'county'} />}></Route>
+            <Route exact path="/metros" render={() => <ScoreLayout placeToShow={'metro'} banner="show" />}></Route>
+            <Route exact path="/counties" render={() => <ScoreLayout placeToShow={'county'} banner="show" />}></Route>
             <Route exact path="/metros/pop_growth" render={() => <Population type={'metro'} />}></Route>
             <Route exact path="/counties/pop_growth" render={() => <Population type={'county'} />}></Route>
           </Switch>

@@ -6,6 +6,8 @@ import Score from '../score/Score';
 import Scores from '../score/Scores';
 import Chart from '../chart/Chart';
 import TempChart from '../chart/TempChart';
+import BarChart from '../chart/BarChart';
+import PieChart from '../chart/PieChart';
 
 const County = () => {
     const { state, dispatch } = useStore();
@@ -32,7 +34,12 @@ const County = () => {
         total: [],
         growth: []
     });
+    const [pieChartData, setPieChartData] = useState({
+        labels: [],
+        data: []
+    });
     const [chartTempData, setChartTempData] = useState([]);
+    const [chartSwData, setChartSwData] = useState([]);
 
     useEffect(() => {
         let mounted = true;
@@ -209,6 +216,34 @@ const County = () => {
                     currentCounty.temperature.temp_dec,
                 ])
             }
+            if (!currentCounty.severe_weather_total) {
+                if (emptyData.length === 0) {
+                    setEmptyData([...emptyData, 'Severe Weather Data'])
+                } else if (emptyData.length > 0 && !emptyData.includes('Severe Weather Data')) {
+                    setEmptyData([...emptyData, 'Severe Weather Data'])
+                }
+            } else if (currentCounty.severe_weather_total) {
+                setChartSwData([
+                    currentCounty.severe_weather_total.pd_2015,
+                    currentCounty.severe_weather_total.pd_2016,
+                    currentCounty.severe_weather_total.pd_2017,
+                    currentCounty.severe_weather_total.pd_2018,
+                    currentCounty.severe_weather_total.pd_2019,
+                    currentCounty.severe_weather_total.pd_2020,
+                ])
+            }
+            if (currentCounty.grp.length === 0) {
+                if (emptyData.length === 0) {
+                    setEmptyData([...emptyData, 'GDP Data'])
+                } else if (emptyData.length > 0 && !emptyData.includes('GDP Data')) {
+                    setEmptyData([...emptyData, 'GDP Data'])
+                }
+            } else if (currentCounty.grp.length > 0) {
+                setPieChartData({
+                    labels: currentCounty.grp.map(item => item.description),
+                    data: currentCounty.grp.map(item => ((item.grp_2018 / currentCounty.grp_total.grp_2018) * 100).toFixed(1))
+                })
+            }
         }
 
         !loading && setDataIfNotNull()
@@ -246,7 +281,15 @@ const County = () => {
                     {chartGdpData.total.length > 0 && <Chart data={chartGdpData} income={true} title='County GDP' year='2018' />}
                     {chartEmpData.total.length > 0 && <Chart data={chartEmpData} income={false} title='County Employment' year='2018' />}
                     {chartTempData.length > 0 && <TempChart data={chartTempData} />}
-                    {currentCounty.pop && <div className="table-container">
+                    {chartTempData.length > 0 && <div className="temp-chart-legend">
+                        <div className="temp-chart-legend-item temp-cold"></div>
+                        <span className="temp-chart-legend-text ml-05">Colder than average</span>
+                        <div className="temp-chart-legend-item temp-hot ml-05"></div>
+                        <span className="temp-chart-legend-text ml-05">Hotter than average</span>
+                    </div>}
+                    {chartSwData.length > 0 && <BarChart data={chartSwData} />}
+                    {pieChartData.data.length > 0 && <PieChart data={pieChartData.data} labels={pieChartData.labels} />}
+                    {/* {currentCounty.pop && <div className="table-container">
                         <h2 className="center-text mt-1 mb-05">County Population</h2>
                         <table className="sm-table">
                             <thead>
@@ -345,8 +388,8 @@ const County = () => {
                                     })}
                             </tbody>
                         </table>
-                    </div>}
-                    {currentCounty.severe_weather_total && <div className="table-container">
+                    </div>} */}
+                    {/* {currentCounty.severe_weather_total && <div className="table-container">
                         <h2 className="center-text mt-1 mb-05">County Severe Weather Damage</h2>
                         <table className="sm-table">
                             <thead>
@@ -366,8 +409,8 @@ const County = () => {
                                     })}
                             </tbody>
                         </table>
-                    </div>}
-                    {currentCounty.grp.length > 0 && <> <h2 className="center-text mt-1">County GDP</h2>
+                    </div>} */}
+                    {/* {currentCounty.grp.length > 0 && <> <h2 className="center-text mt-1">County GDP</h2>
                         <table className="mt-1">
                             <thead>
                                 <tr>
@@ -390,7 +433,7 @@ const County = () => {
                                     </tr>
                                 })}
                             </tbody>
-                        </table> </>}
+                        </table> </>} */}
                     {countyMetro && <> <h3 className="center-text mt-05">County Metro</h3>
                         <Scores
                             places={countyMetro}

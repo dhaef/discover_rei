@@ -5,6 +5,8 @@ import { useStore } from '../../store/index';
 import Score from '../score/Score';
 import Scores from '../score/Scores';
 import Chart from '../chart/Chart';
+import TempChart from '../chart/TempChart';
+import PieChart from '../chart/PieChart';
 
 const Metro = () => {
     const { state, dispatch } = useStore();
@@ -30,6 +32,11 @@ const Metro = () => {
         total: [],
         growth: []
     });
+    const [pieChartData, setPieChartData] = useState({
+        labels: [],
+        data: []
+    });
+    const [chartTempData, setChartTempData] = useState([]);
     const [emptyData, setEmptyData] = useState([]);
     let { cbsa } = useParams();
 
@@ -44,6 +51,7 @@ const Metro = () => {
                 const resGrp = await axios.get(`/metro/grp/${cbsa}`);
                 const resPop = await axios.get(`/metro/population/${cbsa}`);
                 const resPie = await axios.get(`/metro/pie/${cbsa}`);
+                const resTemp = await axios.get(`/metro/temperature/${cbsa}`);
                 if (mounted) {
                     dispatch({
                         type: 'setCurrentMetro', payload: {
@@ -51,6 +59,7 @@ const Metro = () => {
                             grp: resGrp.data,
                             pie: resPie.data,
                             pop: resPop.data,
+                            temp: resTemp.data,
                             currentCounties: res.data
                         }
                     });
@@ -186,6 +195,40 @@ const Metro = () => {
                     ]
                 })
             }
+            if (!currentMetro.temperature) {
+                if (emptyData.length === 0) {
+                    setEmptyData([...emptyData, 'Temperature Data'])
+                } else if (emptyData.length > 0 && !emptyData.includes('Temperature Data')) {
+                    setEmptyData([...emptyData, 'Temperature Data'])
+                }
+            } else if (currentMetro.temperature) {
+                setChartTempData([
+                    currentMetro.temperature.temp_jan,
+                    currentMetro.temperature.temp_feb,
+                    currentMetro.temperature.temp_mar,
+                    currentMetro.temperature.temp_apr,
+                    currentMetro.temperature.temp_may,
+                    currentMetro.temperature.temp_jun,
+                    currentMetro.temperature.temp_jul,
+                    currentMetro.temperature.temp_aug,
+                    currentMetro.temperature.temp_sep,
+                    currentMetro.temperature.temp_oct,
+                    currentMetro.temperature.temp_nov,
+                    currentMetro.temperature.temp_dec,
+                ])
+            }
+            if (currentMetro.grp.length === 0) {
+                if (emptyData.length === 0) {
+                    setEmptyData([...emptyData, 'GDP Data'])
+                } else if (emptyData.length > 0 && !emptyData.includes('GDP Data')) {
+                    setEmptyData([...emptyData, 'GDP Data'])
+                }
+            } else if (currentMetro.grp.length > 0) {
+                setPieChartData({
+                    labels: currentMetro.grp.map(item => item.description),
+                    data: currentMetro.grp.map(item => ((item.grp_2018 / currentMetro.grp_total.grp_2018) * 100).toFixed(1))
+                })
+            }
         }
 
         !loading && setDataIfNotNull();
@@ -217,12 +260,20 @@ const Metro = () => {
             {!loading && <div className='container'>
                 {/* <div className='grid'> */}
                 <div className="container main-content">
-                    {!loading && <Score places={currentMetro} />}
-                    {!loading && <Chart data={chartData} income={false} title='Metro Population' />}
-                    {!loading && <Chart data={chartIncData} income={true} title='Metro Income' year='2018' />}
-                    {!loading && <Chart data={chartGdpData} income={true} title='Metro GDP' year='2018' />}
-                    {!loading && <Chart data={chartEmpData} income={false} title='Metro Employment' year='2018' />}
-                    {currentMetro.pop && <div className="table-container">
+                    {<Score places={currentMetro} />}
+                    {chartData.total.length > 0 && <Chart data={chartData} income={false} title='Metro Population' />}
+                    {chartIncData.total.length > 0 && <Chart data={chartIncData} income={true} title='Metro Income' year='2018' />}
+                    {chartGdpData.total.length > 0 && <Chart data={chartGdpData} income={true} title='Metro GDP' year='2018' />}
+                    {chartEmpData.total.length > 0 && <Chart data={chartEmpData} income={false} title='Metro Employment' year='2018' />}
+                    {chartTempData.length > 0 && <TempChart data={chartTempData} />}
+                    {chartTempData.length > 0 && <div className="temp-chart-legend">
+                        <div className="temp-chart-legend-item temp-cold"></div>
+                        <span className="temp-chart-legend-text ml-05">Colder than average</span>
+                        <div className="temp-chart-legend-item temp-hot ml-05"></div>
+                        <span className="temp-chart-legend-text ml-05">Hotter than average</span>
+                    </div>}
+                    {pieChartData.data.length > 0 && <PieChart data={pieChartData.data} labels={pieChartData.labels} />}
+                    {/* {currentMetro.pop && <div className="table-container">
                         <h2 className="center-text mt-1 mb-05">Metro Population</h2>
                         <table className="sm-table">
                             <thead>
@@ -322,8 +373,8 @@ const Metro = () => {
                                     })}
                             </tbody>
                         </table>
-                    </div>}
-                    {currentMetro.grp.length > 0 && <> <h2 className="center-text mt-1">Metro GDP Split</h2>
+                    </div>} */}
+                    {/* {currentMetro.grp.length > 0 && <> <h2 className="center-text mt-1">Metro GDP Split</h2>
                         <table className="mt-1">
                             <thead>
                                 <tr>
@@ -346,7 +397,7 @@ const Metro = () => {
                                     </tr>
                                 })}
                             </tbody>
-                        </table> </>}
+                        </table> </>} */}
                     {currentCounties && <h2 className="center-text">Counties In {currentMetro.metro_name}</h2>}
                     <div className="county-list-container mt-1">
                         {currentCounties && currentCounties.map(county => {

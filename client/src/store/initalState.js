@@ -10,6 +10,7 @@ export const initalState = {
             income: {},
             employment: {},
         },
+        temperature: {},
     },
     countyMetro: {},
     currentCounty: {
@@ -35,5 +36,6 @@ export const initalState = {
         gdp_diversity: [],
         job_growth: [],
         weather_dmg: [],
-    }
+    },
+    addToEmailList: false
 }

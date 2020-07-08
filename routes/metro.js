@@ -7,7 +7,8 @@ const { metros,
     getMetroScores,
     getMetroScore,
     getMetroPop,
-    grabMetros
+    grabMetros,
+    getMetroTemp
 } = require('../controllers/metro');
 
 const router = express.Router();
@@ -21,5 +22,6 @@ router.get('/grp', getAllMetroGrp);
 router.get('/grp/:id', getMetroGrp);
 router.get('/pie/:id', getMetroPie);
 router.get('/grab', grabMetros);
+router.get('/temperature/:id', getMetroTemp);
 
 module.exports = router;

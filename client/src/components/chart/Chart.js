@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Bar } from 'react-chartjs-2';
+import { Bar, defaults } from 'react-chartjs-2';
 import 'chartjs-plugin-datalabels';
-import { defaults } from 'react-chartjs-2';
 
 defaults.global.defaultFontFamily = "Gill Sans";
 

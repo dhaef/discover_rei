@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useStore } from '../../store/index';
 
 const EmailList = () => {
-    const [show, setShow] = useState(false);
+    const { state, dispatch } = useStore();
+    const { addToEmailList } = state;
     const [email, setEmail] = useState('');
 
     useEffect(() => {
@@ -23,7 +25,7 @@ const EmailList = () => {
             console.log(res);
             if (res.status === 200) {
                 setEmail('');
-                setShow(false);
+                dispatch({ type: 'hideAddToEmailList' })
             }
         } catch (error) {
             console.log(error)
@@ -32,7 +34,7 @@ const EmailList = () => {
 
     return (
         <>
-            {show && <div className="email-list-container">
+            {addToEmailList && <div className="email-list-container">
                 <div style={{ width: 'fit-content', margin: 'auto' }}>
                     <p className="email-list-text center-text mt-05">We're brand new and changing fast! Want to be notified when we lauch a new update? Add your email</p>
                     <input
@@ -42,12 +44,12 @@ const EmailList = () => {
                         placeholder="Your Email..." />
                     <div className="center-div">
                         <button className="btn mr-05 mt-05 mb-05" onClick={handleEmailClick}>Add Email</button>
-                        <button className="btn mr-05 mt-05 mb-05" onClick={() => setShow(false)}>Close</button>
+                        <button className="btn mr-05 mt-05 mb-05" onClick={() => dispatch({ type: 'hideAddToEmailList' })}>Close</button>
                     </div>
                 </div>
             </div>}
-            {!show && <div className="email-list-btn-container">
-                <button className="fixed-btn" onClick={() => setShow(true)}>Add Email</button>
+            {!addToEmailList && <div className="email-list-btn-container">
+                <button className="fixed-btn" onClick={() => dispatch({ type: 'showAddToEmailList' })}>Join</button>
             </div>}
         </>
     )

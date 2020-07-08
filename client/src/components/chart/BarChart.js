@@ -4,9 +4,8 @@ import 'chartjs-plugin-datalabels';
 // import { plugins } from 'chart.js';
 
 defaults.global.defaultFontFamily = "Gill Sans";
-defaults.global.defaultFontColor = 'black';
 
-const TempChart = ({ data }) => {
+const BarChart = ({ data }) => {
     const [dimensions, setDimensions] = useState(window.innerWidth);
 
     useEffect(() => {
@@ -22,13 +21,12 @@ const TempChart = ({ data }) => {
         maintainAspectRatio: false,
         title: {
             display: true,
-            text: 'Average Monthly Temperature',
+            text: 'Annual Severe Weather Property Damage',
             fontSize: 20,
             padding: 20
         },
         legend: {
-            display: true,
-            labels: ['Hot', 'Cold']
+            display: false,
         },
         plugins: {
             datalabels: {
@@ -44,7 +42,7 @@ const TempChart = ({ data }) => {
                     }
                 },
                 color: 'black',
-                formatter: value => `${value}°`
+                formatter: value => `$${value.toLocaleString()}`
             }
         },
         events: [],
@@ -52,7 +50,7 @@ const TempChart = ({ data }) => {
             yAxes: {
                 type: 'linear',
                 ticks: {
-                    callback: value => `${value}°`
+                    callback: value => `$${value.toLocaleString()}`
                 }
             }
         }
@@ -61,24 +59,11 @@ const TempChart = ({ data }) => {
     return (
         <div className="mt-1" style={{ position: 'relative', width: '100%', height: '300px' }}>
             <Bar options={options} data={{
-                labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                labels: ['2015', '2016', '2017', '2018', '2019', '2020'],
                 datasets: [
                     {
                         // label: 'Rainfall',
-                        backgroundColor: [
-                            +data[0] > 40.1 ? '#eb4034' : '#0392ff',
-                            +data[1] > 41 ? '#eb4034' : '#0392ff',
-                            +data[2] > 46.6 ? '#eb4034' : '#0392ff',
-                            +data[3] > 55.4 ? '#eb4034' : '#0392ff',
-                            +data[4] > 63.3 ? '#eb4034' : '#0392ff',
-                            +data[5] > 70 ? '#eb4034' : '#0392ff',
-                            +data[6] > 78.6 ? '#eb4034' : '#0392ff',
-                            +data[7] > 79.9 ? '#eb4034' : '#0392ff',
-                            +data[8] > 73.2 ? '#eb4034' : '#0392ff',
-                            +data[9] > 62.6 ? '#eb4034' : '#0392ff',
-                            +data[10] > 53.6 ? '#eb4034' : '#0392ff',
-                            +data[11] > 44.6 ? '#eb4034' : '#0392ff',
-                        ],
+                        backgroundColor: '#a1caf1',
                         // borderColor: 'rgba(0,0,0,1)',
                         // borderWidth: 2,
                         data
@@ -89,4 +74,4 @@ const TempChart = ({ data }) => {
     )
 }
 
-export default TempChart
+export default BarChart

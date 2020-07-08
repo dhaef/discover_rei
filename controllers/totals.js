@@ -377,3 +377,66 @@ exports.getCountyAvgTemp = async (req, res) => {
     res.status(200).json(avgTemps[30]);
     // res.status(200).json(rows);
 }
+
+exports.getMetroTemp = async (req, res) => {
+    const text = "SELECT * FROM county_temperature";
+    const { rows } = await db.query(text);
+
+    const results = [];
+    rows.forEach(item => {
+        if (!item.cbsa) { return }
+        const inResults = results.find(currentItem => currentItem.cbsa === item.cbsa);
+        if (inResults) {
+            const itemIndex = results.findIndex(place => place.cbsa === item.cbsa);
+            results[itemIndex] = {
+                ...results[itemIndex],
+                data: [...results[itemIndex].data, item]
+            }
+        } else {
+            const newObj = {
+                cbsa: item.cbsa,
+                data: [item]
+            }
+            results.push(newObj);
+        }
+    })
+    const metro_avgs = []
+    const metro_text = 'INSERT INTO metro_temperature(cbsa, temp_jan, temp_feb, temp_mar, temp_apr, temp_may, temp_jun, temp_jul, temp_aug, temp_sep, temp_oct, temp_nov, temp_dec) VALUES($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)';
+    results.forEach(async item => {
+        const metro_values = [
+            item.cbsa,
+            +((item.data.reduce((sum, { temp_jan }) => sum + +temp_jan, 0)) / item.data.length).toFixed(2),
+            +((item.data.reduce((sum, { temp_feb }) => sum + +temp_feb, 0)) / item.data.length).toFixed(2),
+            +((item.data.reduce((sum, { temp_mar }) => sum + +temp_mar, 0)) / item.data.length).toFixed(2),
+            +((item.data.reduce((sum, { temp_apr }) => sum + +temp_apr, 0)) / item.data.length).toFixed(2),
+            +((item.data.reduce((sum, { temp_may }) => sum + +temp_may, 0)) / item.data.length).toFixed(2),
+            +((item.data.reduce((sum, { temp_jun }) => sum + +temp_jun, 0)) / item.data.length).toFixed(2),
+            +((item.data.reduce((sum, { temp_jul }) => sum + +temp_jul, 0)) / item.data.length).toFixed(2),
+            +((item.data.reduce((sum, { temp_aug }) => sum + +temp_aug, 0)) / item.data.length).toFixed(2),
+            +((item.data.reduce((sum, { temp_sep }) => sum + +temp_sep, 0)) / item.data.length).toFixed(2),
+            +((item.data.reduce((sum, { temp_oct }) => sum + +temp_oct, 0)) / item.data.length).toFixed(2),
+            +((item.data.reduce((sum, { temp_nov }) => sum + +temp_nov, 0)) / item.data.length).toFixed(2),
+            +((item.data.reduce((sum, { temp_dec }) => sum + +temp_dec, 0)) / item.data.length).toFixed(2),
+        ]
+        // const newItem = {
+        //     cbsa: item.cbsa,
+        //     jan: (item.data.reduce((sum, { temp_jan }) => sum + +temp_jan, 0)) / item.data.length,
+        //     feb: (item.data.reduce((sum, { temp_feb }) => sum + +temp_feb, 0)) / item.data.length,
+        //     mar: (item.data.reduce((sum, { temp_mar }) => sum + +temp_mar, 0)) / item.data.length,
+        //     apr: (item.data.reduce((sum, { temp_apr }) => sum + +temp_apr, 0)) / item.data.length,
+        //     may: (item.data.reduce((sum, { temp_may }) => sum + +temp_may, 0)) / item.data.length,
+        //     jun: (item.data.reduce((sum, { temp_jun }) => sum + +temp_jun, 0)) / item.data.length,
+        //     jul: (item.data.reduce((sum, { temp_jul }) => sum + +temp_jul, 0)) / item.data.length,
+        //     aug: (item.data.reduce((sum, { temp_aug }) => sum + +temp_aug, 0)) / item.data.length,
+        //     sep: (item.data.reduce((sum, { temp_sep }) => sum + +temp_sep, 0)) / item.data.length,
+        //     oct: (item.data.reduce((sum, { temp_oct }) => sum + +temp_oct, 0)) / item.data.length,
+        //     nov: (item.data.reduce((sum, { temp_nov }) => sum + +temp_nov, 0)) / item.data.length,
+        //     dec: (item.data.reduce((sum, { temp_dec }) => sum + +temp_dec, 0)) / item.data.length,
+        // }
+        // console.log(typeof newItem.jan);
+        // metro_avgs.push(newItem)
+        await db.query(metro_text, metro_values);
+    });
+    // console.log(metro_avgs.length);
+    res.status(200).json(metro_avgs);
+}

@@ -43,6 +43,14 @@ exports.getMetroGrp = async (req, res) => {
     res.status(200).json(rows);
 }
 
+exports.getMetroTemp = async (req, res) => {
+    const text = "SELECT * FROM metro_temperature WHERE cbsa = $1";
+    const fips = req.params.id.length === 4 ? `0${req.params.id}` : req.params.id;
+    const values = [fips];
+    const { rows } = await db.query(text, values);
+    res.status(200).json(rows);
+}
+
 exports.getMetroPie = async (req, res) => {
     const text = "SELECT * FROM pie_by_metro WHERE (geofips = $1 AND description = 'Per capita personal income (dollars) 4/') OR (geofips = $1 AND description = 'Total employment')";
     const fips = req.params.id.length === 4 ? `0${req.params.id}` : req.params.id;
