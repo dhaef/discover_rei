@@ -440,3 +440,114 @@ exports.getMetroTemp = async (req, res) => {
     // console.log(metro_avgs.length);
     res.status(200).json(metro_avgs);
 }
+
+const counties = require('../areas.json');
+
+exports.setCountySw = async (req, res) => {
+    const text = "SELECT begin_yearmonth, state_fips, cz_fips, damage_property, cz_name, event_type, deaths_direct FROM severe_weather";
+    const { rows } = await db.query(text);
+    const results = [];
+    rows.forEach((item, index) => {
+        let state, county;
+        if (item.state_fips.toString().length === 2) {
+            state = item.state_fips;
+        } else if (item.state_fips.toString().length === 1) {
+            state = `0${item.state_fips}`;
+        }
+        if (item.cz_fips.toString().length === 3) {
+            county = item.cz_fips;
+        } else if (item.cz_fips.toString().length === 2) {
+            county = `0${item.cz_fips}`;
+        } else if (item.cz_fips.toString().length === 1) {
+            county = `00${item.cz_fips}`;
+        }
+
+        const inResults = results.find(item => item.fips == `${state}${county}`);
+        if (inResults) {
+            const itemIndex = results.findIndex(cItem => cItem.fips == `${state}${county}`);
+            results[itemIndex] = {
+                ...results[itemIndex],
+                data: [...results[itemIndex].data, { date: item.begin_yearmonth, damage_property: item.damage_property }]
+            }
+        } else {
+            const newObj = {
+                fips: `${state}${county}`,
+                name: item.cz_name,
+                data: [{ date: item.begin_yearmonth, damage_property: item.damage_property }]
+            }
+            const inCounties = counties.find(place => place.fips == `${state}${county}`);
+            if (inCounties) {
+                results.push(newObj)
+            }
+        }
+
+    });
+    // console.log(results[0])
+    // console.log(results[240])
+    // console.log(results[400])
+    const totals = [];
+    const sw_text = 'INSERT INTO county_severe_weather(fips, pd_2015, pd_2016, pd_2017, pd_2018, pd_2019, pd_2020) VALUES($1, $2, $3, $4, $5, $6, $7)';
+    results.forEach(async item => {
+        let total2015 = 0;
+        let total2016 = 0;
+        let total2017 = 0;
+        let total2018 = 0;
+        let total2019 = 0;
+        let total2020 = 0;
+        let amount;
+        item.data.forEach(event => {
+            if (!event.damage_property) {
+                return null;
+            } else if (event.damage_property.endsWith('K')) {
+                amount = +event.damage_property.slice(0, -1) * 1000;
+            } else if (event.damage_property.endsWith('M')) {
+                amount = +event.damage_property.slice(0, -1) * 1000000;
+            }
+
+            if (event.date.toString().startsWith('2020')) {
+                total2020 += amount;
+            } else if (event.date.toString().startsWith('2019')) {
+                total2019 += amount;
+            } else if (event.date.toString().startsWith('2018')) {
+                total2018 += amount;
+            } else if (event.date.toString().startsWith('2017')) {
+                total2017 += amount;
+            } else if (event.date.toString().startsWith('2016')) {
+                total2016 += amount;
+            } else if (event.date.toString().startsWith('2015')) {
+                total2015 += amount;
+            }
+        });
+
+        // const total_item = {
+        //     fips: item.fips,
+        //     name: item.name,
+        //     pd_2020: total2020,
+        //     pd_2019: total2019,
+        //     pd_2018: total2018,
+        //     pd_2017: total2017,
+        //     pd_2016: total2016,
+        //     pd_2015: total2015,
+        // }
+        const sw_value = [
+            item.fips,
+            total2015,
+            total2016,
+            total2017,
+            total2018,
+            total2019,
+            total2020
+        ]
+        await db.query(sw_text, sw_value);
+        // totals.push(total_item);
+    });
+    // if (totals.find(item => item.fips == 49049)) {
+    //     console.log('Yes')
+    // }
+    // console.log(totals[0])
+    // console.log(totals[240])
+    // console.log(totals.length)
+    console.log('done');
+    res.status(200);
+    // res.status(200).json(results[0]);
+}

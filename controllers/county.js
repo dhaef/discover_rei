@@ -63,19 +63,21 @@ exports.getCountyEmployment = async (req, res) => {
 }
 
 exports.getCountySevereWeather = async (req, res) => {
-    const text = "SELECT begin_yearmonth, state_fips, cz_fips, damage_property, cz_name, event_type, deaths_direct FROM severe_weather WHERE state_fips = $1 AND cz_fips = $2";
-    const stateFips = req.params.id.length === 4 ? req.params.id.slice(0, 1) : req.params.id.slice(0, 2);
-    const countyFips = req.params.id.length === 4 ? req.params.id.slice(1) : req.params.id.slice(2);
-    let cz_code;
-    if (countyFips[0] === '0' && countyFips[1] === '0') {
-        cz_code = countyFips[2];
-    } else if (countyFips[0] === '0' && countyFips[1] !== '0') {
-        cz_code = countyFips.slice(1);
-    } else {
-        cz_code = countyFips;
-    }
-    const values = [stateFips, cz_code];
+    // const text = "SELECT begin_yearmonth, state_fips, cz_fips, damage_property, cz_name, event_type, deaths_direct FROM severe_weather WHERE state_fips = $1 AND cz_fips = $2";
+    // const stateFips = req.params.id.length === 4 ? req.params.id.slice(0, 1) : req.params.id.slice(0, 2);
+    // const countyFips = req.params.id.length === 4 ? req.params.id.slice(1) : req.params.id.slice(2);
+    // let cz_code;
+    // if (countyFips[0] === '0' && countyFips[1] === '0') {
+    //     cz_code = countyFips[2];
+    // } else if (countyFips[0] === '0' && countyFips[1] !== '0') {
+    //     cz_code = countyFips.slice(1);
+    // } else {
+    //     cz_code = countyFips;
+    // }
+    // const values = [stateFips, cz_code];
 
+    const text = "SELECT * FROM county_severe_weather WHERE fips = $1";
+    const values = [req.params.id];
     const { rows } = await db.query(text, values);
 
     res.status(200).json(rows);
