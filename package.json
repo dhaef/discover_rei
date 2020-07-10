@@ -6,6 +6,7 @@
     "scripts": {
         "start": "concurrently --kill-other \" npm run build \" \" npm run server \"",
         "server": "node index.js",
+        "build": "react-scripts build",
         "server2": "nodemon index.js",
         "client": "npm start --prefix client",
         "clientinstall": "npm install --prefix client",
