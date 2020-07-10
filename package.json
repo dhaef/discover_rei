@@ -4,8 +4,9 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "node index.js",
-        "server": "nodemon index.js",
+        "start": "concurrently --kill-other \" npm run build \" \" npm run server \"",
+        "server": "node index.js",
+        "server2": "nodemon index.js",
         "client": "npm start --prefix client",
         "clientinstall": "npm install --prefix client",
         "dev": "concurrently \"npm run server\" \"npm run client\""

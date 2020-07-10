@@ -49,12 +49,12 @@ const TempChart = ({ data }) => {
         },
         events: [],
         scales: {
-            yAxes: {
+            yAxes: [{
                 type: 'linear',
                 ticks: {
                     callback: value => `${value}°`
                 }
-            }
+            }]
         }
     }
 

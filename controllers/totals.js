@@ -441,7 +441,7 @@ exports.getMetroTemp = async (req, res) => {
     res.status(200).json(metro_avgs);
 }
 
-const counties = require('../areas.json');
+// const counties = require('../areas.json');
 
 exports.setCountySw = async (req, res) => {
     const text = "SELECT begin_yearmonth, state_fips, cz_fips, damage_property, cz_name, event_type, deaths_direct FROM severe_weather";

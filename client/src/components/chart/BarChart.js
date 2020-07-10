@@ -46,13 +46,17 @@ const BarChart = ({ data }) => {
             }
         },
         events: [],
+        // scaleLabel: value => `$${(+value).toLocaleString()}`
+        // ticks: {
+        //     callback: value => `$${(+value).toLocaleString()}`
+        // }
         scales: {
-            yAxes: {
+            yAxes: [{
                 type: 'linear',
                 ticks: {
                     callback: value => `$${value.toLocaleString()}`
                 }
-            }
+            }]
         }
     }
 
