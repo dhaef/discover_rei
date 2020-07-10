@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
+const path = require('path');
 const port = process.env.PORT || 5000;
 const app = express();
 dotenv.config({ path: './config/config.env' });
@@ -23,5 +24,10 @@ app.use('/county', county);
 app.use('/metro', metro);
 app.use('/totals', totals);
 app.use('/user', user_input);
+
+if (process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'));
+    app.get('*', (req, res) => res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html')));
+}
 
 app.listen(port, () => console.log(port));
