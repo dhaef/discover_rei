@@ -83,7 +83,7 @@ const Navbar = () => {
                         type="text"
                         placeholder="Search Markets..."
                         onChange={onChangeSearch} />
-                    <div className={`search-results ${dimensions <= 768 ? 'show-nav' : 'hide'}`}>
+                    <div className={`search-results ${dimensions <= 768 ? 'show' : 'hide'}`}>
                         {search.length > 0 && search.map((item, index) => {
                             if (index < 10) {
                                 const link = item.name.split(' ').includes('County,')
