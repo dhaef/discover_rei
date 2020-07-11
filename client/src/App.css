@@ -550,6 +550,10 @@ th {
     cursor: pointer;
 }
 
+.home-touch {
+    box-shadow: 0px 0px 10px darkgrey;
+}
+
 .home-item:hover {
     box-shadow: 0px 0px 10px darkgrey;
 }

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 
 const Scores = ({ places, placeToShow, classToBe }) => {
+    const [touched, setTouched] = useState(false);
     const history = useHistory();
     const setOverallScore = () => {
         let totalClassFill;
@@ -26,12 +27,19 @@ const Scores = ({ places, placeToShow, classToBe }) => {
         </div>
     };
 
+    const handleTouchStart = () => setTouched(true);
+    const handleTouchEnd = () => setTouched(false);
+
     return (
-        <div className={classToBe} onClick={e => {
-            placeToShow === 'metro'
-                ? history.push(`/metro/${places.cbsa}`)
-                : history.push(`/county/${places.fips}`)
-        }}>
+        <div
+            className={`${classToBe} ${touched && 'home-touch'}`}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+            onClick={e => {
+                placeToShow === 'metro'
+                    ? history.push(`/metro/${places.cbsa}`)
+                    : history.push(`/county/${places.fips}`)
+            }}>
             {placeToShow === 'county' && <h5 className="mb-05">
                 <Link
                     to={`/county/${places.fips}`}
