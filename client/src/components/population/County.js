@@ -47,14 +47,14 @@ const County = () => {
 
         const getData = async () => {
             try {
-                const res = await axios.get(`/county/score/${id}`);
-                const resPop = await axios.get(`/county/population/${id}`);
-                const resIncome = await axios.get(`/county/income/${id}`);
-                const resGrp = await axios.get(`/county/grp/${id}`);
-                const resEmploy = await axios.get(`/county/employment/${id}`);
-                const resSWeath = await axios.get(`/county/severe_weather/${id}`);
-                const resTemp = await axios.get(`/county/temperature/${id}`);
-                const resMetro = await axios.get(`/metro/score/${res.data[0].cbsa}`);
+                const res = await axios.get(`/api/county/score/${id}`);
+                const resPop = await axios.get(`/api/county/population/${id}`);
+                const resIncome = await axios.get(`/api/county/income/${id}`);
+                const resGrp = await axios.get(`/api/county/grp/${id}`);
+                const resEmploy = await axios.get(`/api/county/employment/${id}`);
+                const resSWeath = await axios.get(`/api/county/severe_weather/${id}`);
+                const resTemp = await axios.get(`/api/county/temperature/${id}`);
+                const resMetro = await axios.get(`/api/metro/score/${res.data[0].cbsa}`);
                 if (mounted) {
                     dispatch({
                         type: 'setCountyData',

@@ -21,7 +21,7 @@ const EmailList = () => {
         }
 
         try {
-            const res = await axios.post('/user/email-list', { email }, options);
+            const res = await axios.post('/api/user/email-list', { email }, options);
             console.log(res);
             if (res.status === 200) {
                 setEmail('');

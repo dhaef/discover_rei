@@ -46,12 +46,12 @@ const Metro = () => {
 
         const getData = async () => {
             try {
-                const res = await axios.get(`/counties/${cbsa}`);
-                const resScore = await axios.get(`/metro/score/${cbsa}`);
-                const resGrp = await axios.get(`/metro/grp/${cbsa}`);
-                const resPop = await axios.get(`/metro/population/${cbsa}`);
-                const resPie = await axios.get(`/metro/pie/${cbsa}`);
-                const resTemp = await axios.get(`/metro/temperature/${cbsa}`);
+                const res = await axios.get(`/api/counties/${cbsa}`);
+                const resScore = await axios.get(`/api/metro/score/${cbsa}`);
+                const resGrp = await axios.get(`/api/metro/grp/${cbsa}`);
+                const resPop = await axios.get(`/api/metro/population/${cbsa}`);
+                const resPie = await axios.get(`/api/metro/pie/${cbsa}`);
+                const resTemp = await axios.get(`/api/metro/temperature/${cbsa}`);
                 if (mounted) {
                     dispatch({
                         type: 'setCurrentMetro', payload: {

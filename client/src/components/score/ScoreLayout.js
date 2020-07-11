@@ -17,7 +17,7 @@ const ScoreLayout = ({ placeToShow, banner }) => {
 
     const getData = async () => {
         dispatch({ type: 'setLoading', payload: true });
-        const res = placeToShow === 'metro' ? await axios.get('/metro/score') : await axios.get('/county/score');
+        const res = placeToShow === 'metro' ? await axios.get('/api/metro/score') : await axios.get('/api/county/score');
         if (isMounted.current) {
             dispatch({
                 type: 'setScore', payload: {

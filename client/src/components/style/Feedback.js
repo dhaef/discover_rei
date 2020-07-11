@@ -15,7 +15,7 @@ const Feedback = () => {
         }
 
         try {
-            const res = await axios.post('/user/feedback', feedbackForm, options);
+            const res = await axios.post('/api/user/feedback', feedbackForm, options);
             console.log(res);
             if (res.status === 200) {
                 setFeedbackForm({

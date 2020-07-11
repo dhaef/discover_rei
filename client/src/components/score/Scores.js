@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const Scores = ({ places, placeToShow, classToBe }) => {
-
+    const history = useHistory();
     const setOverallScore = () => {
         let totalClassFill;
         const totalQualifyingVals = Object.keys(places).filter(key => key.endsWith('score')).length;
@@ -27,19 +27,23 @@ const Scores = ({ places, placeToShow, classToBe }) => {
     };
 
     return (
-        <div className={classToBe}>
+        <div className={classToBe} onClick={e => {
+            placeToShow === 'metro'
+                ? history.push(`/metro/${places.cbsa}`)
+                : history.push(`/county/${places.fips}`)
+        }}>
             {placeToShow === 'county' && <h5 className="mb-05">
                 <Link
                     to={`/county/${places.fips}`}
-                    className="link"
+                    className="home-item-name"
                 >
                     {places.county_name}
                 </Link>
             </h5>}
-            {placeToShow === 'metro' && <h5 className="mb-05">
+            {placeToShow === 'metro' && <h5 className="mb-05 ">
                 <Link
                     to={`/metro/${places.cbsa}`}
-                    className="link"
+                    className="home-item-name"
                 >
                     {places.metro_name}
                 </Link>

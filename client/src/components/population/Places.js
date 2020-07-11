@@ -12,8 +12,8 @@ function Places({ type }) {
 
     const getData = async () => {
         try {
-            const resMetros = await axios.get('/metro');
-            const resCounties = await axios.get('/counties');
+            const resMetros = await axios.get('/api/metro');
+            const resCounties = await axios.get('/api/counties');
             if (isMounted.current) {
                 dispatch({ type: 'setPlaces', payload: { metros: resMetros.data, counties: resCounties.data } });
             }

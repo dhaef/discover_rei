@@ -19,11 +19,11 @@ app.use(bodyParser.json());
 //     })
 // );
 
-app.use('/counties', counties);
-app.use('/county', county);
-app.use('/metro', metro);
-app.use('/totals', totals);
-app.use('/user', user_input);
+app.use('/api/counties', counties);
+app.use('/api/county', county);
+app.use('/api/metro', metro);
+app.use('/api/totals', totals);
+app.use('/api/user', user_input);
 
 if (process.env.NODE_ENV === 'production') {
     app.use(express.static('client/build'));
