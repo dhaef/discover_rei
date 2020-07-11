@@ -25,7 +25,7 @@ const Navbar = () => {
             setSearch([])
         } else {
             setSearch(
-                areas.filter(item => item.name.toLowerCase().includes(e.target.value))
+                areas.filter(item => item.name.toLowerCase().includes(e.target.value.toLowerCase()))
             )
         }
     };
