@@ -5,6 +5,7 @@ import { useStore } from '../../store/index';
 import Scores from '../score/Scores';
 import FilterSet from '../filter/FilterSet';
 import { handleFilter } from '../../utils/filter';
+import States from '../filter/States';
 
 const ScoreLayout = ({ placeToShow, banner }) => {
     const { state, dispatch } = useStore();
@@ -14,6 +15,7 @@ const ScoreLayout = ({ placeToShow, banner }) => {
     const [filteredArr, setFilteredArr] = useState([]);
     const [displayFilters, setDisplayFilters] = useState('Show Filters');
     const [sortBy, setSortBy] = useState('descending');
+    const [sortState, setSortState] = useState('');
 
     const getData = async () => {
         dispatch({ type: 'setLoading', payload: true });
@@ -73,18 +75,25 @@ const ScoreLayout = ({ placeToShow, banner }) => {
             </div>
             <div className='current-filters mt-05 mb-05'>
                 <button
-                    className="btn ml-05"
+                    className="btn mt-05 ml-05"
                     onClick={() => setDisplayFilters(displayFilters === 'Hide Filters' ? 'Show Filters' : 'Hide Filters')}>{displayFilters}</button>
                 <button
-                    className="btn ml-05"
+                    className="btn mt-05 ml-05"
                     onClick={() => dispatch({ type: 'clearFilters' })}>Clear Filters</button>
                 <select
                     value={sortBy}
-                    className="ml-05 select"
+                    className="ml-05 mt-05 select"
                     onChange={e => setSortBy(e.target.value)}>
                     <option disabled>Sort By.</option>
                     <option value="descending">Descending</option>
                     <option value="ascending">Ascending</option>
+                </select>
+                <select
+                    value={sortState}
+                    className="ml-05 mt-05 select"
+                    onChange={e => setSortState(e.target.value)}>
+                    <option value='' disabled>State</option>
+                    <States />
                 </select>
                 {listOfFilters.length > 0 && listOfFilters.map(item => {
                     const itemParts = item.split('-');
@@ -99,6 +108,15 @@ const ScoreLayout = ({ placeToShow, banner }) => {
             </div>
             {!loading && <div className="home-container">
                 {placesArr
+                    .filter(place => {
+                        if (sortState === '') {
+                            return place;
+                        } else {
+                            if (place[`${placeToShow}_name`].includes(sortState)) {
+                                return place
+                            }
+                        }
+                    })
                     .sort((a, b) => {
                         if (sortBy === 'descending') {
                             return b.total - a.total;

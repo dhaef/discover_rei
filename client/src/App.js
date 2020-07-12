@@ -16,6 +16,7 @@ import Home from './components/style/Home';
 import ScoreLayout from './components/score/ScoreLayout';
 import Feedback from './components/style/Feedback';
 import EmailList from './components/style/EmailList';
+import PopupAlert from './components/style/PopupAlert';
 
 function App() {
   const [state, dispatch] = useReducer(rootReducer, initalState);
@@ -24,6 +25,7 @@ function App() {
     <Router>
       <Provider value={{ state, dispatch }}>
         <div className={{ position: 'relative' }}>
+          <PopupAlert />
           <EmailList />
           <Feedback />
           <Navbar />

@@ -37,5 +37,9 @@ export const initalState = {
         job_growth: [],
         weather_dmg: [],
     },
-    addToEmailList: false
+    addToEmailList: false,
+    alert: {
+        show: false,
+        text: ''
+    }
 }

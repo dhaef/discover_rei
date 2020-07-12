@@ -204,6 +204,22 @@ export default function rootReducer(state, { type, payload }) {
                 ...state,
                 addToEmailList: false
             }
+        case 'closeAlert':
+            return {
+                ...state,
+                alert: {
+                    show: false,
+                    text: ''
+                }
+            }
+        case 'setAlert':
+            return {
+                ...state,
+                alert: {
+                    show: true,
+                    text: payload
+                }
+            }
         default:
             return {
                 ...state
