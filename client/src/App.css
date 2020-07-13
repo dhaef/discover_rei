@@ -4,6 +4,12 @@
     font-family: Gill Sans, Helvetica, sans-serif;
 }
 
+.logo {
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+}
+
 .grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -250,14 +256,16 @@ nav {
 .nav-title {
     font-weight: bolder;
     font-size: larger;
-    margin-right: 15px;
+    height: 25px;
+    margin: 5px 15px 5px 10px;
 }
 
 .nav-link-container {
-    display: inline;
+    /* display: inline; */
     list-style-type: none;
-    margin: 0;
+    margin: 5px 0;
     padding: 0;
+    height: 25px;
 }
 
 nav li {
