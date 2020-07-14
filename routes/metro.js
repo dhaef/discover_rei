@@ -8,7 +8,8 @@ const { metros,
     getMetroScore,
     getMetroPop,
     grabMetros,
-    getMetroTemp
+    getMetroTemp,
+    getMetroUnemp
 } = require('../controllers/metro');
 
 const router = express.Router();
@@ -17,6 +18,7 @@ router.get('/', metros);
 router.get('/score', getMetroScores);
 router.get('/score/:id', getMetroScore);
 router.get('/population/:id', getMetroPop);
+router.get('/unemployment/:id', getMetroUnemp);
 router.get('/employment', getAllMetroEmp);
 router.get('/grp', getAllMetroGrp);
 router.get('/grp/:id', getMetroGrp);

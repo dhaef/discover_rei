@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import Banner from '../../components/style/Banner';
 import { useStore } from '../../store';
-import logo from '../../ExplorPlacesSpaceBlack.svg';
+import logo from '../../xploreplacesBlack.svg';
 
 const Navbar = () => {
     const history = useHistory();
@@ -45,7 +45,7 @@ const Navbar = () => {
                     alt='logo'
                     className='logo'
                     onClick={() => history.push('/')} />
-                {dimensions > 768 && <span className="nav-title"><Link to="/" className="link">ExplorPlaces</Link></span>}
+                {dimensions > 768 && <span className="nav-title"><Link to="/" className="link">XplorePlaces</Link></span>}
                 {/* <span className="nav-title"><Link to="/" className="link">{dimensions > 768 ? 'ExplorPlaces' : 'D-REI'}</Link></span> */}
                 <div className="nav-link-container">
                     <div className={`lg-nav ${dimensions > 768 ? 'show-nav' : 'hide'}`}>

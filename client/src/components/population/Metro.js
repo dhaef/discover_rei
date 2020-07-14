@@ -32,6 +32,10 @@ const Metro = () => {
         total: [],
         growth: []
     });
+    const [chartUnempData, setChartUnempData] = useState({
+        total: [],
+        growth: []
+    });
     const [pieChartData, setPieChartData] = useState({
         labels: [],
         data: []
@@ -51,6 +55,7 @@ const Metro = () => {
                 const resGrp = await axios.get(`/api/metro/grp/${cbsa}`);
                 const resPop = await axios.get(`/api/metro/population/${cbsa}`);
                 const resPie = await axios.get(`/api/metro/pie/${cbsa}`);
+                const resUnemp = await axios.get(`/api/metro/unemployment/${cbsa}`);
                 const resTemp = await axios.get(`/api/metro/temperature/${cbsa}`);
                 if (mounted) {
                     dispatch({
@@ -60,6 +65,7 @@ const Metro = () => {
                             pie: resPie.data,
                             pop: resPop.data,
                             temp: resTemp.data,
+                            unemp: resUnemp.data,
                             currentCounties: res.data
                         }
                     });
@@ -195,6 +201,23 @@ const Metro = () => {
                     ]
                 })
             }
+            if (!currentMetro.unemployment) {
+                if (emptyData.length === 0) {
+                    setEmptyData([...emptyData, 'Unemployment Data'])
+                } else if (emptyData.length > 0 && !emptyData.includes('Unemployment Data')) {
+                    setEmptyData([...emptyData, 'Unemployment Data'])
+                }
+            } else if (currentMetro.unemployment) {
+                setChartUnempData({
+                    total: currentMetro.unemployment.map(item => {
+                        const splitString = item.unemployment.split(',');
+                        let result = '';
+                        splitString.forEach(phrase => result += phrase);
+                        return result;
+                    }),
+                    growth: currentMetro.unemployment.map(item => item.unemployment_rate),
+                })
+            }
             if (!currentMetro.temperature) {
                 if (emptyData.length === 0) {
                     setEmptyData([...emptyData, 'Temperature Data'])
@@ -264,6 +287,7 @@ const Metro = () => {
                     {chartData.total.length > 0 && <Chart data={chartData} income={false} title='Metro Population' />}
                     {chartIncData.total.length > 0 && <Chart data={chartIncData} income={true} title='Metro Income' year='2018' />}
                     {chartGdpData.total.length > 0 && <Chart data={chartGdpData} income={true} title='Metro GDP' year='2018' />}
+                    {chartUnempData.total.length > 0 && <Chart data={chartUnempData} income={false} title='Metro Unemployment' year='11' />}
                     {chartEmpData.total.length > 0 && <Chart data={chartEmpData} income={false} title='Metro Employment' year='2018' />}
                     {chartTempData.length > 0 && <TempChart data={chartTempData} />}
                     {chartTempData.length > 0 && <div className="temp-chart-legend">

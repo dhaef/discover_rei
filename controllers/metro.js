@@ -59,6 +59,14 @@ exports.getMetroPie = async (req, res) => {
     res.status(200).json(rows);
 }
 
+exports.getMetroUnemp = async (req, res) => {
+    const text = "SELECT * FROM metro_unemployment WHERE fips = $1 AND month = 12";
+    const fips = req.params.id.length === 4 ? `0${req.params.id}` : req.params.id;
+    const values = [fips];
+    const { rows } = await db.query(text, values);
+    res.status(200).json(rows);
+}
+
 exports.getAllMetroGrp = async (req, res) => {
     const text = "SELECT geofips, json_agg(json_build_array(description, grp_2018)) FROM grp_by_metro GROUP BY geofips";
     const { rows } = await db.query(text);

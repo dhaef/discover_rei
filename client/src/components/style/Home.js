@@ -7,7 +7,7 @@ const Home = () => {
     const { dispatch } = useStore();
 
     useEffect(() => {
-        dispatch({ type: 'setBanner', payload: 'ExplorPlaces' });
+        dispatch({ type: 'setBanner', payload: 'XplorePlaces' });
     }, []);
 
     return (

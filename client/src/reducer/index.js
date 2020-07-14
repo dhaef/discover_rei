@@ -26,6 +26,7 @@ export default function rootReducer(state, { type, payload }) {
                     pop: payload.pop[0],
                     temperature: payload.temp[0],
                     grp_total: payload.grp.find(metro => metro.description === 'All industry total'),
+                    unemployment: payload.unemp,
                     grp: payload.grp.filter(metro => {
                         if (metro.description === 'All industry total'
                             || metro.description === 'Private industries'
@@ -66,42 +67,11 @@ export default function rootReducer(state, { type, payload }) {
                 loading: true
             }
         case 'setCountyData':
-            // let total2015 = 0;
-            // let total2016 = 0;
-            // let total2017 = 0;
-            // let total2018 = 0;
-            // let total2019 = 0;
-            // let total2020 = 0;
-            // let amount;
-            // payload.severe_weather.forEach(event => {
-            //     if (!event.damage_property) {
-            //         return null;
-            //     } else if (event.damage_property.endsWith('K')) {
-            //         amount = +event.damage_property.slice(0, -1) * 1000;
-            //     } else if (event.damage_property.endsWith('M')) {
-            //         amount = +event.damage_property.slice(0, -1) * 1000000;
-            //     }
-
-            //     if (event.begin_yearmonth.toString().startsWith('2020')) {
-            //         total2020 += amount;
-            //     } else if (event.begin_yearmonth.toString().startsWith('2019')) {
-            //         total2019 += amount;
-            //     } else if (event.begin_yearmonth.toString().startsWith('2018')) {
-            //         total2018 += amount;
-            //     } else if (event.begin_yearmonth.toString().startsWith('2017')) {
-            //         total2017 += amount;
-            //     } else if (event.begin_yearmonth.toString().startsWith('2016')) {
-            //         total2016 += amount;
-            //     } else if (event.begin_yearmonth.toString().startsWith('2015')) {
-            //         total2015 += amount;
-            //     }
-            // });
             return {
                 ...state,
                 loading: false,
                 countyMetro: payload.countyMetro[0],
                 currentCounty: {
-                    // ...state.currentCounty,
                     ...payload.score[0],
                     pop: payload.pop[0],
                     income: payload.income[0],
@@ -133,16 +103,7 @@ export default function rootReducer(state, { type, payload }) {
                     grp_total: payload.grp.find(county => county.description === 'All industry total'),
                     employment: payload.employment[0],
                     temperature: payload.temperature[0],
-                    // severe_weather: payload.severe_weather,
                     severe_weather_total: payload.severe_weather[0]
-                    // severe_weather_total: {
-                    //     pd_2020: total2020,
-                    //     pd_2019: total2019,
-                    //     pd_2018: total2018,
-                    //     pd_2017: total2017,
-                    //     pd_2016: total2016,
-                    //     pd_2015: total2015,
-                    // }
                 }
             }
         case 'setScore':

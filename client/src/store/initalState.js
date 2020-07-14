@@ -11,6 +11,7 @@ export const initalState = {
             employment: {},
         },
         temperature: {},
+        unemployment: []
     },
     countyMetro: {},
     currentCounty: {
@@ -27,7 +28,7 @@ export const initalState = {
     loading: true,
     county_score: [],
     metro_score: [],
-    banner: 'Home',
+    banner: 'XplorePlaces',
     areas,
     filters: {
         population: [],
