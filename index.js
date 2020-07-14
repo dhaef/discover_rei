@@ -2,8 +2,10 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const path = require('path');
+const forceSsl = require('force-ssl-heroku');
 const port = process.env.PORT || 5000;
 const app = express();
+app.use(forceSsl);
 dotenv.config({ path: './config/config.env' });
 
 const counties = require('./routes/counties');

@@ -177,29 +177,39 @@ const Metro = () => {
                 } else if (emptyData.length > 0 && !emptyData.includes('Employment Data')) {
                     setEmptyData([...emptyData, 'Employment Data'])
                 }
-            } else if (currentMetro.pie.employment) {
+            } else if (currentMetro.unemployment) {
                 setChartEmpData({
-                    total: [
-                        currentMetro.pie.employment.pie_2011,
-                        currentMetro.pie.employment.pie_2012,
-                        currentMetro.pie.employment.pie_2013,
-                        currentMetro.pie.employment.pie_2014,
-                        currentMetro.pie.employment.pie_2015,
-                        currentMetro.pie.employment.pie_2016,
-                        currentMetro.pie.employment.pie_2017,
-                        currentMetro.pie.employment.pie_2018
-                    ],
-                    growth: [
-                        (((currentMetro.pie.employment.pie_2011 - currentMetro.pie.employment.pie_2010) / currentMetro.pie.employment.pie_2010) * 100).toFixed(3),
-                        (((currentMetro.pie.employment.pie_2012 - currentMetro.pie.employment.pie_2011) / currentMetro.pie.employment.pie_2011) * 100).toFixed(3),
-                        (((currentMetro.pie.employment.pie_2013 - currentMetro.pie.employment.pie_2012) / currentMetro.pie.employment.pie_2012) * 100).toFixed(3),
-                        (((currentMetro.pie.employment.pie_2014 - currentMetro.pie.employment.pie_2013) / currentMetro.pie.employment.pie_2013) * 100).toFixed(3),
-                        (((currentMetro.pie.employment.pie_2015 - currentMetro.pie.employment.pie_2014) / currentMetro.pie.employment.pie_2014) * 100).toFixed(3),
-                        (((currentMetro.pie.employment.pie_2016 - currentMetro.pie.employment.pie_2015) / currentMetro.pie.employment.pie_2015) * 100).toFixed(3),
-                        (((currentMetro.pie.employment.pie_2017 - currentMetro.pie.employment.pie_2016) / currentMetro.pie.employment.pie_2016) * 100).toFixed(3),
-                        (((currentMetro.pie.employment.pie_2018 - currentMetro.pie.employment.pie_2017) / currentMetro.pie.employment.pie_2017) * 100).toFixed(3)
-                    ]
+                    total: currentMetro.unemployment.map(item => item.employment.split(',').join('')),
+                    growth: currentMetro.unemployment.map((item, index) => {
+                        if (item.year === 2010) {
+                            return null
+                        } else {
+                            return (((item.employment.split(',').join('') - currentMetro.unemployment[index - 1].employment.split(',').join('')) / currentMetro.unemployment[index - 1].employment.split(',').join('')) * 100).toFixed(3)
+                        }
+                    }),
                 })
+                // setChartEmpData({
+                //     total: [
+                //         currentMetro.pie.employment.pie_2011,
+                //         currentMetro.pie.employment.pie_2012,
+                //         currentMetro.pie.employment.pie_2013,
+                //         currentMetro.pie.employment.pie_2014,
+                //         currentMetro.pie.employment.pie_2015,
+                //         currentMetro.pie.employment.pie_2016,
+                //         currentMetro.pie.employment.pie_2017,
+                //         currentMetro.pie.employment.pie_2018
+                //     ],
+                //     growth: [
+                //         (((currentMetro.pie.employment.pie_2011 - currentMetro.pie.employment.pie_2010) / currentMetro.pie.employment.pie_2010) * 100).toFixed(3),
+                //         (((currentMetro.pie.employment.pie_2012 - currentMetro.pie.employment.pie_2011) / currentMetro.pie.employment.pie_2011) * 100).toFixed(3),
+                //         (((currentMetro.pie.employment.pie_2013 - currentMetro.pie.employment.pie_2012) / currentMetro.pie.employment.pie_2012) * 100).toFixed(3),
+                //         (((currentMetro.pie.employment.pie_2014 - currentMetro.pie.employment.pie_2013) / currentMetro.pie.employment.pie_2013) * 100).toFixed(3),
+                //         (((currentMetro.pie.employment.pie_2015 - currentMetro.pie.employment.pie_2014) / currentMetro.pie.employment.pie_2014) * 100).toFixed(3),
+                //         (((currentMetro.pie.employment.pie_2016 - currentMetro.pie.employment.pie_2015) / currentMetro.pie.employment.pie_2015) * 100).toFixed(3),
+                //         (((currentMetro.pie.employment.pie_2017 - currentMetro.pie.employment.pie_2016) / currentMetro.pie.employment.pie_2016) * 100).toFixed(3),
+                //         (((currentMetro.pie.employment.pie_2018 - currentMetro.pie.employment.pie_2017) / currentMetro.pie.employment.pie_2017) * 100).toFixed(3)
+                //     ]
+                // })
             }
             if (!currentMetro.unemployment) {
                 if (emptyData.length === 0) {
@@ -208,42 +218,8 @@ const Metro = () => {
                     setEmptyData([...emptyData, 'Unemployment Data'])
                 }
             } else if (currentMetro.unemployment) {
-                // console.log(currentMetro.unemployment.unemp_2010[currentMetro.unemployment.unemp_2010.length - 1].unemployment);
-                // setChartUnempData({
-                //     total: [
-                //         currentMetro.unemployment.unemp_2010[currentMetro.unemployment.unemp_2010.length - 1].unemployment,
-                //         currentMetro.unemployment.unemp_2011[currentMetro.unemployment.unemp_2011.length - 1].unemployment,
-                //         currentMetro.unemployment.unemp_2012[currentMetro.unemployment.unemp_2012.length - 1].unemployment,
-                //         currentMetro.unemployment.unemp_2013[currentMetro.unemployment.unemp_2013.length - 1].unemployment,
-                //         currentMetro.unemployment.unemp_2014[currentMetro.unemployment.unemp_2014.length - 1].unemployment,
-                //         currentMetro.unemployment.unemp_2015[currentMetro.unemployment.unemp_2015.length - 1].unemployment,
-                //         currentMetro.unemployment.unemp_2016[currentMetro.unemployment.unemp_2016.length - 1].unemployment,
-                //         currentMetro.unemployment.unemp_2017[currentMetro.unemployment.unemp_2017.length - 1].unemployment,
-                //         currentMetro.unemployment.unemp_2018[currentMetro.unemployment.unemp_2018.length - 1].unemployment,
-                //         currentMetro.unemployment.unemp_2019[currentMetro.unemployment.unemp_2019.length - 1].unemployment,
-                //         currentMetro.unemployment.unemp_2020[currentMetro.unemployment.unemp_2010.length - 1].unemployment,
-                //     ],
-                //     growth: [
-                //         currentMetro.unemployment.unemp_2010[currentMetro.unemployment.unemp_2010.length - 1].unemployment_rate,
-                //         currentMetro.unemployment.unemp_2011[currentMetro.unemployment.unemp_2011.length - 1].unemployment_rate,
-                //         currentMetro.unemployment.unemp_2012[currentMetro.unemployment.unemp_2012.length - 1].unemployment_rate,
-                //         currentMetro.unemployment.unemp_2013[currentMetro.unemployment.unemp_2013.length - 1].unemployment_rate,
-                //         currentMetro.unemployment.unemp_2014[currentMetro.unemployment.unemp_2014.length - 1].unemployment_rate,
-                //         currentMetro.unemployment.unemp_2015[currentMetro.unemployment.unemp_2015.length - 1].unemployment_rate,
-                //         currentMetro.unemployment.unemp_2016[currentMetro.unemployment.unemp_2016.length - 1].unemployment_rate,
-                //         currentMetro.unemployment.unemp_2017[currentMetro.unemployment.unemp_2017.length - 1].unemployment_rate,
-                //         currentMetro.unemployment.unemp_2018[currentMetro.unemployment.unemp_2018.length - 1].unemployment_rate,
-                //         currentMetro.unemployment.unemp_2019[currentMetro.unemployment.unemp_2019.length - 1].unemployment_rate,
-                //         currentMetro.unemployment.unemp_2020[currentMetro.unemployment.unemp_2010.length - 1].unemployment_rate,
-                //     ]
-                // })
                 setChartUnempData({
-                    total: currentMetro.unemployment.map(item => {
-                        const splitString = item.unemployment.split(',');
-                        let result = '';
-                        splitString.forEach(phrase => result += phrase);
-                        return result;
-                    }),
+                    total: currentMetro.unemployment.map(item => item.unemployment.split(',').join('')),
                     growth: currentMetro.unemployment.map(item => item.unemployment_rate),
                 })
             }
@@ -317,7 +293,7 @@ const Metro = () => {
                     {chartIncData.total.length > 0 && <Chart data={chartIncData} income={true} title='Metro Income' year='2018' />}
                     {chartGdpData.total.length > 0 && <Chart data={chartGdpData} income={true} title='Metro GDP' year='2018' />}
                     {chartUnempData.total.length > 0 && <Chart data={chartUnempData} income={false} title='Metro Unemployment' year='11' />}
-                    {chartEmpData.total.length > 0 && <Chart data={chartEmpData} income={false} title='Metro Employment' year='2018' />}
+                    {chartEmpData.total.length > 0 && <Chart data={chartEmpData} income={false} title='Metro Employment' year='11' />}
                     {chartTempData.length > 0 && <TempChart data={chartTempData} />}
                     {chartTempData.length > 0 && <div className="temp-chart-legend">
                         <div className="temp-chart-legend-item temp-cold"></div>

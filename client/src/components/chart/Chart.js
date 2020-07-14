@@ -109,7 +109,7 @@ const Chart = ({ data, income, title, year }) => {
             <Bar data={{
                 datasets: [
                     {
-                        label: `${title.split(' ')[1]} Growth`,
+                        label: title === 'Metro Unemployment' ? `${title.split(' ')[1]} Rate` : `${title.split(' ')[1]} Growth`,
                         // label: "Population Growth",
                         yAxisID: 'y-axis-2',
                         backgroundColor: '#a1caf1',
