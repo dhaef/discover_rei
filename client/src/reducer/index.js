@@ -26,7 +26,26 @@ export default function rootReducer(state, { type, payload }) {
                     pop: payload.pop[0],
                     temperature: payload.temp[0],
                     grp_total: payload.grp.find(metro => metro.description === 'All industry total'),
-                    unemployment: payload.unemp,
+                    // unemployment: {
+                    //     unemp_2010: payload.unemp.filter(item => item.year === 2010),
+                    //     unemp_2011: payload.unemp.filter(item => item.year === 2011),
+                    //     unemp_2012: payload.unemp.filter(item => item.year === 2012),
+                    //     unemp_2013: payload.unemp.filter(item => item.year === 2013),
+                    //     unemp_2014: payload.unemp.filter(item => item.year === 2014),
+                    //     unemp_2015: payload.unemp.filter(item => item.year === 2015),
+                    //     unemp_2016: payload.unemp.filter(item => item.year === 2016),
+                    //     unemp_2017: payload.unemp.filter(item => item.year === 2017),
+                    //     unemp_2018: payload.unemp.filter(item => item.year === 2018),
+                    //     unemp_2019: payload.unemp.filter(item => item.year === 2019),
+                    //     unemp_2020: payload.unemp.filter(item => item.year === 2020),
+                    // },
+                    unemployment: payload.unemp.filter(item => {
+                        if (item.month === 12) {
+                            return item;
+                        } else if (item.year === 2020 && item.month === 5) {
+                            return item;
+                        }
+                    }),
                     grp: payload.grp.filter(metro => {
                         if (metro.description === 'All industry total'
                             || metro.description === 'Private industries'

@@ -208,6 +208,35 @@ const Metro = () => {
                     setEmptyData([...emptyData, 'Unemployment Data'])
                 }
             } else if (currentMetro.unemployment) {
+                // console.log(currentMetro.unemployment.unemp_2010[currentMetro.unemployment.unemp_2010.length - 1].unemployment);
+                // setChartUnempData({
+                //     total: [
+                //         currentMetro.unemployment.unemp_2010[currentMetro.unemployment.unemp_2010.length - 1].unemployment,
+                //         currentMetro.unemployment.unemp_2011[currentMetro.unemployment.unemp_2011.length - 1].unemployment,
+                //         currentMetro.unemployment.unemp_2012[currentMetro.unemployment.unemp_2012.length - 1].unemployment,
+                //         currentMetro.unemployment.unemp_2013[currentMetro.unemployment.unemp_2013.length - 1].unemployment,
+                //         currentMetro.unemployment.unemp_2014[currentMetro.unemployment.unemp_2014.length - 1].unemployment,
+                //         currentMetro.unemployment.unemp_2015[currentMetro.unemployment.unemp_2015.length - 1].unemployment,
+                //         currentMetro.unemployment.unemp_2016[currentMetro.unemployment.unemp_2016.length - 1].unemployment,
+                //         currentMetro.unemployment.unemp_2017[currentMetro.unemployment.unemp_2017.length - 1].unemployment,
+                //         currentMetro.unemployment.unemp_2018[currentMetro.unemployment.unemp_2018.length - 1].unemployment,
+                //         currentMetro.unemployment.unemp_2019[currentMetro.unemployment.unemp_2019.length - 1].unemployment,
+                //         currentMetro.unemployment.unemp_2020[currentMetro.unemployment.unemp_2010.length - 1].unemployment,
+                //     ],
+                //     growth: [
+                //         currentMetro.unemployment.unemp_2010[currentMetro.unemployment.unemp_2010.length - 1].unemployment_rate,
+                //         currentMetro.unemployment.unemp_2011[currentMetro.unemployment.unemp_2011.length - 1].unemployment_rate,
+                //         currentMetro.unemployment.unemp_2012[currentMetro.unemployment.unemp_2012.length - 1].unemployment_rate,
+                //         currentMetro.unemployment.unemp_2013[currentMetro.unemployment.unemp_2013.length - 1].unemployment_rate,
+                //         currentMetro.unemployment.unemp_2014[currentMetro.unemployment.unemp_2014.length - 1].unemployment_rate,
+                //         currentMetro.unemployment.unemp_2015[currentMetro.unemployment.unemp_2015.length - 1].unemployment_rate,
+                //         currentMetro.unemployment.unemp_2016[currentMetro.unemployment.unemp_2016.length - 1].unemployment_rate,
+                //         currentMetro.unemployment.unemp_2017[currentMetro.unemployment.unemp_2017.length - 1].unemployment_rate,
+                //         currentMetro.unemployment.unemp_2018[currentMetro.unemployment.unemp_2018.length - 1].unemployment_rate,
+                //         currentMetro.unemployment.unemp_2019[currentMetro.unemployment.unemp_2019.length - 1].unemployment_rate,
+                //         currentMetro.unemployment.unemp_2020[currentMetro.unemployment.unemp_2010.length - 1].unemployment_rate,
+                //     ]
+                // })
                 setChartUnempData({
                     total: currentMetro.unemployment.map(item => {
                         const splitString = item.unemployment.split(',');

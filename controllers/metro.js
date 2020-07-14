@@ -60,7 +60,7 @@ exports.getMetroPie = async (req, res) => {
 }
 
 exports.getMetroUnemp = async (req, res) => {
-    const text = "SELECT * FROM metro_unemployment WHERE fips = $1 AND month = 12";
+    const text = "SELECT * FROM metro_unemployment WHERE fips = $1 AND year <> 2009";
     const fips = req.params.id.length === 4 ? `0${req.params.id}` : req.params.id;
     const values = [fips];
     const { rows } = await db.query(text, values);
