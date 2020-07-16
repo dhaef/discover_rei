@@ -171,7 +171,7 @@ const Metro = () => {
                     ]
                 })
             }
-            if (!currentMetro.pie.employment) {
+            if (!currentMetro.unemployment) {
                 if (emptyData.length === 0) {
                     setEmptyData([...emptyData, 'Employment Data'])
                 } else if (emptyData.length > 0 && !emptyData.includes('Employment Data')) {
@@ -188,28 +188,6 @@ const Metro = () => {
                         }
                     }),
                 })
-                // setChartEmpData({
-                //     total: [
-                //         currentMetro.pie.employment.pie_2011,
-                //         currentMetro.pie.employment.pie_2012,
-                //         currentMetro.pie.employment.pie_2013,
-                //         currentMetro.pie.employment.pie_2014,
-                //         currentMetro.pie.employment.pie_2015,
-                //         currentMetro.pie.employment.pie_2016,
-                //         currentMetro.pie.employment.pie_2017,
-                //         currentMetro.pie.employment.pie_2018
-                //     ],
-                //     growth: [
-                //         (((currentMetro.pie.employment.pie_2011 - currentMetro.pie.employment.pie_2010) / currentMetro.pie.employment.pie_2010) * 100).toFixed(3),
-                //         (((currentMetro.pie.employment.pie_2012 - currentMetro.pie.employment.pie_2011) / currentMetro.pie.employment.pie_2011) * 100).toFixed(3),
-                //         (((currentMetro.pie.employment.pie_2013 - currentMetro.pie.employment.pie_2012) / currentMetro.pie.employment.pie_2012) * 100).toFixed(3),
-                //         (((currentMetro.pie.employment.pie_2014 - currentMetro.pie.employment.pie_2013) / currentMetro.pie.employment.pie_2013) * 100).toFixed(3),
-                //         (((currentMetro.pie.employment.pie_2015 - currentMetro.pie.employment.pie_2014) / currentMetro.pie.employment.pie_2014) * 100).toFixed(3),
-                //         (((currentMetro.pie.employment.pie_2016 - currentMetro.pie.employment.pie_2015) / currentMetro.pie.employment.pie_2015) * 100).toFixed(3),
-                //         (((currentMetro.pie.employment.pie_2017 - currentMetro.pie.employment.pie_2016) / currentMetro.pie.employment.pie_2016) * 100).toFixed(3),
-                //         (((currentMetro.pie.employment.pie_2018 - currentMetro.pie.employment.pie_2017) / currentMetro.pie.employment.pie_2017) * 100).toFixed(3)
-                //     ]
-                // })
             }
             if (!currentMetro.unemployment) {
                 if (emptyData.length === 0) {

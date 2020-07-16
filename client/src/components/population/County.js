@@ -30,6 +30,10 @@ const County = () => {
         total: [],
         growth: []
     });
+    const [chartUnempData, setChartUnempData] = useState({
+        total: [],
+        growth: []
+    });
     const [chartEmpData, setChartEmpData] = useState({
         total: [],
         growth: []
@@ -51,6 +55,7 @@ const County = () => {
                 const resPop = await axios.get(`/api/county/population/${id}`);
                 const resIncome = await axios.get(`/api/county/income/${id}`);
                 const resGrp = await axios.get(`/api/county/grp/${id}`);
+                const resUnemploy = await axios.get(`/api/county/unemployment/${id}`);
                 const resEmploy = await axios.get(`/api/county/employment/${id}`);
                 const resSWeath = await axios.get(`/api/county/severe_weather/${id}`);
                 const resTemp = await axios.get(`/api/county/temperature/${id}`);
@@ -66,7 +71,8 @@ const County = () => {
                             employment: resEmploy.data,
                             severe_weather: resSWeath.data,
                             countyMetro: resMetro.data,
-                            temperature: resTemp.data
+                            temperature: resTemp.data,
+                            unemp: resUnemploy.data
                         }
                     });
                     setLoading(false);
@@ -164,34 +170,57 @@ const County = () => {
                     ]
                 })
             }
-            if (!currentCounty.employment) {
+            if (!currentCounty.unemployment) {
                 if (emptyData.length === 0) {
                     setEmptyData([...emptyData, 'Employment Data'])
                 } else if (emptyData.length > 0 && !emptyData.includes('Employment Data')) {
                     setEmptyData([...emptyData, 'Employment Data'])
                 }
-            } else if (currentCounty.employment) {
+            } else if (currentCounty.unemployment) {
                 setChartEmpData({
-                    total: [
-                        currentCounty.employment.emp_2011,
-                        currentCounty.employment.emp_2012,
-                        currentCounty.employment.emp_2013,
-                        currentCounty.employment.emp_2014,
-                        currentCounty.employment.emp_2015,
-                        currentCounty.employment.emp_2016,
-                        currentCounty.employment.emp_2017,
-                        currentCounty.employment.emp_2018
-                    ],
-                    growth: [
-                        (((currentCounty.employment.emp_2011 - currentCounty.employment.emp_2010) / currentCounty.employment.emp_2010) * 100).toFixed(3),
-                        (((currentCounty.employment.emp_2012 - currentCounty.employment.emp_2011) / currentCounty.employment.emp_2011) * 100).toFixed(3),
-                        (((currentCounty.employment.emp_2013 - currentCounty.employment.emp_2012) / currentCounty.employment.emp_2012) * 100).toFixed(3),
-                        (((currentCounty.employment.emp_2014 - currentCounty.employment.emp_2013) / currentCounty.employment.emp_2013) * 100).toFixed(3),
-                        (((currentCounty.employment.emp_2015 - currentCounty.employment.emp_2014) / currentCounty.employment.emp_2014) * 100).toFixed(3),
-                        (((currentCounty.employment.emp_2016 - currentCounty.employment.emp_2015) / currentCounty.employment.emp_2015) * 100).toFixed(3),
-                        (((currentCounty.employment.emp_2017 - currentCounty.employment.emp_2016) / currentCounty.employment.emp_2016) * 100).toFixed(3),
-                        (((currentCounty.employment.emp_2018 - currentCounty.employment.emp_2017) / currentCounty.employment.emp_2017) * 100).toFixed(3)
-                    ]
+                    total: currentCounty.unemployment.map(item => item.employed.split(',').join('')),
+                    growth: currentCounty.unemployment
+                        //     .sort((a, b) => +a.year - +b.year)
+                        .map((item, index) => {
+                            // console.log(currentCounty.unemployment[index - 1])
+                            if (item.year === 2010) {
+                                return null
+                            } else {
+                                return (((item.employed.split(',').join('') - currentCounty.unemployment[index - 1].employed.split(',').join('')) / currentCounty.unemployment[index - 1].employed.split(',').join('')) * 100).toFixed(3)
+                            }
+                        }),
+                    // total: [
+                    //     currentCounty.employment.emp_2011,
+                    //     currentCounty.employment.emp_2012,
+                    //     currentCounty.employment.emp_2013,
+                    //     currentCounty.employment.emp_2014,
+                    //     currentCounty.employment.emp_2015,
+                    //     currentCounty.employment.emp_2016,
+                    //     currentCounty.employment.emp_2017,
+                    //     currentCounty.employment.emp_2018
+                    // ],
+                    // growth: [
+                    //     (((currentCounty.employment.emp_2011 - currentCounty.employment.emp_2010) / currentCounty.employment.emp_2010) * 100).toFixed(3),
+                    //     (((currentCounty.employment.emp_2012 - currentCounty.employment.emp_2011) / currentCounty.employment.emp_2011) * 100).toFixed(3),
+                    //     (((currentCounty.employment.emp_2013 - currentCounty.employment.emp_2012) / currentCounty.employment.emp_2012) * 100).toFixed(3),
+                    //     (((currentCounty.employment.emp_2014 - currentCounty.employment.emp_2013) / currentCounty.employment.emp_2013) * 100).toFixed(3),
+                    //     (((currentCounty.employment.emp_2015 - currentCounty.employment.emp_2014) / currentCounty.employment.emp_2014) * 100).toFixed(3),
+                    //     (((currentCounty.employment.emp_2016 - currentCounty.employment.emp_2015) / currentCounty.employment.emp_2015) * 100).toFixed(3),
+                    //     (((currentCounty.employment.emp_2017 - currentCounty.employment.emp_2016) / currentCounty.employment.emp_2016) * 100).toFixed(3),
+                    //     (((currentCounty.employment.emp_2018 - currentCounty.employment.emp_2017) / currentCounty.employment.emp_2017) * 100).toFixed(3)
+                    // ]
+                })
+            }
+            if (!currentCounty.unemployment) {
+                if (emptyData.length === 0) {
+                    setEmptyData([...emptyData, 'Unemployment Data'])
+                } else if (emptyData.length > 0 && !emptyData.includes('Unemployment Data')) {
+                    setEmptyData([...emptyData, 'Unemployment Data'])
+                }
+            } else if (currentCounty.unemployment) {
+                setChartUnempData({
+                    total: currentCounty.unemployment.map(item => item.unemployed.split(',').join('')),
+                    growth: currentCounty.unemployment.map(item => item.rate),
                 })
             }
             if (!currentCounty.temperature) {
@@ -255,20 +284,6 @@ const County = () => {
         // eslint-disable-next-line
     }, [currentCounty]);
 
-    const getTopThree = () => {
-        const sortedGrp = currentCounty.grp.sort((a, b) => {
-            const c = a.grp_2018 === '(D)' ? 0 : (a.grp_2018 / currentCounty.grp_total.grp_2018);
-            const d = b.grp_2018 === '(D)' ? 0 : (b.grp_2018 / currentCounty.grp_total.grp_2018);
-            return d - c;
-        });
-        return {
-            growth: ((sortedGrp[0].grp_2018 / currentCounty.grp_total.grp_2018)
-                + (sortedGrp[1].grp_2018 / currentCounty.grp_total.grp_2018)
-                + (sortedGrp[2].grp_2018 / currentCounty.grp_total.grp_2018)) * 100,
-            total: +sortedGrp[0].grp_2018 + +sortedGrp[1].grp_2018 + +sortedGrp[2].grp_2018
-        }
-    }
-
     return (
         <>
             {loading && <div className="loading"></div>}
@@ -279,7 +294,8 @@ const County = () => {
                     {chartData.total.length > 0 && <Chart data={chartData} income={false} title='County Population' />}
                     {chartIncData.total.length > 0 && <Chart data={chartIncData} income={true} title='County Income' year='2018' />}
                     {chartGdpData.total.length > 0 && <Chart data={chartGdpData} income={true} title='County GDP' year='2018' />}
-                    {chartEmpData.total.length > 0 && <Chart data={chartEmpData} income={false} title='County Employment' year='2018' />}
+                    {chartUnempData.total.length > 0 && <Chart data={chartUnempData} income={false} title='County Unemployment' year='10' />}
+                    {chartEmpData.total.length > 0 && <Chart data={chartEmpData} income={false} title='County Employment' year='10' />}
                     {chartTempData.length > 0 && <TempChart data={chartTempData} />}
                     {chartTempData.length > 0 && <div className="temp-chart-legend">
                         <div className="temp-chart-legend-item temp-cold"></div>

@@ -94,6 +94,7 @@ export default function rootReducer(state, { type, payload }) {
                     ...payload.score[0],
                     pop: payload.pop[0],
                     income: payload.income[0],
+                    unemployment: payload.unemp,
                     grp: payload.grp.filter(county => {
                         if (county.description === 'All industry total'
                             || county.description === 'Private industries'

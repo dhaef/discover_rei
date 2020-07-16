@@ -23,6 +23,7 @@ export const initalState = {
         severe_weather_total: {},
         income: {},
         temperature: {},
+        unemployment: []
     },
     currentCounties: [],
     loading: true,
