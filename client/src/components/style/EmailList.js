@@ -23,6 +23,7 @@ const EmailList = () => {
                 // console.log(res);
                 if (res.status === 200) {
                     dispatch({ type: 'setAlert', payload: 'Email added!' });
+                    setTimeout(() => dispatch({ type: 'closeAlert' }), 3000);
                     setEmail('');
                     dispatch({ type: 'hideAddToEmailList' });
                     setFormError('');

@@ -5,6 +5,7 @@ import { useStore } from '../../store';
 const Feedback = () => {
     const { dispatch } = useStore();
     const [show, setShow] = useState(false);
+    const [loading, setLoading] = useState(false);
     const [feedbackForm, setFeedbackForm] = useState({ email: '', msg: '' });
     const [formErrors, setFormErrors] = useState({ email: '', msg: '' });
 
@@ -24,10 +25,12 @@ const Feedback = () => {
             }
 
             try {
+                setLoading(true);
                 const res = await axios.post('/api/user/feedback', feedbackForm, options);
-                // console.log(res);
+                setLoading(false);
                 if (res.status === 200) {
-                    dispatch({ type: 'setAlert', payload: 'Feedback sent!' })
+                    dispatch({ type: 'setAlert', payload: 'Feedback sent!' });
+                    setTimeout(() => dispatch({ type: 'closeAlert' }), 3000);
                     setFeedbackForm({
                         email: '',
                         msg: ''
@@ -50,6 +53,7 @@ const Feedback = () => {
 
     return (
         <div className="feedback-container">
+            {loading && <div className="loading"></div>}
             {show && <div className="feedback-form">
                 <h4 className="center-text">Have Feedback?</h4>
                 <p className="center-text mt-05">Find any bugs or thoughts on ways to improve? Let us know!</p>
@@ -69,9 +73,11 @@ const Feedback = () => {
                     placeholder="Your message"></textarea>
                 <div className="center-div">
                     <button
+                        disabled={loading ? true : false}
                         className="btn mr-05 mt-05 mb-05"
                         onClick={handleCloseClick}>Close</button>
                     <button
+                        disabled={loading ? true : false}
                         className="btn ml-05 mt-05 mb-05"
                         onClick={handleSendClick}>Send</button>
                 </div>
