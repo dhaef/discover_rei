@@ -1,6 +1,7 @@
 const express = require('express');
 const { metros,
     getMetroGrp,
+    getMetroGrpTotal,
     getMetroPie,
     getAllMetroEmp,
     getAllMetroGrp,
@@ -22,6 +23,7 @@ router.get('/unemployment/:id', getMetroUnemp);
 router.get('/employment', getAllMetroEmp);
 router.get('/grp', getAllMetroGrp);
 router.get('/grp/:id', getMetroGrp);
+router.get('/grp_total/:id', getMetroGrpTotal);
 router.get('/pie/:id', getMetroPie);
 router.get('/grab', grabMetros);
 router.get('/temperature/:id', getMetroTemp);

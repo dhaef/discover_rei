@@ -1,7 +1,8 @@
 const db = require('../db/index');
 
 exports.getCountyPop = async (req, res) => {
-    const text = "SELECT * FROM county_area WHERE fips = $1";
+    const text = "SELECT fips, json_agg(json_build_array(popestimate2010, popestimate2011, popestimate2012, popestimate2013, popestimate2014, popestimate2015, popestimate2016, popestimate2017, popestimate2018, popestimate2019)) FROM county_area WHERE fips = $1 GROUP BY fips";
+    // const text = "SELECT * FROM county_area WHERE fips = $1";
     const fips = req.params.id.length === 4 ? `0${req.params.id}` : req.params.id;
     const values = [fips];
     const { rows } = await db.query(text, values);
@@ -31,7 +32,8 @@ exports.getCountyScore = async (req, res) => {
 }
 
 exports.getCountyIncome = async (req, res) => {
-    const text = "SELECT * FROM personal_income WHERE geofips = $1 AND Description = 'Per capita personal income (dollars) 2/'";
+    const text = "SELECT geofips, json_agg(json_build_array(y2010, y2011, y2012, y2013, y2014, y2015, y2016, y2017, y2018)) FROM personal_income WHERE geofips = $1 AND Description = 'Per capita personal income (dollars) 2/' GROUP BY geofips";
+    // const text = "SELECT * FROM personal_income WHERE geofips = $1 AND Description = 'Per capita personal income (dollars) 2/'";
     const values = [req.params.id];
     const { rows } = await db.query(text, values);
     res.status(200).json(rows);
@@ -45,8 +47,17 @@ exports.getCountyGrp = async (req, res) => {
     res.status(200).json(rows);
 }
 
+exports.getCountyGrpTotal = async (req, res) => {
+    const text = "SELECT geofips, json_agg(json_build_array(grp_2010, grp_2011, grp_2012, grp_2013, grp_2014, grp_2015, grp_2016, grp_2017, grp_2018)) FROM grp_by_area WHERE geofips = $1 AND description = 'All industry total' GROUP BY geofips";
+    const fips = req.params.id.length === 4 ? `0${req.params.id}` : req.params.id;
+    const values = [fips];
+    const { rows } = await db.query(text, values);
+    res.status(200).json(rows);
+}
+
 exports.getCountyTemp = async (req, res) => {
-    const text = "SELECT * FROM county_temperature WHERE fips = $1";
+    const text = "SELECT fips, json_agg(json_build_array(temp_jan, temp_feb, temp_mar, temp_apr, temp_may, temp_jun, temp_jul, temp_aug, temp_sep, temp_oct, temp_nov, temp_dec)) FROM county_temperature WHERE fips = $1 GROUP BY fips";
+    // const text = "SELECT * FROM county_temperature WHERE fips = $1";
     const fips = req.params.id.length === 4 ? `0${req.params.id}` : req.params.id;
     // console.log(req.params.id, fips);
     const values = [fips];
@@ -95,7 +106,8 @@ exports.getCountySevereWeather = async (req, res) => {
     // }
     // const values = [stateFips, cz_code];
 
-    const text = "SELECT * FROM county_severe_weather WHERE fips = $1";
+    const text = "SELECT fips, json_agg(json_build_array(pd_2015, pd_2016, pd_2017, pd_2018, pd_2019, pd_2020)) FROM county_severe_weather WHERE fips = $1 GROUP BY fips";
+    // const text = "SELECT * FROM county_severe_weather WHERE fips = $1";
     const values = [req.params.id];
     const { rows } = await db.query(text, values);
 

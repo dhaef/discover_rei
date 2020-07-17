@@ -2,6 +2,7 @@ const express = require('express');
 const { getCountyEmployment,
     // getCountyPop,
     getCountyGrp,
+    getCountyGrpTotal,
     getCountyIncome,
     getCountySevereWeather,
     getAllCountyEmp,
@@ -25,6 +26,7 @@ router.get('/employment/:id', getCountyEmployment);
 router.get('/unemployment/:id', getCountyUnemployment);
 router.get('/grp/', getAllCountyGrp);
 router.get('/grp/:id', getCountyGrp);
+router.get('/grp_total/:id', getCountyGrpTotal);
 router.get('/income/:id', getCountyIncome);
 router.get('/severe_weather/', getAllCountySw);
 router.get('/severe_weather/:id', getCountySevereWeather);

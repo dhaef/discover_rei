@@ -28,7 +28,8 @@ exports.getMetroScore = async (req, res) => {
 }
 
 exports.getMetroPop = async (req, res) => {
-    const text = "SELECT * FROM metro_area WHERE cbsa = $1";
+    const text = "SELECT cbsa, json_agg(json_build_array(popestimate2010, popestimate2011, popestimate2012, popestimate2013, popestimate2014, popestimate2015, popestimate2016, popestimate2017, popestimate2018, popestimate2019)) FROM metro_area WHERE cbsa = $1 GROUP BY cbsa";
+    // const text = "SELECT * FROM metro_area WHERE cbsa = $1";
     const fips = req.params.id.length === 4 ? `0${req.params.id}` : req.params.id;
     const values = [fips];
     const { rows } = await db.query(text, values);
@@ -36,6 +37,7 @@ exports.getMetroPop = async (req, res) => {
 }
 
 exports.getMetroGrp = async (req, res) => {
+    // const text = "SELECT * FROM grp_by_metro WHERE (geofips = $1) AND (description <> 'All industry total' OR description <>  'Private industries' OR description <> 'Durable goods manufacturing' OR description <> 'Nondurable goods manufacturing' OR description <> 'Finance and insurancel' OR description <> 'Real estate and rental and leasing' OR description <> 'Professional, scientific, and technical services' OR description <> 'Management of companies and enterprises' OR description <> 'Administrative and support and waste management and remediation services' OR description <> 'Educational services' OR description <> 'Health care and social assistance' OR description <> 'All industry total' OR description <> 'Arts, entertainment, and recreation' OR description <> 'Accommodation and food services' OR description <> 'Private goods-producing industries 2/' OR description <> 'Private services-providing industries 3/' OR description <> 'Natural resources and mining' OR description <> 'Trade' OR description <> 'Transportation and utilities' OR description <> 'Manufacturing and information')";
     const text = "SELECT * FROM grp_by_metro WHERE geofips = $1";
     const fips = req.params.id.length === 4 ? `0${req.params.id}` : req.params.id;
     const values = [fips];
@@ -43,8 +45,18 @@ exports.getMetroGrp = async (req, res) => {
     res.status(200).json(rows);
 }
 
+exports.getMetroGrpTotal = async (req, res) => {
+    const text = "SELECT geofips, json_agg(json_build_array(grp_2010, grp_2011, grp_2012, grp_2013, grp_2014, grp_2015, grp_2016, grp_2017, grp_2018)) FROM grp_by_metro WHERE geofips = $1 AND description = 'All industry total' GROUP BY geofips";
+    // const text = "SELECT * FROM grp_by_metro WHERE geofips = $1";
+    const fips = req.params.id.length === 4 ? `0${req.params.id}` : req.params.id;
+    const values = [fips];
+    const { rows } = await db.query(text, values);
+    res.status(200).json(rows);
+}
+
 exports.getMetroTemp = async (req, res) => {
-    const text = "SELECT * FROM metro_temperature WHERE cbsa = $1";
+    const text = "SELECT cbsa, json_agg(json_build_array(temp_jan, temp_feb, temp_mar, temp_apr, temp_may, temp_jun, temp_jul, temp_aug, temp_sep, temp_oct, temp_nov, temp_dec)) FROM metro_temperature WHERE cbsa = $1 GROUP BY cbsa";
+    // const text = "SELECT * FROM metro_temperature WHERE cbsa = $1";
     const fips = req.params.id.length === 4 ? `0${req.params.id}` : req.params.id;
     const values = [fips];
     const { rows } = await db.query(text, values);
@@ -52,7 +64,7 @@ exports.getMetroTemp = async (req, res) => {
 }
 
 exports.getMetroPie = async (req, res) => {
-    const text = "SELECT * FROM pie_by_metro WHERE (geofips = $1 AND description = 'Per capita personal income (dollars) 4/') OR (geofips = $1 AND description = 'Total employment')";
+    const text = "SELECT geofips, json_agg(json_build_array(pie_2010, pie_2011, pie_2012, pie_2013, pie_2014, pie_2015, pie_2016, pie_2017, pie_2018)) FROM pie_by_metro WHERE (geofips = $1 AND description = 'Per capita personal income (dollars) 4/') GROUP BY geofips";
     const fips = req.params.id.length === 4 ? `0${req.params.id}` : req.params.id;
     const values = [fips];
     const { rows } = await db.query(text, values);
