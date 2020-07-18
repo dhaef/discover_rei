@@ -105,6 +105,15 @@ const Metro = () => {
                                 key={county.fips} />
                         })}
                     </div>
+                    {emptyData.length > 0 && <div>
+                        <h5 className="center-text mt-05">The following data was unavailable</h5>
+                        <div style={{ width: 'fit-content' }} className="center mb-05">
+                            {emptyData.map((item, index) => {
+                                const text = index !== (emptyData.length - 1) ? `${item}, ` : item;
+                                return <span key={index}>{text}</span>
+                            })}
+                        </div>
+                    </div>}
                 </div>
             </div>}
         </>

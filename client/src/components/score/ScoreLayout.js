@@ -52,6 +52,11 @@ const ScoreLayout = ({ placeToShow, banner }) => {
         // eslint-disable-next-line
     }, [filters, placeToShow]);
 
+    const handleClearFilters = () => {
+        dispatch({ type: 'clearFilters' });
+        setSortState('');
+    }
+
     const listOfFilters = [].concat(...Object.values(filters));
     let placesArr;
 
@@ -80,7 +85,7 @@ const ScoreLayout = ({ placeToShow, banner }) => {
                     onClick={() => setDisplayFilters(displayFilters === 'Hide Filters' ? 'Show Filters' : 'Hide Filters')}>{displayFilters}</button>
                 <button
                     className="btn mt-05 ml-05"
-                    onClick={() => dispatch({ type: 'clearFilters' })}>Clear Filters</button>
+                    onClick={handleClearFilters}>Clear Filters</button>
                 <select
                     value={sortBy}
                     className="ml-05 mt-05 select"

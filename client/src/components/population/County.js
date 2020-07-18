@@ -36,7 +36,7 @@ const County = () => {
                 const resSWeath = await axios.get(`/api/county/severe_weather/${id}`);
                 const resTemp = await axios.get(`/api/county/temperature/${id}`);
                 const resMetro = await axios.get(`/api/metro/score/${res.data[0].cbsa}`);
-                console.log(resTemp);
+
                 if (mounted) {
                     dispatch({
                         type: 'setCountyData',

@@ -151,7 +151,7 @@ export default function rootReducer(state, { type, payload }) {
                 countyMetro: payload.countyMetro[0],
                 currentCounty: {
                     ...payload.score[0],
-                    pop: payload.pop.length > 0
+                    pop: payload.pop.length === 0
                         ? { total: [], growth: [] }
                         : {
                             total: payload.pop[0].json_agg[0],
