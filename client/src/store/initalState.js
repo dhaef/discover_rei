@@ -35,6 +35,7 @@ export const initalState = {
         gdp_diversity: [],
         job_growth: [],
         weather_dmg: [],
+        unemp_rate: [],
     },
     addToEmailList: false,
     alert: {

@@ -253,6 +253,7 @@ export default function rootReducer(state, { type, payload }) {
                     gdp_diversity: [],
                     job_growth: [],
                     weather_dmg: [],
+                    unemp_rate: []
                 }
             }
         case "setLoading":

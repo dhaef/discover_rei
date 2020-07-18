@@ -48,6 +48,18 @@ export const handleFilter = (filters, places) => {
             }
         });
     }
+    // Unemployment filter
+    if (filters.unemp_rate.length === 1) {
+        filtered = filtered.filter(place => place.unemp_score === +filters.unemp_rate[0].slice(-1))
+    } else if (filters.unemp_rate.length > 1) {
+        filtered = filtered.filter(place => {
+            for (let i = 0; i < filters.unemp_rate.length; i++) {
+                if (place.unemp_score === +filters.unemp_rate[i].split('-')[1]) {
+                    return place
+                }
+            }
+        });
+    }
     // Job Growth filter
     if (filters.job_growth.length === 1) {
         filtered = filtered.filter(place => place.emp_score === +filters.job_growth[0].slice(-1))

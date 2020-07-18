@@ -1,5 +1,5 @@
 import React from 'react';
-import Places from '../../components/population/Places';
+import Places from '../components/population/Places';
 
 const Population = ({ type }) => {
     return (

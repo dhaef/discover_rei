@@ -71,6 +71,7 @@ const ScoreLayout = ({ placeToShow, banner }) => {
                 <FilterSet name='gdp_growth' title='GDP Growth' />
                 <FilterSet name='gdp_diversity' title='GDP Diversity' />
                 <FilterSet name='job_growth' title='Job Growth' />
+                <FilterSet name='unemp_rate' title='Unemp Rate' />
                 {placeToShow === 'county' && <FilterSet name='weather_dmg' title='Weather Dmg' />}
             </div>
             <div className='current-filters mt-05 mb-05'>

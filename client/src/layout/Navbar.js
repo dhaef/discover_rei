@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import Banner from '../../components/style/Banner';
-import { useStore } from '../../store';
-import logo from '../../xploreplacesBlack.svg';
+import Banner from '../components/style/Banner';
+import { useStore } from '../store';
+import logo from '../xploreplacesBlack.svg';
 
 const Navbar = () => {
     const history = useHistory();

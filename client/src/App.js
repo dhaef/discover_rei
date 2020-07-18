@@ -5,13 +5,13 @@ import {
   Route
 } from 'react-router-dom';
 import './App.css';
-import Population from './layout/population/Population.js';
+import Population from './layout/Population.js';
 import Metro from './components/population/Metro';
 import County from './components/population/County';
 import rootReducer from './reducer/index';
 import { initalState } from './store/initalState';
 import { Provider } from './store/index';
-import Navbar from './layout/navbar/Navbar';
+import Navbar from './layout/Navbar';
 import Home from './components/style/Home';
 import ScoreLayout from './components/score/ScoreLayout';
 import Feedback from './components/style/Feedback';

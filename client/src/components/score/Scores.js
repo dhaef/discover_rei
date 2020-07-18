@@ -90,6 +90,14 @@ const Scores = ({ places, placeToShow, classToBe }) => {
                 </div>
             </div>
             <div className="bar-item">
+                <span className="bar-name">Unemp Rate</span>
+                <div className="bar">
+                    <div className={`bar-fill ${places.unemp_score === 4 ? 'bar-great' : places.unemp_score === 3 ? 'bar-good' : places.unemp_score === 2 ? 'bar-fair' : places.unemp_score === 1 ? 'bar-poor' : 'bar-empty'}`}>
+                        <span className="bar-fill-text">{places.unemp_score === 4 ? 'Great' : places.unemp_score === 3 ? 'Good' : places.unemp_score === 2 ? 'Fair' : places.unemp_score === 1 ? 'Poor' : 'N/A'}</span>
+                    </div>
+                </div>
+            </div>
+            <div className="bar-item">
                 <span className="bar-name">Job Gro.</span>
                 <div className="bar">
                     <div className={`bar-fill ${places.emp_score === 4 ? 'bar-great' : places.emp_score === 3 ? 'bar-good' : places.emp_score === 2 ? 'bar-fair' : places.emp_score === 1 ? 'bar-poor' : 'bar-empty'}`}>
