@@ -33,7 +33,7 @@ const Metro = () => {
                 const resPie = await axios.get(`/api/metro/pie/${cbsa}`);
                 const resUnemp = await axios.get(`/api/metro/unemployment/${cbsa}`);
                 const resTemp = await axios.get(`/api/metro/temperature/${cbsa}`);
-                console.log(resScore.data)
+
                 if (mounted) {
                     dispatch({
                         type: 'setCurrentMetro', payload: {

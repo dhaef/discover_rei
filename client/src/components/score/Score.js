@@ -6,13 +6,13 @@ const Score = ({ places }) => {
     const setOverallScore = () => {
         let totalClassFill;
         const totalQualifyingVals = Object.keys(places).filter(key => key.endsWith('score')).length;
-        if (places.total >= (totalQualifyingVals * 3) && places.total <= (totalQualifyingVals * 4)) {
+        if (places.total >= ((totalQualifyingVals - 1) * 4) && places.total <= (totalQualifyingVals * 4)) {
             totalClassFill = 'bar-great';
-        } else if (places.total >= (totalQualifyingVals * 2) && places.total < (totalQualifyingVals * 3)) {
+        } else if (places.total >= ((totalQualifyingVals - 2) * 4) && places.total < ((totalQualifyingVals - 1) * 4)) {
             totalClassFill = 'bar-good';
-        } else if (places.total >= totalQualifyingVals && places.total < (totalQualifyingVals * 2)) {
+        } else if (places.total >= ((totalQualifyingVals - 3) * 4) && places.total < ((totalQualifyingVals - 2) * 4)) {
             totalClassFill = 'bar-fair';
-        } else if (places.total < totalQualifyingVals) {
+        } else if (places.total < ((totalQualifyingVals - 3) * 4)) {
             totalClassFill = 'bar-poor';
         }
         return <div className="bar-item score-item">
