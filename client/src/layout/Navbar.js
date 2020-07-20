@@ -136,6 +136,14 @@ const Navbar = () => {
                                 to="/counties/pop_growth"
                                 onClick={() => setDropdown(false)}
                             >County Pop. <span role="img" aria-label="graph">📈</span></Link>
+                            <h5 className="dropdown-header">Methodology</h5>
+                            <Link
+                                className="nav-item dropdown-item"
+                                to="/methodology"
+                                onClick={() => setDropdown(false)}
+                            >Methodology
+                            {/* <span role="img" aria-label="graph">📈</span> */}
+                            </Link>
                         </div>
                     </div>
                 </div>

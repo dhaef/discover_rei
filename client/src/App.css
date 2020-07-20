@@ -793,6 +793,23 @@ th {
     margin-top: 0.5rem;
 }
 
+/* METHODOLOGY */
+.method-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    /* justify-content: space-evenly; */
+}
+
+.method-item {
+    /* height: 25px; */
+    padding: 0.7%;
+    width: 30%;
+    background-color: #f5f5f5;
+    margin: 0.8%;
+    border-radius: 5px;
+}
+
 @media only screen and (min-width: 768px) {
     .home-item {
         width: 45%;

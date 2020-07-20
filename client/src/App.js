@@ -17,6 +17,7 @@ import ScoreLayout from './components/score/ScoreLayout';
 import Feedback from './components/style/Feedback';
 import EmailList from './components/style/EmailList';
 import PopupAlert from './components/style/PopupAlert';
+import Methodology from './components/methodology/Methodology';
 
 function App() {
   const [state, dispatch] = useReducer(rootReducer, initalState);
@@ -37,6 +38,7 @@ function App() {
             <Route exact path="/counties" render={() => <ScoreLayout placeToShow={'county'} banner="show" />}></Route>
             <Route exact path="/metros/pop_growth" render={() => <Population type={'metro'} />}></Route>
             <Route exact path="/counties/pop_growth" render={() => <Population type={'county'} />}></Route>
+            <Route exact path="/methodology" component={Methodology}></Route>
           </Switch>
         </div>
       </Provider>
