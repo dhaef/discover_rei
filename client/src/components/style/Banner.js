@@ -9,7 +9,7 @@ const Banner = ({ name }) => {
             {name !== 'XplorePlaces' && <h2 className="center center-text banner-title">{name}</h2>}
             {name === 'XplorePlaces' && <div className="home-header">
                 <h2 className="home-header-title home-header-item mr-auto ml-auto mb-05 mt-05">{name}</h2>
-                <p className="home-header-text center-text home-header-item">Explore🕵️ the best📈 places to invest🏘 in the United States🇺🇸</p>
+                <p className="home-header-text center-text home-header-item">Explore🕵️ the best📈 places to live🏡 or invest🏘 in the United States🇺🇸</p>
                 <button className="home-header-btn btn center-btn" onClick={() => dispatch({ type: 'showAddToEmailList' })}>Join Today!</button>
             </div>}
         </div>

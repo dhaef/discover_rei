@@ -24,6 +24,7 @@ exports.sendFeedback = async (req, res) => {
 
     try {
         await sendMail({
+            type: 'feedback',
             from: req.body.email,
             // email: process.env.CONTACT_EMAIL,
             subject: `Feedback Message @ ${req.body.email}`,

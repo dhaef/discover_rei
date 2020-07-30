@@ -27,8 +27,8 @@ const Methodology = () => {
                 qualifers={{ great: '2%+', good: '1%-2%', fair: '0-1%', poor: 'less than 0' }}
             />
             <MethodItem
-                title="Unemployment Growth"
-                description="Ranked by the size of the average unemployment rate for the last 10 years in the metro or county"
+                title="Unemployment Rate"
+                description="Ranked by the weighted average unemployment rate for the last 10 years in the metro or county"
                 qualifers={{ great: 'less than 4.5%', good: '4.5%-5.5%', fair: '5.5%-6.5%', poor: '6.5%+' }}
             />
             <MethodItem

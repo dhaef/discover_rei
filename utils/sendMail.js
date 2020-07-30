@@ -13,9 +13,10 @@ const sendEmail = async (options) => {
     const message = {
         // from: `${process.env.FROM_NAME} <${process.env.FROM_EMAIL}>`,
         from: process.env.FROM_EMAIL,
-        to: process.env.FROM_EMAIL,
+        to: options.type === 'feedback' ? process.env.FROM_EMAIL : options.to,
         subject: options.subject,
-        html: options.msg
+        html: options.msg,
+        attachments: options.attachments ? options.attachments : []
     };
 
     const info = await transporter.sendMail(message);
